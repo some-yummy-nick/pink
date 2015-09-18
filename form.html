@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pink-form</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+    <header class="header-form">
+        <div class="top-menu">
+            <a href="" class="logo">Pink</a>
+            <nav>
+                <ul>
+                    <li><a href="#">Информация</a>
+                    </li>
+                    <li><a href="#">Блог</a>
+                    </li>
+                    <li><a href="#">Отзывы</a>
+                    </li>
+                    <li><a href="#">Конкурс</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <h1>Конкурс на самое безбашеное путешествие с Пинк</h1>
+    </header>
+
+    <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! </p>
+    <form action="" method="post">
+
+        <label for="name">Имя:*</label>
+        <br>
+        <input type="text" id="name" required placeholder="Введите ваше имя">
+        <br>
+
+        <label for="family">Фамилия:*</label>
+        <br>
+        <input type="text" id="family" required placeholder="Укажите фамилию">
+        <br>
+
+        <label for="patronymic">Отчество:</label>
+        <br>
+        <input type="text" id="patronymic" placeholder="Ну и отчество тоже">
+        <br>
+        <p>С каким приложением путешествовали? *</p>
+
+        <input type="radio" name="device" value="Pink для OS">Pink для OS
+        <br>
+        <input type="radio" name="device" value="Pink на Android">Pink на Android
+        <br>
+        <input type="radio" name="device" value="Windows Phone">Windows Phone
+        <br>
+        <p>Когда вы путешествовали? *</p>
+
+        <input type="text" id="date" required placeholder="1 апреля 2015">
+        <br>
+        <p>Дата выезда</p>
+
+        <button>-</button>
+        <input type="text" id="day" placeholder="10 дней">
+        <button>+</button>
+        <br>
+        <p>Продолжительность</p>
+
+        <input type="text" id="date" placeholder="1 апреля 2015">
+        <br>
+        <p>Дата возвращения</p>
+
+        <input type="text" id="date-end" placeholder="1 апреля 2015">
+        <br>
+        <p>Количество попутчиков*</p>
+        <button>-</button>
+        <input type="text" id="people" required placeholder="2 чел">
+        <button>+</button>
+        <div class="username">
+            <p><span>№</span> Имя:*</p>
+            <span>1</span>
+            <input type="text" placeholder="Введите ваше имя">
+            <p>Прозвище</p>
+            <input type="text" placeholder="Ну как же без этого!">
+        </div>
+        <div class="username">
+            <p><span>№</span> Имя:*</p>
+            <span>2</span>
+            <input type="text" placeholder="Введите ваше имя">
+            <p>Прозвище</p>
+            <input type="text" placeholder="Ну как же без этого!">
+        </div>
+        <p>Ваши безбашенные достижения в путешествии</p>
+        <input type="checkbox" checked>Сделал селфи с акулой
+        <br>
+        <input type="checkbox" checked>Обгорел на пляже
+        <br>
+        <input type="checkbox">Видел Чака Норриса
+        <br>
+        <input type="checkbox">Накупил сувениров
+        <br>
+        <input type="checkbox" checked>Удержал башню
+        <br>
+        <input type="checkbox">Разгромил отель
+        <br>
+        <p>ВАШИ ФОТОГРАФИИ из поездки *</p>
+        <button>Загрузить фото</button>
+        <div class="form-photos">
+            <img src="img/form-photo-1.png" height="68" width="67" alt="form-photo" class="form-photo">
+            <img src="img/form-photo-2.png" height="68" width="68" alt="form-photo" class="form-photo">
+            <img src="img/form-photo-3.png" height="68" width="67" alt="form-photo" class="form-photo">
+            <img src="img/form-photo-4.png" height="67" width="67" alt="form-photo" class="form-photo">
+            <img src="img/form-photo-5.png" height="67" width="68" alt="form-photo" class="form-photo">
+            <img src="img/form-photo-6.png" height="67" width="67" alt="form-photo" class="form-photo">
+            <img src="img/form-photo-7.png" height="67" width="68" alt="form-photo" class="form-photo">
+            <img src="img/form-photo-8.png" height="67" width="68" alt="form-photo" class="form-photo">
+        </div>
+        <input type="submit" value="Отправить форму">
+    </form>
+    <p><span>*</span> — обязательные поля</p>
+    <footer class="footer-second">
+        <a href="" class="footer-logo"><img src="img/logo-glasses.png" alt="logo">Pink</a>
+        <div class="social-buttons">
+            <a href="" class="social-item"></a>
+            <a href="" class="social-item"></a>
+            <a href="" class="social-item"></a>
+        </div>
+        <div class="copyright">Разработано</div>
+    </footer>
+    <!-- <script src="js/script.js"></script> -->
+</body>
+
+
+</html>

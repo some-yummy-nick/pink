@@ -3,12 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>HTML Academy: pink</title>
+    <title>Pink</title>
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/koalanav.css">
-    <link rel="stylesheet" href="css/default.css">
-    <link rel="stylesheet" href="css/ideal-image-slider.css">
+
 </head>
 
 <body>
@@ -30,7 +28,7 @@
         </div>
         <h1>Взгляните на жизнь иначе!</h1>
         <div class="header-left">
-            <a href="">Скачать приложение</a>
+            <a href="" class="download">Скачать приложение</a>
             <ul class="icon-logo">
                 <li></li>
                 <li></li>
@@ -38,7 +36,9 @@
             </ul>
             <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
-        <div class="header-right"></div>
+        <div class="header-right">
+            <img src="img/handle-phone.png" width="320" height="313" alt="handle-phone">
+        </div>
     </header>
     <section class="information">
         <h2>Устали от серости мегаполиса? Нам есть, что вам предложить!</h2>
@@ -59,20 +59,17 @@
     </section>
 
     <div id="slider">
-        <img src="" alt="Minimum required attributes">
-        <img src="" alt="Use data-src for on-demand loading">
-        <img src="" alt="Use data-src-2x for HiDPI devices">
+        <img src="img/iphone-screen-3.png" height="320" width="157" alt="iphone">
     </div>
-    <div id="caption-1" style="display:none;">
-        <h3>Николай Петров</h3>
-        <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+    <div id="caption-1">
+        <cite>Николай Петров</cite>
+        <blockquote>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
     </div>
     <section class="price">
         <div class="price-item">
-            <div class="flag"></div>
             <div class="price-item-top">
+                <h3></h3>
                 <p></p>
-                <span></span>
             </div>
             <ul class="price-item-filter">
                 <li></li>
@@ -80,11 +77,10 @@
                 <li></li>
             </ul>
         </div>
-        <div class="price-item">
-            <div class="flag">Хит</div>
+        <div class="price-item flag">
             <div class="price-item-top">
-                <p>Стандарт</p>
-                <span>3.99 USD</span>
+                <h3>Стандарт</h3>
+                <p>3.99 USD</p>
             </div>
             <ul class="price-item-filter">
                 <li>Розовый фильтр</li>
@@ -94,10 +90,9 @@
 
         </div>
         <div class="price-item">
-            <div class="flag"></div>
             <div class="price-item-top">
+                <h3></h3>
                 <p></p>
-                <span></span>
             </div>
             <ul class="price-item-filter">
                 <li></li>
@@ -124,22 +119,7 @@
 
 
     <!-- <script src="js/script.js"></script> -->
-    <script src="js/koalanav.js"></script>
-    <script src="js/ideal-image-slider.js"></script>
-    <script src="js/iis-bullet-nav.js"></script>
-    <script src="js/iis-captions.js"></script>
-    <script>
-        new IdealImageSlider.Slider({
-            selector: '#slider',
-            height: 400
-        });
-    </script>
-    <script>
-        var slider = new IdealImageSlider.Slider('#slider');
-        slider.addCaptions();
-        slider.addBulletNav();
-        slider.start();
-    </script>
+
 </body>
 
 </html>
