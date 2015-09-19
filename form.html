@@ -47,13 +47,18 @@
         <input type="text" id="patronymic" placeholder="Ну и отчество тоже">
         <br>
         <p>С каким приложением путешествовали? *</p>
-
-        <input type="radio" name="device" value="Pink для OS">Pink для OS
-        <br>
-        <input type="radio" name="device" value="Pink на Android">Pink на Android
-        <br>
-        <input type="radio" name="device" value="Windows Phone">Windows Phone
-        <br>
+        <div>
+            <input type="radio" name="device" value="Pink для OS" id="answer1">
+            <label for="answer1">Pink для OS</label>
+        </div>
+        <div>
+            <input type="radio" name="device" value="Pink на Android" id="answer2">
+            <label for="answer2">Pink на Android</label>
+        </div>
+        <div>
+            <input type="radio" name="device" value="Windows Phone" id="answer3">
+            <label for="answer3">Windows Phone</label>
+        </div>
         <p>Когда вы путешествовали? *</p>
 
         <input type="text" id="date" required placeholder="1 апреля 2015">
@@ -91,18 +96,30 @@
             <input type="text" placeholder="Ну как же без этого!">
         </div>
         <p>Ваши безбашенные достижения в путешествии</p>
-        <input type="checkbox" checked>Сделал селфи с акулой
-        <br>
-        <input type="checkbox" checked>Обгорел на пляже
-        <br>
-        <input type="checkbox">Видел Чака Норриса
-        <br>
-        <input type="checkbox">Накупил сувениров
-        <br>
-        <input type="checkbox" checked>Удержал башню
-        <br>
-        <input type="checkbox">Разгромил отель
-        <br>
+        <div>
+            <input type="checkbox" id="answer4" checked>
+            <label for="answer4">Сделал селфи с акулой</label>
+        </div>
+        <div>
+            <input type="checkbox" checked id="answer5">
+            <label for="answer5">Обгорел на пляже</label>
+        </div>
+        <div>
+            <input type="checkbox" id="answer6">
+            <label for="answer6">Видел Чака Норриса</label>
+        </div>
+        <div>
+            <input type="checkbox" id="answer7">
+            <label for="answer7">Накупил сувениров</label>
+        </div>
+        <div>
+            <input type="checkbox" id="answer8" checked>
+            <label for="answer8">Удержал башню</label>
+        </div>
+        <div>
+            <input type="checkbox" id="answer9">
+            <label for="answer9">Разгромил отель</label>
+        </div>
         <p>ВАШИ ФОТОГРАФИИ из поездки *</p>
         <button>Загрузить фото</button>
         <div class="form-photos">
