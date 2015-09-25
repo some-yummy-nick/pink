@@ -10,34 +10,51 @@
 </head>
 
 <body>
+
+
+
+
     <header class="page-header">
-        <div class="top-menu">
-            <a href="index.html" class="logo">Pink</a>
-            <nav>
-                <ul>
-                    <li><a href="#">Информация</a>
-                    </li>
-                    <li><a href="blog.html">Блог</a>
-                    </li>
-                    <li><a href="#">Отзывы</a>
-                    </li>
-                    <li><a href="#">Конкурс</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <h1>Блог путешественников,  пользователей Пинк</h1>
-    </header>
-    <section class="blog">
-        <article class="blog-post">
-            <div class="post-header">
-                <h2>Антон и Надя в Тайланде</h2>
-                <p class="blog-post-date">Опубликовано: 6 месяцев назад</p>
-                <p>Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и районов.</p>
+        <div class="layout-center-wrapper">
+            <div class="page-header__top-menu">
+                <a class="logo" href="index.html">Pink</a>
+                <nav class="main-nav">
+                    <ul class="main-nav__list">
+                        <li class="main-nav__item  main-nav__item--active"><a href="#">Информация</a>
+                        </li>
+                        <li class="main-nav__item"><a href="blog.html">Блог</a>
+                        </li>
+                        <li class="main-nav__item"><a href="#">Отзывы</a>
+                        </li>
+                        <li class="main-nav__item"><a href="#">Конкурс</a>
+                        </li>
+                    </ul>
+                    <div class="main-nav__toggle main-nav__toggle--close">
+                        <a href=""></a>
+                    </div>
+                </nav>
             </div>
-            <h3>Предыстория</h3>
+            <h1 class="page-header__title">Блог путешественников,  пользователей Пинк</h1>
+        </div>
+    </header>
+
+
+
+
+    <div class="layout-center-wrapper">
+
+        <section class="blog">
+
+            <article class="post-header">
+                <h2>Антон и Надя в Тайланде</h2>
+                <p class="post-header__date">Опубликовано: 6 месяцев назад</p>
+                <p class="post-header__text">Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и районов.</p>
+            </article>
+
+            <h3 class="blog__caption">Предыстория</h3>
             <p>В Азию нам хотелось попасть уже давно, но все время что-то останавливало. Также не давал покоя вопрос гигиены и чистоты вокруг. Были сомнения и на счет местной еды. Однако, увидев выгодные билеты на <a href="">skyscanner.ru</a> мы все-таки решились!</p>
-            <h3>Выбор отеля</h3>
+
+            <h3 class="blog__caption">Выбор отеля</h3>
             <p>В Тайланде огромный разброс по стоимости отелей и так же сильно отличаются и они сами. Так как достопримечательности щедро разбросаны по всей стране, то чтобы посетить их все, нужно пожить в нескольких разных городах. В итоге мы остановились на следующих:</p>
             <ul>
                 <li>Point Yamu by Como (Пхукет)</li>
@@ -46,25 +63,40 @@
             </ul>
             <p>В выборе отелей мы учитывали как расположение, так и отзывы на Tripadvisor. Например, вот, что пишут люди про Point Yamu:</p>
             <blockquote>Замечательное место,в которое хочется вернуться обязательно! Персонал отзывчивый и внимательный,еда-потрясающая. Отель расположен в тихом и уединенном месте-в чем вся и прелесть. СПА отличный. Потрясающие виды.</blockquote>
-            <cite>  Олег, г. Москва</cite>
-            <h3>Местная еда</h3>
+            <cite>Олег, г. Москва</cite>
+
+            <h3 class="blog__caption">Местная еда</h3>
             <p>Существует мнение, что вся еда в Тайланде экстремально острая. Это мнение сложилось не напрасно! Но не стоит делать из этого проблему — просто попросите сделать ваше блюдо «not spicy». Желающие могут попробовать жареных тараканчиков. Мы не рискнули.</p>
-        </article>
-    </section>
-    <div class="paginator-post">
-        <a href="">Пред.</a>
-        <a href="">След.</a>
-        <a href="">Назад к списку</a>
-    </div>
-    <footer class="footer-second">
-        <a href=" " class="footer-logo "><img src="img/logo-glasses.png " alt="logo ">Pink</a>
-        <div class="social-buttons ">
-            <a href=" " class="social-item "></a>
-            <a href=" " class="social-item "></a>
-            <a href=" " class="social-item "></a>
+            </article>
+
+        </section>
+
+
+
+
+        <div class="post-paginator">
+            <a class="post-paginator__item" href="">Пред.</a>
+            <a class="post-paginator__item" href="">След.</a>
+            <a class="post-paginator__item" href="">Назад к списку</a>
         </div>
-        <div class="copyright ">Разработано</div>
-    </footer>
+
+
+
+
+        <footer class="footer-second">
+            <a class="footer-second__logo" href=" "><img src="img/logo-glasses.png " alt="logo">Pink</a>
+            <div class="social-buttons">
+                <span class="social-buttons__item"></span>
+                <span class="social-buttons__item"></span>
+                <span class="social-buttons__item"></span>
+            </div>
+            <div class="footer-second__copyright">Разработано</div>
+        </footer>
+
+
+
+
+    </div>
     <!-- <script src="js/script.js "></script> -->
 </body>
 
