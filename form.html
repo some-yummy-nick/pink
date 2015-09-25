@@ -5,145 +5,241 @@
     <meta charset="utf-8">
     <title>Pink-form</title>
     <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- 
+        Объединить обращение к google fonts
+     -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
 </head>
 
 <body>
+
+
+
+
     <header class="page-header">
-        <div class=" top-menu ">
-            <a href="index.html" class="logo ">Pink</a>
-            <nav>
-                <ul>
-                    <li><a href="# ">Информация</a>
-                    </li>
-                    <li><a href="blog.html">Блог</a>
-                    </li>
-                    <li><a href="# ">Отзывы</a>
-                    </li>
-                    <li><a href="# ">Конкурс</a>
+        <div class="layout-center-wrapper">
+            <div class="page-header__top-menu">
+                <a class="logo" href="index.html">Pink</a>
+                <nav class="main-nav">
+                    <ul class="main-nav__list">
+                    <!-- 
+                        Разобраться с оформлением HTML
+                    -->
+                        <li class="main-nav__item  main-nav__item--active"><a href="#">Информация</a>
+                        </li>
+                        <li class="main-nav__item"><a href="blog.html">Блог</a>
+                        </li>
+                        <li class="main-nav__item"><a href="#">Отзывы</a>
+                        </li>
+                        <li class="main-nav__item"><a href="#">Конкурс</a>
+                        </li>
+                    </ul>
+                    <div class="main-nav__toggle main-nav__toggle--close">
+                        <a href=""></a>
+                    </div>
+                </nav>
+            </div>
+            <h1 class="page-header__title">Конкурс на самое безбашеное путешествие с Пинк</h1>
+        </div>
+    </header>
+    <div class="layout-center-wrapper">
+        <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! </p>
+
+
+
+
+        <form action=" " method="post" class="form">
+            
+            <fieldset class="form__group">
+                <div class="form__group-fields">
+                    <label class="form-text" for="name">Имя:*</label>
+                    <input type="text" id="name" required placeholder="Введите ваше имя ">
+                </div>
+                
+                <div class="form__group-fields">
+                    <label class="form-text" for="family">Фамилия:*</label>
+                    <input type="text " id="family" required placeholder="Укажите фамилию ">
+                </div>
+                
+                <div class="form__group-fields">
+                    <label class="form-text" for="patronymic">Отчество:</label>
+                    <input tabindex="3" type="text" id="patronymic" placeholder="Ну и отчество тоже">
+                </div>
+            </fieldset>
+
+            <fieldset class="form__group form__group--gray">
+                <legend class="form__group-title">С каким приложением путешествовали? *</legend>
+
+                <div>
+                    <input tabindex="4" type="radio" name="device" id="answer1" checked>
+                    <label for="answer1">Pink для OS</label>
+                </div>
+                <div>
+                    <input type="radio" name="device" id="answer2">
+                    <label for="answer2">Pink на Android</label>
+                </div>
+                <div>
+                    <input type="radio" name="device" id="answer3">
+                    <label for="answer3">Windows Phone</label>
+                </div>
+            </fieldset>
+
+
+            <p class="form-text">Когда вы путешествовали? *</p>
+            <input tabindex="5" type="text" id="date" required placeholder="1 апреля 2015">
+            <br>
+
+
+            <p class="form-text">Дата выезда</p>
+            <div class="form-counter">
+                <button class="form-counter__btn">-</button>
+                <input tabindex="6" type="text" id="day" placeholder="10 дней">
+                <button class="form-counter__btn">+</button>
+            </div>
+
+            <!--
+                <p class="form-text"> - заменить на label
+            -->
+            <p class="form-text">Продолжительность</p>
+            <input tabindex="7" type="text" id="date" placeholder="1 апреля 2015 ">
+            <br>
+
+
+            <p class="form-text">Дата возвращения</p>
+            <input tabindex="8" type="text" id="date-end" placeholder="1 апреля 2015">
+            <br>
+
+
+            <p class="form-text">Количество попутчиков*</p>
+            <button>-</button>
+            <input tabindex="9" type="text" id="people" required placeholder="2 чел">
+            <button>+</button>
+
+            <!-- 
+                Переделать на списки
+             -->
+            <div class="username">
+                <p class="form-text"><span>№</span> Имя:*</p>
+                <span>1</span>
+                <input type="text" placeholder="Введите ваше имя">
+                <p class="form-text">Прозвище</p>
+                <input type="text" placeholder="Ну как же без этого!">
+            </div>
+
+            <div class="username">
+                <p class="form-text"><span>№</span> Имя:*</p>
+                <span>2</span>
+                <input type="text" placeholder="Введите ваше имя ">
+                <p class="form-text">Прозвище</p>
+                <input type="text" placeholder="Ну как же без этого! ">
+            </div>
+
+
+            <p class="form-text">Ваши безбашенные достижения в путешествии</p>
+            <div>
+                <input type="checkbox" id="answer4" checked>
+                <label for="answer4">Сделал селфи с акулой</label>
+            </div>
+            <div>
+                <input type="checkbox" checked id="answer5">
+                <label for="answer5">Обгорел на пляже</label>
+            </div>
+            <div>
+                <input type="checkbox" id="answer6">
+                <label for="answer6">Видел Чака Норриса</label>
+            </div>
+            <div>
+                <input type="checkbox" id="answer7">
+                <label for="answer7">Накупил сувениров</label>
+            </div>
+            <div>
+                <input type="checkbox" id="answer8" checked>
+                <label for="answer8">Удержал башню</label>
+            </div>
+            <div>
+                <input type="checkbox" id="answer9">
+                <label for="answer9">Разгромил отель</label>
+            </div>
+
+            <!-- 
+                <input type="file"> - открывает диалог загрузки файла
+                Нужно добавить вместо <button type="button" id="submit-form">Загрузить фото</button>
+
+                http://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/ - вот статья, смотри и разбирайся
+             -->
+            
+
+            <p class="form-text">ВАШИ ФОТОГРАФИИ из поездки *</p>
+            <button type="button" id="submit-form">Загрузить фото</button>
+            
+
+            <!-- 
+                
+                <ul class="upload-list">
+                    <li>
+                        <div class="upload-list__img">
+                            <img src="img/form-photo-1.png " height="68 " width="67 " alt="form-photo">
+                        </div>
+                        <div class="upload-list__title">IMG-1.JPG</div>
+                        <button type="button" class="upload-list__btn-delete"></button>
                     </li>
                 </ul>
-            </nav>
-        </div>
-        <h1>Конкурс на самое безбашеное путешествие с Пинк</h1>
-    </header>
+            
+             -->
 
-    <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! </p>
-    <form action=" " method="post ">
 
-        <label for="name">Имя:*</label>
-        <br>
-        <input tabindex="1" type="text" id="name" required placeholder="Введите ваше имя ">
-        <br>
+            <div class="form-photo">
+                <img src="img/form-photo-1.png " height="68 " width="67 " alt="form-photo" class="form-photo__item">
+                <img src="img/form-photo-2.png " height="68 " width="68 " alt="form-photo" class="form-photo__item">
+                <img src="img/form-photo-3.png " height="68 " width="67 " alt="form-photo" class="form-photo__item">
+                <img src="img/form-photo-4.png " height="67 " width="67 " alt="form-photo" class="form-photo__item">
+                <img src="img/form-photo-5.png " height="67 " width="68 " alt="form-photo" class="form-photo__item">
+                <img src="img/form-photo-6.png " height="67 " width="67 " alt="form-photo" class="form-photo__item">
+                <img src="img/form-photo-7.png " height="67 " width="68 " alt="form-photo" class="form-photo__item">
+                <img src="img/form-photo-8.png " height="67 " width="68 " alt="form-photo" class="form-photo__item">
+            </div>
 
-        <label for="family">Фамилия:*</label>
-        <br>
-        <input tabindex="2" type="text " id="family" required placeholder="Укажите фамилию ">
-        <br>
 
-        <label for="patronymic">Отчество:</label>
-        <br>
-        <input tabindex="3" type="text" id="patronymic" placeholder="Ну и отчество тоже">
-        <br>
-        <p>С каким приложением путешествовали? *</p>
-        <div>
-            <input tabindex="4" type="radio" name="device" id="answer1">
-            <label for="answer1">Pink для OS</label>
-        </div>
-        <div>
-            <input type="radio" name="device" id="answer2">
-            <label for="answer2">Pink на Android</label>
-        </div>
-        <div>
-            <input type="radio" name="device" id="answer3">
-            <label for="answer3">Windows Phone</label>
-        </div>
-        <p>Когда вы путешествовали? *</p>
 
-        <input tabindex="5" type="text" id="date" required placeholder="1 апреля 2015">
-        <br>
-        <p>Дата выезда</p>
+            <input type="submit" value="Отправить форму">
 
-        <button>-</button>
-        <input tabindex="6" type="text" id="day" placeholder="10 дней">
-        <button>+</button>
-        <br>
-        <p>Продолжительность</p>
+        </form>
 
-        <input tabindex="7" type="text" id="date" placeholder="1 апреля 2015 ">
-        <br>
-        <p>Дата возвращения</p>
+        <p class="required-text"><span>*</span> — обязательные поля</p>
 
-        <input tabindex="8" type="text" id="date-end" placeholder="1 апреля 2015">
-        <br>
-        <p>Количество попутчиков*</p>
-        <button>-</button>
-        <input tabindex="9" type="text" id="people" required placeholder="2 чел">
-        <button>+</button>
-        <div class="username">
-            <p><span>№</span> Имя:*</p>
-            <span>1</span>
-            <input type="text" placeholder="Введите ваше имя">
-            <p>Прозвище</p>
-            <input type="text" placeholder="Ну как же без этого!">
-        </div>
-        <div class="username">
-            <p><span>№</span> Имя:*</p>
-            <span>2</span>
-            <input type="text" placeholder="Введите ваше имя ">
-            <p>Прозвище</p>
-            <input type="text" placeholder="Ну как же без этого! ">
-        </div>
-        <p>Ваши безбашенные достижения в путешествии</p>
-        <div>
-            <input type="checkbox" id="answer4" checked>
-            <label for="answer4">Сделал селфи с акулой</label>
-        </div>
-        <div>
-            <input type="checkbox" checked id="answer5">
-            <label for="answer5">Обгорел на пляже</label>
-        </div>
-        <div>
-            <input type="checkbox" id="answer6">
-            <label for="answer6">Видел Чака Норриса</label>
-        </div>
-        <div>
-            <input type="checkbox" id="answer7">
-            <label for="answer7">Накупил сувениров</label>
-        </div>
-        <div>
-            <input type="checkbox" id="answer8" checked>
-            <label for="answer8">Удержал башню</label>
-        </div>
-        <div>
-            <input type="checkbox" id="answer9">
-            <label for="answer9">Разгромил отель</label>
-        </div>
-        <p>ВАШИ ФОТОГРАФИИ из поездки *</p>
-        <button id="submit-form">Загрузить фото</button>
-        <div class="form-photos">
-            <img src="img/form-photo-1.png " height="68 " width="67 " alt="form-photo" class="form-photo">
-            <img src="img/form-photo-2.png " height="68 " width="68 " alt="form-photo" class="form-photo">
-            <img src="img/form-photo-3.png " height="68 " width="67 " alt="form-photo" class="form-photo">
-            <img src="img/form-photo-4.png " height="67 " width="67 " alt="form-photo" class="form-photo">
-            <img src="img/form-photo-5.png " height="67 " width="68 " alt="form-photo" class="form-photo">
-            <img src="img/form-photo-6.png " height="67 " width="67 " alt="form-photo" class="form-photo">
-            <img src="img/form-photo-7.png " height="67 " width="68 " alt="form-photo" class="form-photo">
-            <img src="img/form-photo-8.png " height="67 " width="68 " alt="form-photo" class="form-photo">
-        </div>
-        <input type="submit " value="Отправить форму ">
-    </form>
-    <p><span>*</span> — обязательные поля</p>
-    <footer class="footer-second">
-        <a href=" " class="footer-logo"><img src="img/logo-glasses.png " alt="logo ">Pink</a>
-        <div class="social-buttons">
-            <span class="social-item"></span>
-            <span class="social-item"></span>
-            <span class="social-item"></span>
-        </div>
-        <div class="copyright">Разработано</div>
-    </footer>
+
+
+
+        <footer class="footer-second">
+            <a href=" " class="footer-second__logo"><img src="img/logo-glasses.png " alt="logo">Pink</a>
+            <div class="social-buttons">
+                <span class="social-buttons__item"></span>
+                <span class="social-buttons__item"></span>
+                <span class="social-buttons__item"></span>
+            </div>
+            <div class="footer-second__copyright">Разработано</div>
+        </footer>
+
+    </div>
+
+
+
+
+    <div class="success-popup">
+        <h3 class="success-popup__caption">Ваша заявка отправлена</h3>
+        <p>Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+        <button class="success-popup__btn">ЗАКРЫТЬ ОКНО</button>
+    </div>
+    <div class="failure-popup">
+        <h3 class="failure-popup__caption">Что-то пошло не так!</h3>
+        <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button class="failure-popup__btn">OK</button>
+    </div>
+
+
+
     <!-- <script src="js/script.js "></script> -->
 </body>
 
