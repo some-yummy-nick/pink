@@ -6,7 +6,8 @@
     <title>Pink-blog</title>
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
 </head>
 
 <body>
@@ -15,12 +16,12 @@
 
 
     <header class="page-header">
-        <div class="layout-center-wrapper">
+        <div class="page-header__layout-wrapper page-header__layout-wrapper--second-page">
             <div class="page-header__top-menu">
-                <a class="logo" href="index.html">Pink</a>
-                <nav class="main-nav">
-                    <ul class="main-nav__list">
 
+                <a class="logo" href="index.html">Pink</a>
+                <nav class="main-nav main-nav__hide-block">
+                    <ul class="main-nav__list">
                         <li class="main-nav__item  main-nav__item--active">
                             <a href="#">Информация</a>
                         </li>
@@ -32,15 +33,16 @@
                         </li>
                         <li class="main-nav__item">
                             <a href="#">Конкурс</a>
-
                         </li>
                     </ul>
-                    <div class="main-nav__toggle main-nav__toggle--close">
-                        <a href=""></a>
-                    </div>
+
                 </nav>
+                <div class="main-nav__toggle" id="main-nav__toggle">
+                    <a href=""></a>
+                </div>
             </div>
-            <h1 class="page-header__title">Блог путешественников,  пользователей Пинк</h1>
+            <h1 class="page-header__title">Блог путешественников,
+пользователей Пинк</h1>
         </div>
     </header>
 
@@ -98,7 +100,7 @@
 
 
         <div class="blog-paginator">
-            <a href="" class="blog-paginator__item">1</a>
+            <a href="" class="blog-paginator__item  blog-paginator__item--active">1</a>
             <a href="" class="blog-paginator__item">2</a>
             <a href="" class="blog-paginator__item">3</a>
             <a href="" class="blog-paginator__item">4</a>
@@ -108,22 +110,28 @@
 
 
         <footer class="footer-second">
-
             <a class="footer-second__logo" href=" ">
-                <img src="img/logo-glasses.png" alt="logo"> Pink
+                <img src="img/logo-glasses.png" alt="logo">Pink
             </a>
             <div class="social-buttons">
-                <a class="social-buttons__item" href=""></a>
-                <a class="social-buttons__item" href=""></a>
-                <a class="social-buttons__item" href=""></a>
+                <a class="social-buttons__item" href="">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="social-buttons__item" href="">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="social-buttons__item" href="">
+                    <i class="fa fa-play"></i>
+                </a>
             </div>
             <div class="footer-second__copyright">Разработано
-                <a href="https://htmlacademy.ru/"></a>
+                <a href="https://htmlacademy.ru/"><img src="img/copyright.png" height="34" width="27" alt="copyright">
+                </a>
             </div>
-
         </footer>
     </div>
     <!-- <script src="js/script.js "></script> -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>

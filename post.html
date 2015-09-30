@@ -6,7 +6,8 @@
     <title>Pink-post</title>
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,300,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
 </head>
 
 <body>
@@ -15,12 +16,12 @@
 
 
     <header class="page-header">
-        <div class="layout-center-wrapper">
+        <div class="page-header__layout-wrapper page-header__layout-wrapper--second-page">
             <div class="page-header__top-menu">
-                <a class="logo" href="index.html">Pink</a>
-                <nav class="main-nav">
-                    <ul class="main-nav__list">
 
+                <a class="logo" href="index.html">Pink</a>
+                <nav class="main-nav main-nav__hide-block">
+                    <ul class="main-nav__list">
                         <li class="main-nav__item  main-nav__item--active">
                             <a href="#">Информация</a>
                         </li>
@@ -32,15 +33,16 @@
                         </li>
                         <li class="main-nav__item">
                             <a href="#">Конкурс</a>
-
                         </li>
                     </ul>
-                    <div class="main-nav__toggle main-nav__toggle--close">
-                        <a href=""></a>
-                    </div>
+
                 </nav>
+                <div class="main-nav__toggle" id="main-nav__toggle">
+                    <a href=""></a>
+                </div>
             </div>
-            <h1 class="page-header__title">Блог путешественников,  пользователей Пинк</h1>
+            <h1 class="page-header__title">Блог путешественников,
+пользователей Пинк</h1>
         </div>
     </header>
 
@@ -51,7 +53,7 @@
 
         <section class="blog">
 
-            <article class="post-header">
+            <article class="post-header  post-header--center">
                 <h2>Антон и Надя в Тайланде</h2>
 
                 <div class="post-header__date">Опубликовано: 6 месяцев назад</div>
@@ -70,9 +72,10 @@
                 <li> Photo Hotel (Пхукет)</li>
             </ul>
             <p>В выборе отелей мы учитывали как расположение, так и отзывы на Tripadvisor. Например, вот, что пишут люди про Point Yamu:</p>
-            <blockquote>Замечательное место,в которое хочется вернуться обязательно! Персонал отзывчивый и внимательный,еда-потрясающая. Отель расположен в тихом и уединенном месте-в чем вся и прелесть. СПА отличный. Потрясающие виды.</blockquote>
-            <cite>Олег, г. Москва</cite>
-
+            <div class="blog__blockquote">
+                <blockquote>Замечательное место,в которое хочется вернуться обязательно! Персонал отзывчивый и внимательный,еда-потрясающая. Отель расположен в тихом и уединенном месте-в чем вся и прелесть. СПА отличный. Потрясающие виды.</blockquote>
+                <cite>Олег, г. Москва</cite>
+            </div>
             <h3 class="blog__caption">Местная еда</h3>
             <p>Существует мнение, что вся еда в Тайланде экстремально острая. Это мнение сложилось не напрасно! Но не стоит делать из этого проблему — просто попросите сделать ваше блюдо «not spicy». Желающие могут попробовать жареных тараканчиков. Мы не рискнули.</p>
 
@@ -85,33 +88,35 @@
         <div class="post-paginator">
             <a class="post-paginator__item" href="">Пред.</a>
             <a class="post-paginator__item" href="">След.</a>
-            <a class="post-paginator__item" href="">Назад к списку</a>
+            <a class="post-paginator__item  post-paginator__item--longer" href="">Назад к списку</a>
         </div>
 
 
 
 
         <footer class="footer-second">
-
             <a class="footer-second__logo" href=" ">
-                <img src="img/logo-glasses.png " alt="logo">Pink
+                <img src="img/logo-glasses.png" alt="logo">Pink
             </a>
             <div class="social-buttons">
-                <a class="social-buttons__item" href=""></a>
-                <a class="social-buttons__item" href=""></a>
-                <a class="social-buttons__item" href=""></a>
+                <a class="social-buttons__item" href="">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="social-buttons__item" href="">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="social-buttons__item" href="">
+                    <i class="fa fa-play"></i>
+                </a>
             </div>
             <div class="footer-second__copyright">Разработано
-                <a href="https://htmlacademy.ru/"></a>
+                <a href="https://htmlacademy.ru/"><img src="img/copyright.png" height="34" width="27" alt="copyright">
+                </a>
             </div>
-
         </footer>
-
-
-
-
     </div>
     <!-- <script src="js/script.js "></script> -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>
