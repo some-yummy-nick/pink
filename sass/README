@@ -7,5 +7,19 @@ http://sass-lang.com
 Структура файлов:
 
 sass/
-| - style.scss
-| - [другие *.scss файлы]
+| - blocks
+    | - logo.scss
+    | - nav.scss
+| - layout
+    | - base.scss
+    | - header.scss
+    | - footer.scss
+| - pages
+    | - index.scss
+    | - form.scss
+    | - blog.scss
+    | - post.scss
+| - normalize.scss
+| - variables.scss (Все переменные проекта)
+| - mixins.scss (Mixin'ы и дополнительные вспомогательные классы)
+| - style.scss (Импорт всех файлов проекта)

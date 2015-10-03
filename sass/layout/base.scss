@@ -1,0 +1,12 @@
+html,
+body {
+    font-family: $font;
+    font-weight: 400;
+    min-height: 100%;
+    min-width: 320px;
+    // Убрать впоследствии
+    text-align: center;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+}

@@ -1,137 +1,3 @@
-/* start index*/
-body {
-    font-family: $font;
-    text-align: center;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-.page-header__layout-wrapper {
-    min-height: 553px;
-    background: url(../img/iphone-hand.png) no-repeat 50% 38%, url(../img/header-bg.png) no-repeat 50% 0;
-    background-color: #1d2631;
-    background-size: 320px, 600px;
-}
-
-.page-header__top-menu {
-    width: 100%;
-    background: #1d2631;
-    background-color: rgba(29, 38, 49, 0.3);
-}
-
-.page-header__top-menu:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.logo {
-    display: block;
-    float: left;
-    padding: 15px;
-    font-size: 23px;
-    color: white;
-    text-transform: uppercase;
-}
-
-.logo:hover {
-    color: white;
-    text-decoration: none;
-}
-
-.main-nav {
-    display: none;
-    position: absolute;
-    top: 66px;
-    width: 100%;
-}
-
-.main-nav__list {
-    text-align: center;
-}
-
-.main-nav__item {
-    display: block;
-    background: #283645;
-    padding: 15px;
-    box-shadow: 0 1px 0 #000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
-}
-
-.main-nav__item a {
-    color: white;
-    font: 700 18px "Open Sans";
-    text-transform: uppercase;
-}
-
-.main-nav__toggle {
-    position: relative;
-    float: right;
-    height: 24px;
-    margin-right: 15px;
-    padding-top: 30px;
-    cursor: pointer;
-}
-
-.main-nav__toggle a {
-    display: block;
-    position: relative;
-    width: 50px;
-    height: 5px;
-    background: white;
-}
-
-.main-nav__toggle a:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 10px;
-    width: 50px;
-    height: 5px;
-    background: white;
-    transition: top 0.3s 0.6s, transform 0.3s;
-}
-
-.main-nav__toggle a:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -10px;
-    width: 50px;
-    height: 5px;
-    background: white;
-    transition: top 0.3s 0.6s, transform 0.3s;
-}
-
-.main-nav__toggle--close {
-    padding-top: 30px;
-}
-
-.main-nav__toggle--close a {
-    width: 25px;
-    height: 4px;
-    background: transparent;
-}
-
-.main-nav__toggle--close a:after {
-    width: 25px;
-    height: 4px;
-    transform: rotate3d(0, 0, 1, -45deg);
-    transition: top 0.3s, transform 0.3s 0.5s;
-    top: 0;
-}
-
-.main-nav__toggle--close a:before {
-    width: 25px;
-    height: 4px;
-    transform: rotate3d(0, 0, 1, 45deg);
-    transition: top 0.3s, transform 0.3s 0.5s;
-    top: 0;
-}
-
 .page-header__title {
     min-height: 373px;
     margin-left: 15px;
@@ -171,23 +37,24 @@ ul {
 }
 
 .page-header__app-list li {
-    display: inline-block;
+    // display: inline-block;
+    @include inline-block;
     margin-right: 25px;
     width: 42px;
     height: 47px;
-    background: url(../img/Android-logo-SVG.png) no-repeat;
+    background: url(../img/android-logo-svg.png) no-repeat;
 }
 
 .page-header__app-list li:first-child {
     width: 46px;
     height: 57px;
-    background: url(../img/Apple-logo-SVG.png);
+    background: url(../img/apple-logo-svg.png);
 }
 
 .page-header__app-list li:last-child {
     width: 44px;
     height: 42px;
-    background: url(../img/Microsoft-logo-SVG.png);
+    background: url(../img/microsoft-logo-svg.png);
 }
 
 .layout-center-wrapper {
@@ -389,4 +256,3 @@ blockquote {
     border-top: 70px solid #fff;
     border-right: 350px solid transparent;
 }
-/*end index.html */

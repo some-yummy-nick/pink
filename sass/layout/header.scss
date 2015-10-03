@@ -1,0 +1,16 @@
+.page-header {
+    &__layout-wrapper {
+        background: url(../img/iphone-hand.png) no-repeat 50% 38%, url(../img/header-bg.png) no-repeat 50% 0;
+        background-color: #1d2631;
+        background-size: 320px, 600px;
+        min-height: 553px;
+    }
+
+    &__top-menu {
+        @extend %clearfix;
+
+        background: #1d2631;
+        background-color: rgba(29, 38, 49, 0.3);
+        width: 100%;
+    }
+}

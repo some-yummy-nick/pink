@@ -1,4 +1,11 @@
+@import "normalize";
+@import "mixins";
 @import "variables";
+
+@import "layout/base";
+@import "layout/header";
+@import "layout/footer";
+
 @import "index";
 @import "form";
 @import "blog";

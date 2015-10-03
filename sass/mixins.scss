@@ -1,0 +1,19 @@
+%clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;        
+    }
+}
+
+
+%no-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin inline-block($valign: top) {
+    display: inline-block;
+    vertical-align: $valign;
+}
