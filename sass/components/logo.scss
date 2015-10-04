@@ -1,0 +1,27 @@
+    .logo {
+        display: block;
+        float: left;
+        padding: 15px;
+        font-size: 23px;
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        &:hover {
+            color: #fff;
+        }
+        &__image {
+            margin-right: 10px;
+            &--none {
+                display: none;
+                @media (min-width: $width-md) {
+                    display: block;
+                }
+            }
+        }
+        &--footer {
+            color: #000;
+            &:hover {
+                color: #000;
+            }
+        }
+    }

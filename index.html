@@ -5,10 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title>Pink</title>
-
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700,600|PT+Sans:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
@@ -17,10 +15,11 @@
 
 
     <header class="page-header">
-        <div class="page-header__layout-wrapper">
+        <div class="page-wrapper">
             <div class="page-header__top-menu">
-
-                <a class="logo" href="index.html">Pink</a>
+                <a class="logo" href="index.html">Pink
+                  <img class="logo__image  logo__image--none" src="img/logo-glasses.png" alt="logo">
+                </a>
                 <nav class="main-nav main-nav__hide-block">
                     <ul class="main-nav__list">
                         <li class="main-nav__item  main-nav__item--active">
@@ -42,10 +41,7 @@
                 </div>
             </div>
 
-
-
             <div class="page-header__content">
-
                 <h1 class="page-header__title">Взгляните на жизнь иначе!</h1>
                 <div class="page-header__download-block">
                     <a class="page-header__btn" href="">Скачать приложение</a>
@@ -58,54 +54,53 @@
                 </div>
             </div>
         </div>
-
     </header>
 
 
 
 
-    <div class="layout-center-wrapper">
+
+    <div class="page-wrapper">
         <section class="information">
             <h2 class="information__title">Устали от серости мегаполиса? </h2>
             <h2 class="information__title">Нам есть, что вам предложить!</h2>
-            <ul class="information__list">
-                <li class="information__item">
-                    <div class="information__img information__img--none">
-                        <img src="" alt="information__img">
-                    </div>
+            <div class="information__list">
+               <div class="information__list-part">
+                <div class="information__item">
                     <h3 class="section-title">Поднимает настроение</h3>
                     <p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
-                </li>
-                <li class="information__item">
-                    <div class="information__img  information__img--none ">
-                        <img src="" alt="information__img">
-                    </div>
+                </div>
+                <div class="information__item">
                     <h3 class="section-title">Меняет мир вокруг</h3>
                     <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-                </li>
-                <li class="information__item">
+                </div>
+                <div class="information__item">
                     <h3 class="section-title">Заводит новых друзей</h3>
                     <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-                    <div class="information__img">
-                        <img src="img/iphone-screen-3.png" height="320" width="157" alt="information__img">
-                    </div>
-                </li>
-            </ul>
+                </div>
+                </div>
+                <div class="information__item">
+                    <img src="img/iphone-screen-3.png" height="320" width="157" alt="information__img">
+                </div>
+            </div>
         </section>
+
 
 
 
         <div class="slider-review">
             <div class="slider-review__caption">
-                <cite>Николай Петров</cite>
-                <blockquote>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+                <cite class="slider-review__cite">Николай Петров</cite>
+                <span class="slider-review__hide">25 лет, водитель трамвая</span>
+                <blockquote class="slider-review__blockquate">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
             </div>
-            <div class="slider-pagination">
-                <span class="slider-pagination__item  slider-pagination__item--active"></span>
-                <span class="slider-pagination__item"></span>
-                <span class="slider-pagination__item"></span>
+            <div class="slider-paginator">
+                <span class="slider-paginator__item  slider-paginator__item--active"></span>
+                <span class="slider-paginator__item"></span>
+                <span class="slider-paginator__item"></span>
             </div>
         </div>
+
 
 
 
@@ -170,42 +165,70 @@
                 </div>
             </div>
         </div>
-        <div class="slider-pagination slider-pagination-two">
-            <a class="slider-pagination__item" href="#one"></a>
-            <a class="slider-pagination__item slider-pagination__item--active" href="#two"></a>
-            <a class="slider-pagination__item" href="#three"></a>
+        <div class="slider-paginator slider-paginator-two">
+            <a class="slider-paginator__item" href="#one"></a>
+            <a class="slider-paginator__item slider-paginator__item--active" href="#two"></a>
+            <a class="slider-paginator__item" href="#three"></a>
         </div>
-
-
-
-
     </div>
-    <footer class="page-footer">
-        <div class="layout-center-wrapper">
-            <h2 class="page-footer__title">Остались вопросы?<br>Свяжитесь с нами!</h2>
-            <div class="page-footer__text">
+
+
+
+
+    <section class="contacts">
+        <div class="page-wrapper">
+            <h2 class="contacts__title">Остались вопросы?<br>Свяжитесь с нами!</h2>
+            <div class="contacts__text">
                 <h3 class="section-title">Звоните:</h3>
                 <a href="tel:+7812555-66-66">+7 (812) 555-66-66</a>
             </div>
-            <div class="page-footer__text">
+            <div class="contacts__text">
                 <h3 class="section-title">Пишите:</h3>
                 <a href="mailto:mail@htmlacademy.ru?subject=Вопрос по HTML">mail@htmlacademy.ru</a>
             </div>
-            <div class="page-footer__text">
+            <div class="contacts__text">
                 <h3 class="section-title">Приезжайте в гости:</h3>
-                <p>ул. Большая<br>Конюшенная, 19/8</p>
+                <p>ул. Большая
+                    <br>Конюшенная, 19/8</p>
             </div>
         </div>
+    </section>
 
 
+
+
+    <footer class="page-footer">
         <div class="map">
-            <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=nNKAsDrE3o43LAxdHKvEBCbloRvE9CF_&height=400&lang=ru_RU&sourceType=constructor"></script>
+            <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=nNKAsDrE3o43LAxdHKvEBCbloRvE9CF_&width=100%&height=400&lang=ru_RU&sourceType=constructor"></script>
+        </div>
+        <div class="page-wrapper">
+            <div class="page-footer__none">
+                <a class="logo" href="index.html">
+                    <img class="logo__image  logo__image--none" src="img/logo-glasses.png" alt="logo">Pink
+                </a>
+                <div class="social-buttons">
+                    <a class="social-buttons__item" href="">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="social-buttons__item" href="">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a class="social-buttons__item" href="">
+                        <i class="fa fa-play"></i>
+                    </a>
+                </div>
+                <div class="page-footer__copyright">Разработано
+                    <a href="https://htmlacademy.ru/"><img src="img/copyright.svg" height="34" width="27" alt="copyright">
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 
 
-    <!-- <script src="js/script.js"></script> -->
 
+
+    <!-- <script src="js/script.js"></script> -->
     <script src="js/script.js"></script>
 
 </body>

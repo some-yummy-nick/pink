@@ -1,0 +1,22 @@
+.map {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    &:after,
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        border-top: 70px solid #fff;
+    }
+    &:after {
+        right: 50%;
+        border-left: 350px solid transparent;
+    }
+    &:before {
+        left: 50%;
+        border-right: 350px solid transparent;
+    }
+}

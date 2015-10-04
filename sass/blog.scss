@@ -1,57 +1,32 @@
-/*start blog.html */
-
 .blog {
     margin-left: 15px;
     padding-right: 15px;
     text-align: left;
 }
-
 .post-header {
-    border-bottom: 1px solid #E5E5E5;
+    border-bottom: 1px solid $color-gray;
     &:last-child {
         border: none;
     }
-}
-
-.post-header__link {
-    a {
-        font: 700 18px / 27px 'Open Sans';
-        color: #283645;
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
+    &__link {
+        a {
+            font-weight: 700;
+            font-size: 18px;
+            color: $color-purple;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
-}
-
-.post-header__date {
-    color: #d22856;
-    margin-top: -10px;
-    font: 400 12px / 27px 'Open Sans';
-    text-transform: uppercase;
-}
-
-.post-header__text {
-    color: #283645;
-    font: 400 14px / 27px 'Open Sans';
-}
-
-.blog-paginator {
-    margin-top: 40px;
-    .blog-paginator__item {
-        display: inline-block;
-        width: 59px;
-        height: 59px;
-        border: 2px solid #E5E5E5;
-        color: #283645;
-        text-decoration: none;
-        font: 700 18px / 60px 'Open Sans';
-        &:hover {
-            border-color: #d22856;
-        }
+    &__date {
+        color: $color-pink;
+        margin-top: -10px;
+        font-size: 12px;
+        text-transform: uppercase;
     }
-    .blog-paginator__item--active {
-        border: 2px solid #d22856;
+    &__text {
+        color: $color-purple;
     }
 }
-/*end blog.html */
+@import "components/paginators";

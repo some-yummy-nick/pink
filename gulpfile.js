@@ -1,7 +1,6 @@
 'use strict';
 
 var gulp = require('gulp'),
-    concatCss = require('gulp-concat-css'),
     rename = require('gulp-rename'),
     autoprefixer = require('gulp-autoprefixer'),
     sass = require('gulp-sass'),
@@ -10,7 +9,7 @@ var gulp = require('gulp'),
     minifyCss = require('gulp-minify-css');
 
 
-gulp.task('default', ['sass', 'watch', 'browser-sync', 'concat', 'html', 'js']);
+gulp.task('default', ['sass', 'watch', 'browser-sync', 'html', 'js','postcss']);
 
 gulp.task('sass', function () {
     gulp.src('sass/style.scss')
@@ -27,19 +26,6 @@ gulp.task('postcss', function(){
         .pipe(autoprefixer('last 3 versions'))
         .pipe(minifyCss())
         .pipe(rename('style.min.css'))
-        .pipe(gulp.dest('css/'))
-        .pipe(reload({
-            stream: true
-        }));
-});
-
-gulp.task('concat', function () {
-    gulp.src(['css/style.css'])
-        .pipe(concatCss('all.css'))
-        .pipe(autoprefixer('last 3 versions'))
-        .pipe(gulp.dest('css/'))
-        .pipe(minifyCss())
-        .pipe(rename('all.min.css'))
         .pipe(gulp.dest('css/'))
         .pipe(reload({
             stream: true
