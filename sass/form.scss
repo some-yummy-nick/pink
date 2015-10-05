@@ -84,7 +84,7 @@ input[type="checkbox"] ~ label::after {
     width: 22px;
     height: 16px;
     top: 1px;
-    left: 9px;
+    left: 8px;
     @include border($color: $color-pink);
     border-top-style: none;
     border-right-style: none;
@@ -235,4 +235,24 @@ input[type='submit'] {
         color: $color-pink;
     }
 }
-@import "components/popup";
+.success-popup,
+.failure-popup {
+    display: none;
+    max-width: 320px;
+    padding: 20px;
+    box-shadow: 0px 7px 15px 0.00px rgba(0, 1, 1, 0.15);
+}
+.success-popup__btn,
+.failure-popup__btn {
+    display: block;
+    width: 276px;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: $color-green;
+    @include border($color: $color-green);
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+}

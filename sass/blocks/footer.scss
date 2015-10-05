@@ -8,7 +8,6 @@
         img {
             margin-left: 10px;
             vertical-align: middle;
-            color: $color-pink;
         }
     }
     &__none {
@@ -24,13 +23,36 @@
         margin-right: 10px;
         border-radius: 50%;
         border: $border;
-        color: $color-purple;
         font-size: 20px;
         line-height: 40px;
         &:hover {
             background: $color-purple;
             color: #fff;
         }
+        i {
+            color: $color-pink;
+        }
     }
 }
-@import "components/map";
+.map {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    &:after,
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        border-top: 70px solid #fff;
+    }
+    &:after {
+        right: 50%;
+        border-left: 350px solid transparent;
+    }
+    &:before {
+        left: 50%;
+        border-right: 350px solid transparent;
+    }
+}

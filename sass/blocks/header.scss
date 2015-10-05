@@ -72,5 +72,107 @@
                 }
             }
         }
-        @import "../components/logo";
-        @import "../components/nav";
+        .main-nav {
+            display: none;
+            position: absolute;
+            top: 66px;
+            width: 100%;
+            &__list {
+                @extend %no-list;
+                text-align: center;
+            }
+            &__item {
+                display: block;
+                background: $color-purple;
+                padding: 15px;
+                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 0 #000;
+                a {
+                    color: #fff;
+                    font-size: 12px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            &__toggle {
+                position: relative;
+                float: right;
+                height: 24px;
+                margin-right: 15px;
+                padding-top: 30px;
+                cursor: pointer;
+                a {
+                    background: #fff;
+                    display: block;
+                    position: relative;
+                    width: 50px;
+                    height: 5px;
+                    &:after,
+                    &:before {
+                        background: #fff;
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        height: 5px;
+                        width: 50px;
+                        transition: top 0.3s 0.6s, transform 0.3s;
+                    }
+                    &:after {
+                        top: 10px;
+                    }
+                    &:before {
+                        top: -10px;
+                    }
+                }
+                &--close {
+                    padding-top: 30px;
+                    a {
+                        background: transparent;
+                        height: 4px;
+                        width: 25px;
+                        &:after,
+                        &:before {
+                            width: 25px;
+                            height: 4px;
+                            transform: rotate3d(0, 0, 1, -45deg);
+                            transition: top 0.3s, transform 0.3s 0.5s;
+                            top: 0;
+                        }
+                        &:before {
+                            transform: rotate3d(0, 0, 1, 45deg);
+                            ;
+                        }
+                    }
+                }
+            }
+        }
+        .logo {
+            display: block;
+            float: left;
+            padding: 15px;
+            font-size: 23px;
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            &:hover {
+                color: #fff;
+            }
+            &__image {
+                margin-right: 10px;
+                &--none {
+                    display: none;
+                    @media (min-width: $width-md) {
+                        display: block;
+                    }
+                }
+            }
+            &--footer {
+                color: #000;
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
