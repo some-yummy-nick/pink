@@ -1,3 +1,28 @@
+.form {
+
+    &__group {
+
+    }
+
+    &__radio-checkbox {
+
+        display: none;
+
+        & ~ label {
+
+            &:before {
+
+            }
+
+            &:after {
+
+            }
+        }
+
+    }
+}
+
+
 .form__group {
     border: none;
     max-width: 320px;
@@ -22,6 +47,8 @@
         }
     }
 }
+// Оформить через класс form__field
+
 input {
     padding: 15px;
     max-width: 276px;
@@ -36,13 +63,15 @@ label[for*="answer"] {
     position: relative;
     cursor: pointer;
     margin-top: 30px;
+
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;    
+    }
 }
-label[for*="answer"]::before,
-label[for*="answer"]::after {
-    content: '';
-    display: block;
-    position: absolute;
-}
+
 input[type="checkbox"],
 input[type="radio"] {
     display: none;
@@ -84,12 +113,14 @@ input[type="checkbox"] ~ label::after {
     width: 22px;
     height: 16px;
     top: 1px;
-    left: 9px;
+    left: 8px;
     @include border($color: $color-pink);
     border-top-style: none;
     border-right-style: none;
     transform: rotate(-45deg);
 }
+
+
 
 /* end checkbox и radio*/
 
@@ -173,6 +204,10 @@ input[type="checkbox"] ~ label::after {
     overflow: hidden;
     position: absolute;
     z-index: -1;
+
+    & + label {
+
+    }
 }
 .inputfile + label {
     display: block;
@@ -218,6 +253,9 @@ input[type="checkbox"] ~ label::after {
         line-height: 5px;
     }
 }
+
+// Задать класс
+
 input[type='submit'] {
     width: 276px;
     background-color: $color-green;
@@ -235,4 +273,37 @@ input[type='submit'] {
         color: $color-pink;
     }
 }
-@import "components/popup";
+
+.popup {
+
+    &__btn {
+
+    }
+
+    &--success-popup {
+        
+    }
+
+}
+
+.success-popup,
+.failure-popup {
+    display: none;
+    max-width: 320px;
+    padding: 20px;
+    box-shadow: 0px 7px 15px 0.00px rgba(0, 1, 1, 0.15);
+}
+.success-popup__btn,
+.failure-popup__btn {
+    display: block;
+    width: 276px;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: $color-green;
+    @include border($color: $color-green);
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+}
