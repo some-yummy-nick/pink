@@ -1,7 +1,6 @@
 'use strict';
 
 var gulp = require('gulp'),
-    concatCss = require('gulp-concat-css'),
     rename = require('gulp-rename'),
     autoprefixer = require('gulp-autoprefixer'),
     sass = require('gulp-sass'),
@@ -10,7 +9,7 @@ var gulp = require('gulp'),
     minifyCss = require('gulp-minify-css');
 
 
-gulp.task('default', ['sass', 'watch', 'browser-sync', 'concat', 'html', 'js']);
+gulp.task('default', ['sass', 'watch', 'browser-sync', 'html', 'js','postcss']);
 
 gulp.task('sass', function () {
     gulp.src('sass/style.scss')
@@ -22,13 +21,11 @@ gulp.task('sass', function () {
         }));
 });
 
-gulp.task('concat', function () {
-    gulp.src(['css/normalize.css', 'css/style.css'])
-        .pipe(concatCss('all.css'))
-        .pipe(autoprefixer('last 15 versions'))
-        .pipe(gulp.dest('css/'))
+gulp.task('postcss', function(){
+    gulp.src('css/style.css')
+        .pipe(autoprefixer('last 3 versions'))
         .pipe(minifyCss())
-        .pipe(rename('all.min.css'))
+        .pipe(rename('style.min.css'))
         .pipe(gulp.dest('css/'))
         .pipe(reload({
             stream: true
@@ -49,8 +46,8 @@ gulp.task('js', function () {
         }));
 });
 gulp.task('watch', function () {
-    gulp.watch('css/**/*.css', ['concat']);
     gulp.watch('sass/**/*.scss', ['sass']);
+    gulp.watch('css/**/*.css', ['postcss']);
     gulp.watch('js/*.js', ['js']);
     gulp.watch('./*.html', ['html']);
 })

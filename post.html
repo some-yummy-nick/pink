@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title>Pink-post</title>
     <!-- <link rel="stylesheet" href="css/style.css"> -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,300,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700,600|PT+Sans:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
-
 <body>
 
 
 
 
-    <header class="page-header">
-        <div class="page-header__layout-wrapper page-header__layout-wrapper--second-page">
+    <header class="page-header  page-header--second-page">
+        <div class="page-wrapper">
             <div class="page-header__top-menu">
-
-                <a class="logo" href="index.html">Pink</a>
+               <a class="logo" href="index.html">Pink
+                  <img class="logo__image  logo__image--none" src="img/logo-glasses.png" alt="logo">
+                </a>
                 <nav class="main-nav main-nav__hide-block">
                     <ul class="main-nav__list">
                         <li class="main-nav__item  main-nav__item--active">
@@ -35,7 +35,6 @@
                             <a href="#">Конкурс</a>
                         </li>
                     </ul>
-
                 </nav>
                 <div class="main-nav__toggle" id="main-nav__toggle">
                     <a href=""></a>
@@ -49,21 +48,15 @@
 
 
 
-    <div class="layout-center-wrapper">
-
+    <div class="page-wrapper">
         <section class="blog">
-
             <article class="post-header  post-header--center">
                 <h2>Антон и Надя в Тайланде</h2>
-
                 <div class="post-header__date">Опубликовано: 6 месяцев назад</div>
-
                 <p class="post-header__text">Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и районов.</p>
             </article>
-
             <h3 class="blog__caption">Предыстория</h3>
             <p>В Азию нам хотелось попасть уже давно, но все время что-то останавливало. Также не давал покоя вопрос гигиены и чистоты вокруг. Были сомнения и на счет местной еды. Однако, увидев выгодные билеты на <a href="">skyscanner.ru</a> мы все-таки решились!</p>
-
             <h3 class="blog__caption">Выбор отеля</h3>
             <p>В Тайланде огромный разброс по стоимости отелей и так же сильно отличаются и они сами. Так как достопримечательности щедро разбросаны по всей стране, то чтобы посетить их все, нужно пожить в нескольких разных городах. В итоге мы остановились на следующих:</p>
             <ul>
@@ -72,14 +65,12 @@
                 <li> Photo Hotel (Пхукет)</li>
             </ul>
             <p>В выборе отелей мы учитывали как расположение, так и отзывы на Tripadvisor. Например, вот, что пишут люди про Point Yamu:</p>
-            <div class="blog__blockquote">
-                <blockquote>Замечательное место,в которое хочется вернуться обязательно! Персонал отзывчивый и внимательный,еда-потрясающая. Отель расположен в тихом и уединенном месте-в чем вся и прелесть. СПА отличный. Потрясающие виды.</blockquote>
-                <cite>Олег, г. Москва</cite>
+            <div class="post-blockquote">
+                <blockquote class="post-blockquote__block">Замечательное место,в которое хочется вернуться обязательно! Персонал отзывчивый и внимательный,еда-потрясающая. Отель расположен в тихом и уединенном месте-в чем вся и прелесть. СПА отличный. Потрясающие виды.</blockquote>
+                <cite class="post-blockquote__cite">Олег, г. Москва</cite>
             </div>
             <h3 class="blog__caption">Местная еда</h3>
             <p>Существует мнение, что вся еда в Тайланде экстремально острая. Это мнение сложилось не напрасно! Но не стоит делать из этого проблему — просто попросите сделать ваше блюдо «not spicy». Желающие могут попробовать жареных тараканчиков. Мы не рискнули.</p>
-
-
         </section>
 
 
@@ -94,10 +85,10 @@
 
 
 
-        <footer class="footer-second">
-            <a class="footer-second__logo" href=" ">
-                <img src="img/logo-glasses.png" alt="logo">Pink
-            </a>
+        <footer class="page-footer">
+            <a class="logo  logo--footer" href="index.html">
+                    <img class="logo__image" src="img/logo-glasses.png" alt="logo">Pink
+                </a>
             <div class="social-buttons">
                 <a class="social-buttons__item" href="">
                     <i class="fa fa-twitter"></i>
@@ -109,14 +100,18 @@
                     <i class="fa fa-play"></i>
                 </a>
             </div>
-            <div class="footer-second__copyright">Разработано
-                <a href="https://htmlacademy.ru/"><img src="img/copyright.png" height="34" width="27" alt="copyright">
+            <div class="page-footer__copyright">Разработано
+                <a href="https://htmlacademy.ru/">
+                <img src="img/copyright.svg" height="34" width="27" alt="copyright">
                 </a>
             </div>
         </footer>
     </div>
+    
+    
+    
+    
     <!-- <script src="js/script.js "></script> -->
     <script src="js/script.js"></script>
 </body>
-
 </html>
