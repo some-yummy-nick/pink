@@ -56,10 +56,11 @@
         }
     }
     &__item {
+        position: relative;
         color: $color-purple;
         text-align: left;
         border: 2px solid $color-gray;
-        padding: 10px;
+        padding: 15px;
         font-size: 14px;
         text-transform: uppercase;
         &:first-child {
@@ -73,19 +74,20 @@
                 color: $color-purple;
             }
         }
-        &--yes {
-            background: url(../img/yes.png);
+    }
+    &__item--yes,
+    &__item--no {
+        position: absolute;
+        right: 20px;
+        top: 25%;
+        @media (min-width: $width-md) {
+            right: 40%;
         }
-        &--no {
-            background: url(../img/no.png);
-        }
-        &--yes,
-        &--no {
-            background-repeat: no-repeat;
-            background-position: 95% 50%;
-            @media (min-width: $width-md) {
-                background-position: 50%;
-            }
-        }
+    }
+    &__item--yes {
+        fill: #44c84b;
+    }
+    &__item--no {
+        fill: #f36735;
     }
 }

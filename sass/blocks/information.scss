@@ -4,17 +4,27 @@
         font-weight: 300;
         font-size: 24px;
         color: $color-purple;
+        @media (min-width: $width-md) {
+            margin: auto;
+            text-align: center;
+            width: 590px;
+            font-size: 40px;
+            span {
+                display: block;
+            }
+        }
     }
     &__list {
         display: flex;
         flex-direction: column;
-        margin-top: 100px;
-        margin: auto;
+        align-items: center;
+        margin-top: 40px;
         @media (min-width: $width-md) {
             flex-direction: row;
             text-align: left;
             width: 500px;
             margin: auto;
+            margin-top: 48px;
         }
     }
     &__item {
