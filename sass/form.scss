@@ -1,3 +1,28 @@
+.form {
+
+    &__group {
+
+    }
+
+    &__radio-checkbox {
+
+        display: none;
+
+        & ~ label {
+
+            &:before {
+
+            }
+
+            &:after {
+
+            }
+        }
+
+    }
+}
+
+
 .form__group {
     border: none;
     max-width: 320px;
@@ -22,6 +47,8 @@
         }
     }
 }
+// Оформить через класс form__field
+
 input {
     padding: 15px;
     max-width: 276px;
@@ -36,13 +63,15 @@ label[for*="answer"] {
     position: relative;
     cursor: pointer;
     margin-top: 30px;
+
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;    
+    }
 }
-label[for*="answer"]::before,
-label[for*="answer"]::after {
-    content: '';
-    display: block;
-    position: absolute;
-}
+
 input[type="checkbox"],
 input[type="radio"] {
     display: none;
@@ -90,6 +119,8 @@ input[type="checkbox"] ~ label::after {
     border-right-style: none;
     transform: rotate(-45deg);
 }
+
+
 
 /* end checkbox и radio*/
 
@@ -173,6 +204,10 @@ input[type="checkbox"] ~ label::after {
     overflow: hidden;
     position: absolute;
     z-index: -1;
+
+    & + label {
+
+    }
 }
 .inputfile + label {
     display: block;
@@ -218,6 +253,9 @@ input[type="checkbox"] ~ label::after {
         line-height: 5px;
     }
 }
+
+// Задать класс
+
 input[type='submit'] {
     width: 276px;
     background-color: $color-green;
@@ -235,6 +273,19 @@ input[type='submit'] {
         color: $color-pink;
     }
 }
+
+.popup {
+
+    &__btn {
+
+    }
+
+    &--success-popup {
+        
+    }
+
+}
+
 .success-popup,
 .failure-popup {
     display: none;
