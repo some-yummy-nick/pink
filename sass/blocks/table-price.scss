@@ -1,7 +1,25 @@
-.table-price {
-    min-width: 621px;
-    overflow-x: scroll;
+.table-wrapper {
+    background: #f2f2f2 url(../img/triangle-white.svg) no-repeat;
+    padding-bottom: 50px;
+    padding-top: 115px;
     margin: auto;
+    overflow-x: scroll;
+    @media (min-width: $width-md) {
+        width: 605px;
+        overflow-x: hidden;
+    }
+    @media (min-width: $width-lg) {
+        width: 930px;
+    }
+}
+.table-price {
+    width: 100%;
+    background: #fff;
+    margin: auto;
+    transform: translateX(-60px);
+    @media (min-width: $width-md) {
+        transform: translatex(0) !important;
+    }
     &__header {
         min-width: 280px;
         border-right: 2px solid #fff;
@@ -18,16 +36,6 @@
             @media (min-width: $width-md) {
                 display: table-cell;
             }
-        }
-        &__caption {
-            font-weight: 700;
-            font-size: 16px;
-            margin-bottom: 0;
-        }
-        p {
-            margin-top: 0;
-            font-size: 18px;
-            font-weight: 300;
         }
         &--flag {
             position: relative;
@@ -53,6 +61,26 @@
                 z-index: 2;
                 transform: matrix(0.707, -0.707, 0.707, 0.707, 0, 0);
             }
+        }
+    }
+    &__caption {
+        font-weight: 700;
+        @media (min-width: $width-md) {
+            font-size: 16px;
+        }
+        @media (min-width: $width-lg) {
+            font-size: 18px;
+        }
+        margin-bottom: 0;
+    }
+    &__cost {
+        margin-top: 0;
+        font-weight: 300;
+        @media (min-width: $width-md) {
+            font-size: 18px;
+        }
+        @media (min-width: $width-lg) {
+            font-size: 24px;
         }
     }
     &__item {

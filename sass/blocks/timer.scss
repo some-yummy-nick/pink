@@ -1,14 +1,24 @@
 .timer {
     display: none;
+    text-align: left;
     &__column {
         min-width: 300px;
         &:last-child {
             max-width: 600px;
+            @media (min-width: $width-lg) {
+                margin-left: 120px;
+            }
         }
     }
     &__title {
         font-weight: 700;
         font-size: 30px;
+        span {
+            display: block;
+            @media (min-width: $width-lg) {
+                display: inline;
+            }
+        }
     }
     a {
         color: $color-pink;
@@ -16,9 +26,19 @@
             text-decoration: none;
         }
     }
+    &__svg {
+        width: 262px;
+        opacity: 0.5;
+        @media (min-width: $width-lg) {
+            width: 300px;
+        }
+    }
     @media (min-width: $width-md) {
         display: flex;
         justify-content: space-around;
         align-items: center;
+    }
+    @media (min-width: $width-lg) {
+        background: #f2f2f2;
     }
 }

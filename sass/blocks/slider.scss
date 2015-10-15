@@ -1,38 +1,100 @@
-.slider-review {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    &__cite {
-        font-weight: 700;
-        font-size: 18px;
-    }
-    &__hide {
-        display: none;
-        @media(min-width: $width-md) {
-            display: block;
+        .slider-review {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            position: relative;
+            &__inner {
+                position: relative;
+                width: 100%;
+                min-height: 150px;
+            }
+            &__item {
+                position: absolute;
+                width: 100%;
+                min-height: 150px;
+                opacity: 0;
+                padding-top: 30px;
+                transition: opacity ease-in-out .5s;
+                @media(min-width: $width-md) {
+                    padding-top: 0;
+                }
+            }
+            &__cite {
+                font-weight: 700;
+                font-size: 18px;
+                position: absolute;
+                top: 0;
+                left: 25%;
+                @media(min-width: $width-md) {
+                    position: static;
+                }
+            }
+            &__hide {
+                display: none;
+                @media(min-width: $width-md) {
+                    display: block;
+                }
+            }
+            &__blockquote {
+                margin: 0;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            &__quates {
+                display: none;
+                fill: #EFEFEF;
+                @media(min-width: $width-lg) {
+                    display: block;
+                }
+            }
         }
-    }
-    &__blockquote {
-        margin: 0;
-        margin-top: 20px;
-    }
-}
-.slider-paginator {
-    margin-top: 20px;
-    &__item {
-        @include inline-block(middle);
-        width: 6px;
-        height: 6px;
-        margin-right: 10px;
-        background-color: $color-purple;
-        border-radius: 50%;
-        opacity: 0.3;
-        cursor: pointer;
-        &--active {
-            width: 12px;
-            height: 12px;
-            background-color: #fff;
+        .slider-controls {
+            width: 100px;
+            margin: auto;
+            label {
+                cursor: pointer;
+                display: inline-block;
+                height: 12px;
+                position: relative;
+                width: 12px;
+                background: $color-purple;
+                border-radius: 50%;
+                opacity: 0.3;
+            }
+            &--table {
+                @media(min-width: $width-md) {
+                    display: none;
+                }
+            }
+        }
+        #slide1,
+        #slide2,
+        #slide3,
+        #table1,
+        #table2,
+        #table3 {
+            display: none;
+        }
+        #slide1:checked ~ .slider-controls label:nth-of-type(1),
+        #slide2:checked ~ .slider-controls label:nth-of-type(2),
+        #slide3:checked ~ .slider-controls label:nth-of-type(3),
+        #table1:checked ~ .slider-controls label:nth-of-type(1),
+        #table2:checked ~ .slider-controls label:nth-of-type(2),
+        #table3:checked ~ .slider-controls label:nth-of-type(3) {
+            background: #fff;
             border: 3px solid $color-purple;
             opacity: 1;
         }
-    }
-}
+        #slide1:checked ~ .slider-review__inner > .slide1,
+        #slide2:checked ~ .slider-review__inner > .slide2,
+        #slide3:checked ~ .slider-review__inner > .slide3 {
+            opacity: 1;
+        }
+        #table1:checked ~ .table-price {
+            transform: translateX(10px);
+        }
+        #table2:checked ~ .table-price {
+            transform: translateX(-270px);
+        }
+        #table3:checked ~ .table-price {
+            transform: translateX(-545px);
+        }
