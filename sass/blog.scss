@@ -1,12 +1,21 @@
-.blog {
-    margin-left: 15px;
-    padding-right: 15px;
-    text-align: left;
-}
 .post-header {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-bottom: 1px solid $color-gray;
-    &:last-child {
-        border: none;
+    @media (min-width: $width-md) {
+        border-bottom: 1px dotted $color-gray;
+    }
+    h2 {
+        color: $color-purple;
+        font-weight: 700;
+        font-size: 30px;
+        @media (min-width: $width-md) {
+            font-size: 50px;
+        }
+    }
+    &--center {
+        text-align: center;
     }
     &__link {
         a {
@@ -14,9 +23,28 @@
             font-size: 18px;
             color: $color-purple;
             text-decoration: none;
+            @media (min-width: $width-md) {
+                font-size: 27px;
+            }
             &:hover {
                 text-decoration: underline;
             }
+        }
+    }
+    &__icon {
+        display: none;
+        position: absolute;
+        left: -40px;
+        top: 35px;
+        @media (min-width: $width-md) {
+            display: inline;
+        }
+    }
+    &__text {
+        color: $color-purple;
+        @media (min-width: $width-md) {
+            font-size: 24px;
+            margin-bottom: 45px;
         }
     }
     &__date {
@@ -24,8 +52,119 @@
         margin-top: -10px;
         font-size: 12px;
         text-transform: uppercase;
+        @media (min-width: $width-md) {
+            font-size: 14px;
+            &--tablet {
+                position: absolute;
+                display: block;
+                width: 300px;
+                bottom: -10px;
+                left: 30%;
+                background: #fff;
+            }
+        }
     }
-    &__text {
+    &:last-child {
+        border: none;
+    }
+}
+.blog {
+    margin-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+    ul {
+        @extend %no-list;
+        li {
+            position: relative;
+            margin-bottom: 40px;
+            &:before {
+                content: "";
+                @include inline-block(middle);
+                width: 7px;
+                height: 7px;
+                margin-right: 10px;
+                border-radius: 50%;
+                background-color: $color-pink;
+                top: 50%;
+            }
+        }
+    }
+    &__caption {
+        margin-top: 30px;
         color: $color-purple;
+        font-weight: 700;
+        font-size: 18px;
+        text-transform: uppercase;
+        @media (min-width: $width-md) {
+            font-size: 24px;
+        }
+    }
+}
+.post-blockquote {
+    margin-top: 40px;
+    border-left: $color-pink 2px solid;
+    &__block {
+        margin-left: 20px;
+    }
+    &__cite {
+        padding-left: 20px;
+        color: #8a8a8a;
+        font-style: italic;
+    }
+}
+.post-paginator {
+    padding: 0;
+    &__item {
+        @include inline-block;
+        padding: 15px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        @include border;
+        color: $color-purple;
+        font-weight: 700;
+        font-size: 18px;
+        text-transform: uppercase;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+            &--longer {
+                width: 226px;
+            }
+        }
+    }
+}
+.blog-paginator {
+    margin-top: 40px;
+    @media (min-width: $width-md) {
+        width: 330px;
+    }
+    &__item {
+        @include inline-block;
+        width: 59px;
+        height: 59px;
+        @include border;
+        color: $color-purple;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 55px;
+        &:hover {
+            border-color: $color-pink;
+        }
+        &--active {
+            border: 2px solid $color-pink;
+        }
+    }
+    &__span {
+        display: none;
+        @media (min-width: $width-md) {
+            display: inline;
+            margin-right: 10px;
+            text-transform: uppercase;
+            font-size: 18px;
+            line-height: 60px;
+            font-weight: 700;
+            color: $color-purple;
+        }
     }
 }

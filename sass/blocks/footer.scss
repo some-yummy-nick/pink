@@ -1,17 +1,34 @@
 .page-footer {
+    position: relative;
+    padding-bottom: 30px;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    padding-top: 30px;
+    align-items: center;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    @media (min-width: $width-md) {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+    &--none {
+        display: none;
+        @media (min-width: $width-md) {
+            display: flex;
+        }
+    }
     &__copyright {
         margin-top: 30px;
+        width: 180px;
+        text-align: center;
+        @media (min-width: $width-md) {
+            margin-top: 0;
+        }
         img {
             margin-left: 10px;
             vertical-align: middle;
         }
-    }
-    &__none {
-        display: none;
     }
 }
 .social-buttons {
@@ -25,6 +42,7 @@
         border: $border;
         font-size: 20px;
         line-height: 40px;
+        text-align: center;
         &:hover {
             background: $color-purple;
             color: #fff;
@@ -38,21 +56,22 @@
     position: relative;
     width: 100%;
     z-index: 1;
-    &:after,
-    &:before {
+    &:after {
         content: "";
         display: block;
         position: absolute;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+        background: url(../img/map-marker.svg) no-repeat;
+        cursor: pointer;
+    }
+    &__triagle {
+        position: absolute;
         top: 0;
         z-index: 2;
-        border-top: 70px solid #fff;
-    }
-    &:after {
-        right: 50%;
-        border-left: 350px solid transparent;
-    }
-    &:before {
-        left: 50%;
-        border-right: 350px solid transparent;
     }
 }

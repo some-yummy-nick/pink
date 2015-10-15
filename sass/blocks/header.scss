@@ -1,178 +1,181 @@
-        .page-header {
-            background: url(../img/iphone-hand.png) no-repeat 50% 38%, url(../img/header-bg.png) no-repeat 50% 0;
-            background-color: #1d2631;
-            background-size: 320px, 600px;
-            min-height: 553px;
-            &--second-page {
-                background: url(../img/header-bg.png) no-repeat 50% 0;
-                background-color: #1d2631;
-                height: 235px;
-                min-height: 235px;
-                background-size: 600px;
-            }
-            &__top-menu {
-                @extend %clearfix;
-                background: #1d2631;
-                background-color: rgba(29, 38, 49, 0.3);
-                width: 100%;
-            }
-            &__title {
-                min-height: 373px;
-                margin-left: 15px;
-                margin-right: 15px;
-                color: #fff;
-                font-weight: 300;
-                font-size: 24px;
-            }
-            &__download-block {
-                position: relative;
-                background: $color-purple;
-                height: 271px;
-                padding-top: 20px;
-                p {
-                    font-weight: 300;
-                    font-size: 14px;
-                    color: #fff;
-                    width: 229px;
-                    margin: auto;
-                    margin-top: 20px;
-                }
-            }
-            &__btn {
-                display: block;
-                width: 281px;
-                height: 55px;
-                margin: auto;
-                border: 3px solid #fff;
-                color: #fff;
-                border-radius: 30px;
-                font-weight: 700;
-                font-size: 18px;
-                line-height: 48px;
-                @extend %no-decor;
-            }
-            &__app-list {
-                margin-top: 25px;
-                li {
-                    @include inline-block;
-                    margin-right: 25px;
-                    width: 42px;
-                    height: 47px;
-                    background: url(../img/android-logo-svg.png) no-repeat;
-                    &:first-child {
-                        width: 46px;
-                        height: 57px;
-                        background: url(../img/apple-logo-svg.png);
-                    }
-                    &:last-child {
-                        width: 44px;
-                        height: 42px;
-                        background: url(../img/microsoft-logo-svg.png);
-                    }
-                }
+.page-header {
+    background: url(../img/iphone-hand-mobile.png) no-repeat 0% 36%, url(../img/background-mobile@1x.jpg) no-repeat 50% 0;
+    background-color: $color-tone;
+    background-size: 300px, 700px;
+    min-height: 553px;
+    @media (min-width: $width-md) {
+        background: url(../img/iphone-hand-tablet@1x.png) no-repeat 50% 100%, url(../img/background-tablet@1x.jpg) no-repeat 50% 0;
+        background-color: $color-tone;
+        background-size: 600px, 1200px;
+    }
+    &--second-page {
+        background: url(../img/background-mobile@1x.jpg) no-repeat 50% 0;
+        background-color: $color-tone;
+        height: 235px;
+        min-height: 235px;
+        background-size: 700px;
+        @media (min-width: $width-md) {
+            background: url(../img/background-tablet@1x.jpg) no-repeat 50% 0;
+            min-height: 440px;
+            background-color: $color-tone;
+            background-size: 1200px;
+        }
+    }
+    &__top-menu {
+        position: relative;
+        @extend %clearfix;
+        padding-top: 20px;
+        background: $color-tone;
+        background-color: rgba(29, 38, 49, 0.3);
+        width: 100%;
+        min-height: 66px;
+        @media (min-width: $width-md) {
+            min-height: 105px;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+        margin: auto;
+        @media (min-width: $width-md) {
+            margin-top: 20px;
+            margin-left: 5%;
+        }
+    }
+    &__title {
+        margin-bottom: 340px;
+        margin-left: 15px;
+        margin-right: 15px;
+        color: #fff;
+        font-weight: 300;
+        font-size: 24px;
+        @media (min-width: $width-md) {
+            margin: auto;
+            font-size: 40px;
+            margin-bottom: 0;
+            &--second {
+                font-size: 50px;
+                margin-top: 70px;
             }
         }
-        .main-nav {
-            display: none;
-            position: absolute;
-            top: 66px;
-            width: 100%;
-            &__list {
-                @extend %no-list;
-                text-align: center;
+    }
+}
+.download-block {
+    background: $color-tone;
+    height: 271px;
+    padding-top: 20px;
+    @media (min-width: $width-md) {
+        background: transparent;
+    }
+    p {
+        font-weight: 300;
+        font-size: 14px;
+        color: #fff;
+        width: 229px;
+        margin: auto;
+        margin-top: 20px;
+    }
+    &__btn {
+        display: block;
+        width: 281px;
+        height: 55px;
+        margin: auto;
+        border: 3px solid #fff;
+        color: #fff;
+        border-radius: 30px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 48px;
+        @extend %no-decor;
+    }
+    &__list {
+        margin-top: 25px;
+        &-item {
+            @include inline-block;
+            margin-right: 25px;
+            width: 50px;
+            height: 60px;
+            &--apple {
+                background: url(../img/apple-logo.svg) no-repeat;
             }
-            &__item {
-                display: block;
-                background: $color-purple;
-                padding: 15px;
-                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 0 #000;
-                a {
-                    color: #fff;
-                    font-size: 12px;
-                    font-weight: 700;
-                    text-transform: uppercase;
-                    text-decoration: none;
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
+            &--android {
+                background: url(../img/android-logo.svg) no-repeat 0px 10px;
             }
-            &__toggle {
-                position: relative;
-                float: right;
-                height: 24px;
-                margin-right: 15px;
-                padding-top: 30px;
-                cursor: pointer;
-                a {
-                    background: #fff;
-                    display: block;
-                    position: relative;
-                    width: 50px;
-                    height: 5px;
-                    &:after,
-                    &:before {
-                        background: #fff;
-                        content: "";
-                        display: block;
-                        position: absolute;
-                        height: 5px;
-                        width: 50px;
-                        transition: top 0.3s 0.6s, transform 0.3s;
-                    }
-                    &:after {
-                        top: 10px;
-                    }
-                    &:before {
-                        top: -10px;
-                    }
-                }
-                &--close {
-                    padding-top: 30px;
-                    a {
-                        background: transparent;
-                        height: 4px;
-                        width: 25px;
-                        &:after,
-                        &:before {
-                            width: 25px;
-                            height: 4px;
-                            transform: rotate3d(0, 0, 1, -45deg);
-                            transition: top 0.3s, transform 0.3s 0.5s;
-                            top: 0;
-                        }
-                        &:before {
-                            transform: rotate3d(0, 0, 1, 45deg);
-                            ;
-                        }
-                    }
-                }
+            &--microsoft {
+                background: url(../img/microsoft-logo.svg) no-repeat 0px 15px;
             }
         }
-        .logo {
-            display: block;
-            float: left;
-            padding: 15px;
-            font-size: 23px;
+    }
+}
+.main-nav {
+    display: block;
+    float: left;
+    width: 100%;
+    &__list {
+        @extend %no-list;
+        text-align: center;
+    }
+    &__item {
+        display: block;
+        background: $color-purple;
+        padding: 15px;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 0 #000;
+        a {
             color: #fff;
+            font-size: 12px;
+            font-weight: 700;
             text-transform: uppercase;
             text-decoration: none;
             &:hover {
-                color: #fff;
-            }
-            &__image {
-                margin-right: 10px;
-                &--none {
-                    display: none;
-                    @media (min-width: $width-md) {
-                        display: block;
-                    }
-                }
-            }
-            &--footer {
-                color: #000;
-                &:hover {
-                    color: #000;
-                }
+                text-decoration: underline;
             }
         }
+    }
+    &__toggle,
+    &__toggle--close {
+        position: absolute;
+        display: block;
+        right: 20px;
+        width: 50px;
+        height: 24px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        fill: #fff;
+        background: transparent;
+        @media (min-width: $width-md) {
+            padding-top: 10px;
+        }
+    }
+    &__toggle {
+        margin-right: 20px;
+    }
+    &--hide-block {
+        display: none;
+    }
+}
+.logo {
+    display: block;
+    float: left;
+    &--header {
+        margin-left: 20px;
+    }
+    &__mobile {
+        @media (min-width: $width-md) {
+            display: none;
+        }
+    }
+    &__tablet {
+        display: none;
+        width: 180px;
+        margin: auto;
+        @media (min-width: $width-md) {
+            display: block;
+        }
+        &--footer {
+            display: block;
+            margin-left: 0;
+        }
+    }
+}

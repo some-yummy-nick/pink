@@ -19,8 +19,15 @@ body {
     min-width: 320px;
     margin: auto;
     text-align: center;
+    padding-left: 10px;
+    padding-right: 15px;
+    @media (min-width: $width-md) {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
 }
 .section-title {
     font-weight: 700;
     font-size: 18px;
+    margin-bottom: 0;
 }
