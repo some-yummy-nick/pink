@@ -6,8 +6,10 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload,
-    minifyCss = require('gulp-minify-css');
-
+    minifyCss = require('gulp-minify-css'),
+    svgstore = require('gulp-svgstore'),
+    svgmin = require('gulp-svgmin'),
+    path = require('path');
 
 gulp.task('default', ['sass', 'watch', 'browser-sync', 'html', 'js', 'postcss']);
 
@@ -50,7 +52,26 @@ gulp.task('watch', function () {
     gulp.watch('css/**/*.css', ['postcss']);
     gulp.watch('js/*.js', ['js']);
     gulp.watch('./*.html', ['html']);
-})
+});
+
+
+gulp.task('svg', function(){
+    return gulp
+        .src('img/svg/*.svg')
+        .pipe(svgmin(function (file) {
+            var prefix = path.basename(file.relative, path.extname(file.relative));
+            return {
+                plugins: [{
+                    cleanupIDs: {
+                        prefix: prefix + '-',
+                        minify: true
+                    }
+                }]
+            }
+        }))
+        .pipe(svgstore())
+        .pipe(gulp.dest('img/'));
+});
 
 gulp.task('browser-sync', function () {
     browserSync({
