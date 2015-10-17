@@ -4,6 +4,7 @@
     padding-bottom: 10px;
     border-bottom: 1px solid $color-gray;
     @media (min-width: $width-md) {
+        margin-left: 30px;
         border-bottom: 1px dotted $color-gray;
     }
     h2 {
@@ -54,14 +55,19 @@
         text-transform: uppercase;
         @media (min-width: $width-md) {
             font-size: 14px;
-            &--tablet {
-                position: absolute;
-                display: block;
-                width: 300px;
-                bottom: -10px;
-                left: 30%;
-                background: #fff;
-            }
+        }
+    }
+    &--tablet {
+        @media (min-width: $width-md) {
+            position: absolute;
+            display: block;
+            width: 300px;
+            bottom: -10px;
+            left: 30%;
+            background: #fff;
+        }
+        @media (min-width: $width-lg) {
+            left: 33%;
         }
     }
     &:last-child {

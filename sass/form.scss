@@ -124,15 +124,10 @@
                 background: #fff;
             }
         }
-        &--radio {
-            @media (min-width: $width-lg) {}
-        }
         &-title {
             display: block;
             margin: auto;
             text-align: center;
-            //            padding-left: 20px;
-            //            padding-right: 10px;
             text-transform: uppercase;
             color: $color-pink;
             @media (min-width: $width-md) {
@@ -152,6 +147,15 @@
             width: 100%;
             @include border;
             text-align: left;
+            &:hover {
+                border-color: $color-purple;
+            }
+            &:active {
+                border-color: $color-pink;
+            }
+            &:focus {
+                outline: none;
+            }
             &--names {
                 margin-top: 20px;
             }
@@ -162,6 +166,16 @@
         position: relative;
         cursor: pointer;
         padding-top: 30px;
+        &:hover {
+            &::before {
+                border-color: $color-purple;
+            }
+        }
+        &:active {
+            &::before {
+                border-color: $color-pink;
+            }
+        }
         &::before,
         &::after {
             content: "";
@@ -180,6 +194,7 @@
         }
     }
     &__radio-field {
+        & ~ label {}
         & ~ label::before,
         & ~ label::after {
             border-radius: 50%;
@@ -221,6 +236,7 @@
         }
     }
     &-counter {
+        position: relative;
         @include border;
         width: 276px;
         font-size: 0;
@@ -251,13 +267,31 @@
             border-left: 2px solid $color-gray;
             border-right: 2px solid $color-gray;
             font: 400 18px / 30px $font;
-            text-align: center;
+            text-align: left;
+            padding-left: 20px;
             @media (min-width: $width-md) {
                 width: 110px;
+                padding-left: 15px;
             }
             @media (min-width: $width-lg) {
                 width: 130px;
                 height: 54px;
+                text-align: center;
+                padding-left: 0;
+            }
+        }
+        &__inner-input {
+            position: absolute;
+            font-size: 18px;
+            top: 14px;
+            left: 120px;
+            @media (min-width: $width-md) {
+                top: 14px;
+                left: 105px;
+            }
+            @media (min-width: $width-lg) {
+                left: 132px;
+                top: 16px;
             }
         }
         &__btn {
@@ -372,28 +406,43 @@
         }
     }
 }
-.upload-list {
+.upload-images {
     margin-top: 30px;
     padding: 0;
     padding-top: 30px;
     font-size: 0;
     border-top: 2px solid $color-gray;
     text-align: left;
-    &__img {
+    &__list {
+        @extend %no-list;
+        font-size: 0;
+    }
+    &__item {
         @include inline-block;
-        position: relative;
         margin-right: 20px;
         margin-bottom: 20px;
-        font: 400 14px $font;
+        width: 70px;
         @media (min-width: $width-md) {
             width: 120px;
             margin-right: 40px;
+            margin-bottom: 40px;
+            &:nth-child(5n) {
+                margin-right: 0;
+            }
         }
         @media (min-width: $width-lg) {
-            margin-right: 60px;
+            margin-right: 50px;
         }
     }
-    &__btn-delete {
+    &__img-wrap {
+        position: relative;
+        font: 400 14px $font;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    &__del-link {
         display: block;
         position: absolute;
         top: -10px;
@@ -406,6 +455,10 @@
         color: rgba(#000, .3);
         font-size: 25px;
         line-height: 5px;
+        cursor: pointer;
+        i {
+            margin-left: -3px;
+        }
     }
 }
 .submit-wrapper {

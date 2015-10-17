@@ -1,0 +1,22 @@
+{
+    "name": "31950-pink",
+    "description": "Обучающий проект «pink» от HTML Academy",
+    "main": "gulpfile.js",
+    "authors": [
+    "Марат Шаймарданов"
+  ],
+    "license": "MIT",
+    "homepage": "https://github.com/yeffasol/pink",
+    "moduleType": [],
+    "private": true,
+    "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+    "dependencies": {
+        "moment": "~2.10.6"
+    }
+}

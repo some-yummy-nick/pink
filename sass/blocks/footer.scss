@@ -1,77 +1,86 @@
-.page-footer {
-    position: relative;
-    padding-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    //    margin-top: 30px;
-    padding-bottom: 30px;
-    padding-top: 20px;
-    @media (min-width: $width-md) {
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: flex-end;
-    }
-    &--none {
-        display: none;
+    .page-footer {
+        position: relative;
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        //    margin-top: 30px;
+        padding-bottom: 30px;
+        padding-top: 20px;
         @media (min-width: $width-md) {
-            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-end;
+        }
+        &--none {
+            display: none;
+            @media (min-width: $width-md) {
+                display: flex;
+            }
+        }
+        &__copyright {
+            margin-top: 30px;
+            width: 180px;
+            text-align: center;
+            fill: white;
+            @media (min-width: $width-md) {
+                margin-top: 0;
+            }
+            &-link {
+                @include inline-block;
+                margin-top: -5px;
+            }
+            &-svg {
+                fill: $color-pink;
+            }
         }
     }
-    &__copyright {
+    .social-buttons {
         margin-top: 30px;
-        width: 180px;
-        text-align: center;
-        @media (min-width: $width-md) {
-            margin-top: 0;
-        }
-        img {
-            margin-left: 10px;
-            vertical-align: middle;
-        }
-    }
-}
-.social-buttons {
-    margin-top: 30px;
-    &__item {
-        @include inline-block;
-        width: 46px;
-        height: 45px;
-        margin-right: 10px;
-        border-radius: 50%;
-        border: $border;
-        font-size: 20px;
-        line-height: 40px;
-        text-align: center;
-        &:hover {
-            background: $color-purple;
-            color: #fff;
-        }
-        i {
-            color: $color-pink;
+        &__item {
+            @include inline-block;
+            width: 46px;
+            height: 45px;
+            margin-right: 10px;
+            border-radius: 50%;
+            @include border;
+            border-width: 3px;
+            font-size: 20px;
+            line-height: 40px;
+            text-align: center;
+            &:hover {
+                color: #fff;
+                border-color: $color-purple;
+                border-width: 3px;
+            }
+            &:active {
+                opacity: 0.1;
+            }
+            i {
+                color: $color-pink;
+            }
         }
     }
-}
-.map {
-    position: relative;
-    width: 100%;
-    z-index: 1;
-    &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        top: 50%;
-        left: 50%;
-        z-index: 2;
-        background: url(../img/map-marker.svg) no-repeat;
-        cursor: pointer;
+    .map {
+        position: relative;
+        width: 100%;
+        z-index: 1;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            z-index: 2;
+            background: url(../img/map-marker.svg) no-repeat;
+            cursor: pointer;
+        }
+        &__triagle {
+            position: absolute;
+            top: 0;
+            z-index: 2;
+        }
     }
-    &__triagle {
-        position: absolute;
-        top: 0;
-        z-index: 2;
-    }
-}

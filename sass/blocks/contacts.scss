@@ -32,6 +32,14 @@
         p {
             margin-top: 0;
         }
+        a {
+            &:hover {
+                color: $color-purple;
+            }
+            &:active {
+                opacity: 0.3;
+            }
+        }
         @media (min-width: $width-lg) {
             &:nth-child(2) {
                 order: 1;

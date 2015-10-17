@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     minifyCss = require('gulp-minify-css');
 
 
-gulp.task('default', ['sass', 'watch', 'browser-sync', 'html', 'js','postcss']);
+gulp.task('default', ['sass', 'watch', 'browser-sync', 'html', 'js', 'postcss']);
 
 gulp.task('sass', function () {
     gulp.src('sass/style.scss')
@@ -21,7 +21,7 @@ gulp.task('sass', function () {
         }));
 });
 
-gulp.task('postcss', function(){
+gulp.task('postcss', function () {
     gulp.src('css/style.css')
         .pipe(autoprefixer('last 3 versions'))
         .pipe(minifyCss())
@@ -40,7 +40,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('js', function () {
-    gulp.src('js.*.js')
+    gulp.src('js/*.js')
         .pipe(reload({
             stream: true
         }));

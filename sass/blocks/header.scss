@@ -47,12 +47,24 @@
             min-height: 440px;
             background-color: $color-tone;
             background-size: 1200px;
+            @media (min-resolution: 1.5dppx) {
+                background: url(../img/background-tablet@2x.jpg) no-repeat 50% 0;
+                background-size: 1200px;
+                min-height: 440px;
+                background-color: $color-tone;
+            }
         }
         @media (min-width: $width-lg) {
             background: url(../img/background-fullsize.jpg) no-repeat 50% 0;
             background-color: $color-tone;
             background-size: cover;
             min-height: 400px;
+            @media (min-resolution: 1.5dppx) {
+                background: url(../img/background-fullsize.jpg) no-repeat 50% 0;
+                background-size: cover;
+                background-color: $color-tone;
+                min-height: 400px;
+            }
         }
     }
     &__top-menu {
@@ -146,6 +158,14 @@
         font-size: 18px;
         line-height: 48px;
         @extend %no-decor;
+        &:hover {
+            background: #fff;
+            color: $color-pink;
+            text-decoration: none;
+        }
+        &:active {
+            opacity: 0.3;
+        }
         @media (min-width: $width-lg) {
             font-size: 21px;
             margin-top: 50px;
@@ -203,18 +223,22 @@
             font-weight: 700;
             text-transform: uppercase;
             text-decoration: none;
-            &:hover {
-                text-decoration: underline;
-            }
             @media (min-width: $width-lg) {
                 font-size: 18px;
                 text-transform: none;
                 font-weight: 400;
+                &:hover {
+                    padding-bottom: 5px;
+                    box-shadow: 0px 5px 0 -3px #fff;
+                }
+                &:active {
+                    opacity: 0.3;
+                    box-shadow: none;
+                }
             }
         }
     }
-    &__toggle,
-    &__toggle--close {
+    &__toggle {
         position: absolute;
         display: block;
         right: 20px;
@@ -225,6 +249,17 @@
         cursor: pointer;
         fill: #fff;
         background: transparent;
+        &-iconclose {
+            display: none;
+        }
+        &--close {
+            .main-nav__toggle-icon {
+                display: none;
+            }
+            .main-nav__toggle-iconclose {
+                display: block;
+            }
+        }
         @media (min-width: $width-md) {
             padding-top: 10px;
         }
@@ -268,6 +303,9 @@
             margin-left: 0;
             @media (min-width: $width-lg) {
                 display: none;
+            }
+            &:hover {
+                fill: $color-pink;
             }
         }
     }

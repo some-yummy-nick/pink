@@ -59,10 +59,22 @@
                 background: $color-purple;
                 border-radius: 50%;
                 opacity: 0.3;
+                &:hover {
+                    opacity: 1;
+                }
+                &:active {
+                    opacity: 0.1;
+                }
             }
             &--table {
                 @media(min-width: $width-md) {
                     display: none;
+                }
+            }
+            &--blockquote {
+                margin-top: 35px;
+                @media(min-width: $width-md) {
+                    margin-top: 0;
                 }
             }
         }
