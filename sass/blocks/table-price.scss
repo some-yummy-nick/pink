@@ -4,14 +4,19 @@
     padding-top: 115px;
     margin: auto;
     overflow-x: scroll;
+
     @media (min-width: $width-md) {
         width: 605px;
         overflow-x: hidden;
     }
+
     @media (min-width: $width-lg) {
         width: 930px;
     }
 }
+
+// Посмотри, возможно удобнее использовать media не так сильно разрозненно
+
 .table-price {
     width: 100%;
     background: #fff;
