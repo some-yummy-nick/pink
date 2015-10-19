@@ -1,0 +1,81 @@
+.form {
+    &-counter {
+        position: relative;
+        width: 276px;
+        font-size: 0;
+        input {
+            @include inline-block;
+            width: 156px;
+            height: 54px;
+            border-top: 2px solid $color-gray;
+            border-bottom: 2px solid $color-gray;
+            border-left: none;
+            font: 400 18px / 30px $font;
+            text-align: left;
+            padding-left: 20px;
+            outline: none;
+        }
+        &__inner-input {
+            position: absolute;
+            font-size: 18px;
+            top: 14px;
+            left: 120px;
+        }
+        &__btn {
+            @include inline-block;
+            @include border;
+            width: 55px;
+            height: 54px;
+            background: #fff;
+            text-align: center;
+            outline: none;
+            i {
+                font-size: 28px;
+                color: $color-purple;
+                opacity: 0.7;
+            }
+            &:hover {
+                border: 2px solid $color-purple;
+            }
+            &:active {
+                background: $color-purple;
+                i {
+                    color: #fff;
+                    opacity: 1;
+                }
+            }
+        }
+        @media (min-width: $width-md) {
+            width: 227px;
+            &--people {
+                border: none;
+                input {
+                    border: none;
+                }
+                button {
+                    @include border;
+                }
+            }
+            input {
+                width: 110px;
+                padding-left: 15px;
+            }
+            &__inner-input {
+                top: 14px;
+                left: 105px;
+            }
+        }
+        @media (min-width: $width-lg) {
+            width: 244px;
+            input {
+                width: 130px;
+                height: 54px;
+                padding-left: 20px;
+            }
+            &__inner-input {
+                top: 16px;
+                left: 115px;
+            }
+        }
+    }
+}

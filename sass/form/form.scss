@@ -1,0 +1,208 @@
+.form {
+    margin-top: 60px;
+    &-caption {
+        color: $color-purple;
+        line-height: 30px;
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        span {
+            display: none;
+        }
+    }
+    &__group {
+        border: none;
+        margin-bottom: 30px;
+        text-align: left;
+        padding: 0;
+        padding-bottom: 35px;
+        padding-top: 10px;
+        &--first {
+            text-align: left;
+            padding-left: 0;
+        }
+        &--time-travel {
+            padding-top: 40px;
+            padding-bottom: 10px;
+        }
+        &--count-travel {
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+        &-fields {
+            text-align: left;
+            &--names {
+                margin-bottom: 20px;
+            }
+        }
+        &--gray {
+            background: #f2f2f2;
+        }
+        &-title {
+            display: block;
+            margin: auto;
+            text-align: center;
+            text-transform: uppercase;
+            color: $color-pink;
+            &--bottom {
+                margin-top: 10px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        }
+        &-field {
+            padding: 15px;
+            width: 100%;
+            @include border;
+            text-align: left;
+            &:hover {
+                border-color: $color-purple;
+            }
+            &:active {
+                border-color: $color-pink;
+            }
+            &:focus {
+                outline: none;
+                border-color: $color-pink;
+            }
+            &--names {
+                margin-top: 20px;
+            }
+        }
+    }
+    @media (min-width: $width-md) {
+        &-caption {
+            span {
+                @include inline-block;
+            }
+        }
+        &__group {
+            @include border;
+            padding-left: 60px;
+            padding-right: 30px;
+            &--first {
+                border: none;
+                text-align: left;
+                label {
+                    text-align: left;
+                }
+            }
+            &--submit {
+                padding-right: 60px;
+            }
+            &-fields {
+                &--radio {
+                    margin-bottom: 20px;
+                }
+                &--time-travel {
+                    @include inline-block;
+                    margin-right: 30px;
+                }
+            }
+            &-title {
+                text-align: center;
+                &--bottom {
+                    text-align: left;
+                }
+            }
+        }
+    }
+    @media (min-width: $width-lg) {
+        width: 960px;
+        margin: auto;
+        &__group {
+            width: 960px;
+            padding-left: 60px;
+            margin-bottom: 60px;
+            &--first {
+                padding-left: 0;
+                padding-right: 0;
+                margin-bottom: 40px;
+            }
+            &-fields {
+                &--names {
+                    @include inline-block;
+                    width: 300px;
+                    margin-right: 25px;
+                    margin-bottom: 0;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+                &--radio {
+                    @include inline-block;
+                    width: 200px;
+                    margin-right: 60px;
+                    margin-left: 0;
+                    &:last-child {
+                        margin-right: 0;
+                        margin-left: 60px;
+                    }
+                }
+                &--time-travel {
+                    @include inline-block;
+                    width: 240px;
+                    margin-right: 40px;
+                    &:last-child {
+                        margin-right: 0;
+                        margin-left: 10px;
+                    }
+                }
+                &--people {
+                    @include inline-block;
+                    margin-right: 20px;
+                }
+                &--checkbox {
+                    min-width: 260px;
+                    @include inline-block;
+                    margin-right: 15px;
+                }
+                &--gray {
+                    background: #fff;
+                }
+            }
+        }
+    }
+}
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    &:focus +label {
+        text-decoration: underline;
+    }
+    & + label {
+        display: block;
+        max-width: 900px;
+        margin-top: 20px;
+        padding: 15px;
+        @include border;
+        font-weight: 700;
+        font-size: 18px;
+        text-transform: uppercase;
+        text-align: center;
+        cursor: pointer;
+        &:hover {
+            border-color: $color-purple;
+        }
+        &:active {
+            background: $color-purple;
+            color: #fff;
+        }
+        @media (min-width: $width-lg) {
+            background: $color-pink;
+            color: #fff;
+            border-color: $color-pink;
+            &:hover {
+                border-color: $color-pink;
+            }
+            &:active {
+                background: $color-purple;
+                border-color: $color-purple;
+            }
+        }
+    }
+}

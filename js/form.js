@@ -106,7 +106,3 @@
 
 
 })();
-var toggler = document.querySelector(".main-nav__toggle");
-toggler.addEventListener("click", function () {
-    this.classList.toggle(".main-nav__toggle--close");
-});

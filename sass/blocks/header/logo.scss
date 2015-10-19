@@ -1,0 +1,60 @@
+.logo {
+    display: block;
+    float: left;
+    fill: $color-purple;
+    &:hover {
+        fill: $color-pink;
+    }
+    &:active {
+        opacity: 0.3;
+    }
+    &--header {
+        fill: #fff;
+        margin-left: 20px;
+        padding-bottom: 20px;
+    }
+    &__color-pink {
+        fill: $color-pink;
+    }
+    &__mobile {
+        width: 74px;
+        height: 23px;
+    }
+    &__tablet {
+        display: none;
+        width: 180px;
+        height: 40px;
+        margin: auto;
+        &--footer {
+            display: block;
+            margin-left: 0;
+            &:hover {
+                fill: $color-pink;
+            }
+        }
+    }
+    &__desktop {
+        display: none;
+        width: 180px;
+        height: 40px;
+    }
+    @media (min-width: $width-md) {
+        &__mobile {
+            display: none;
+        }
+        &__tablet {
+            display: block;
+        }
+    }
+    @media (min-width: $width-lg) {
+        &__tablet {
+            display: none;
+            &--footer {
+                display: none;
+            }
+        }
+        &__desktop {
+            display: block;
+        }
+    }
+}

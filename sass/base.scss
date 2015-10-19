@@ -22,6 +22,9 @@ body {
     text-align: center;
     padding-left: 10px;
     padding-right: 10px;
+    @media (min-width: $width-lg) {
+        width: 960px;
+    }
 }
 .section-title {
     font-weight: 700;
@@ -35,11 +38,11 @@ body {
     margin-top: 20px;
     font-weight: 300;
     font-size: 24px;
+    color: $color-purple;
     span {
         display: block;
         margin-top: 20px;
     }
-    color: $color-purple;
     @media (min-width: $width-md) {
         margin: auto;
         text-align: center;

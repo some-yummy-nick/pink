@@ -1,0 +1,131 @@
+.table {
+    &__wrapper {
+        background: #f2f2f2 url(../img/triangle-white.svg) no-repeat;
+        padding-bottom: 50px;
+        margin: auto;
+        overflow-x: scroll;
+    }
+    &-price {
+        width: 100%;
+        background: #fff;
+        margin: auto;
+        transform: translateX(-60px);
+        &__header {
+            min-width: 280px;
+            border-right: 2px solid #fff;
+            color: #fff;
+            text-transform: uppercase;
+            background: $color-purple;
+            &:first-child {
+                background: #fff;
+                border: none;
+                display: none;
+            }
+            &--flag {
+                position: relative;
+                &:after,
+                &:before {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                }
+                &:after {
+                    top: 0;
+                    width: 74px;
+                    height: 73px;
+                    background: url(../img/slider-flag.png);
+                }
+                &:before {
+                    content: "Хит";
+                    color: #fff;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    top: 12px;
+                    left: 10px;
+                    z-index: 2;
+                    transform: matrix(0.707, -0.707, 0.707, 0.707, 0, 0);
+                }
+            }
+        }
+        &__caption {
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+        &__cost {
+            margin-top: 0;
+            font-weight: 300;
+        }
+        &__item {
+            position: relative;
+            color: $color-purple;
+            text-align: left;
+            border: 2px solid $color-gray;
+            padding: 15px;
+            font-size: 14px;
+            text-transform: uppercase;
+            &:first-child {
+                display: none;
+            }
+            &--yes,
+            &--no {
+                position: absolute;
+                width: 26px;
+                height: 26px;
+                right: 20px;
+                top: 25%;
+            }
+            &--yes {
+                fill: #44c84b;
+            }
+            &--no {
+                fill: #f36735;
+            }
+        }
+    }
+    @media (min-width: $width-md) {
+        &__wrapper {
+            width: 605px;
+            overflow-x: hidden;
+        }
+        &-price {
+            transform: translatex(0) !important;
+            &__header {
+                min-width: 155px;
+                &:first-child {
+                    display: table-cell;
+                }
+            }
+            &__caption {
+                font-size: 16px;
+            }
+            &__cost {
+                font-size: 18px;
+            }
+            &__item {
+                text-transform: none;
+                color: transparent;
+                &:first-child {
+                    display: table-cell;
+                    color: $color-purple;
+                }
+                &--yes,
+                &--no {
+                    right: 40%;
+                }
+            }
+        }
+    }
+    @media (min-width: $width-lg) {
+        &__wrapper {
+            width: 930px;
+        }
+        &-price {
+            &__caption {
+                font-size: 18px;
+            }
+            &__cost {
+                font-size: 24px;
+            }
+        }
+    }
+}

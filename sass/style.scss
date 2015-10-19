@@ -1,13 +1,30 @@
 // Свериться с guidelines - http://sass-guidelin.es/ru/
-
 @import "normalize";
 @import "font-awesome/font-awesome";
 @import "mixins";
 @import "variables";
 @import "base";
-@import "blocks/header";
+//header
+@import "blocks/header/layout";
+@import "blocks/header/logo";
+@import "blocks/header/main-nav";
+@import "blocks/header/toggle-button";
+@import "blocks/header/download-block";
+//футер
 @import "blocks/footer";
 @import "blocks/popup";
-@import "index";
-@import "form";
+//индекс 
+@import "index/information";
+@import "index/timer";
+@import "index/slider";
+@import "index/table-price";
+@import "index/contacts";
+//форма
+@import "form/form";
+@import "form/checkbox-radio";
+@import "form/counter";
+@import "form/username";
+@import "form/upload-images";
+@import "form/submit-form";
+//blog
 @import "blog";

@@ -1,0 +1,76 @@
+.form {
+    &__radio-checkbox {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        padding-top: 30px;
+        &:hover {
+            &::before {
+                border-color: $color-purple;
+            }
+        }
+        &:active {
+            &::before {
+                border-color: $color-pink;
+            }
+        }
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+        }
+    }
+    &__checkbox-field,
+    &__radio-field {
+        display: none;
+        & ~ label {
+            padding-left: 50px;
+        }
+        &:checked ~ label::after {
+            display: block;
+        }
+    }
+    &__radio-field {
+        & ~ label {}
+        & ~ label::before,
+        & ~ label::after {
+            border-radius: 50%;
+        }
+        & ~ label::before {
+            width: 36px;
+            height: 39px;
+            top: 23px;
+            left: 10px;
+            @include border;
+        }
+        & ~ label::after {
+            display: none;
+            top: 35px;
+            left: 21px;
+            width: 15px;
+            height: 15px;
+            background-color: $color-pink;
+        }
+    }
+    &__checkbox-field {
+        & ~ label::before {
+            width: 36px;
+            height: 39px;
+            top: 22px;
+            left: 0;
+            @include border;
+        }
+        & ~ label::after {
+            display: none;
+            width: 22px;
+            height: 16px;
+            top: 29px;
+            left: 8px;
+            @include border($color: $color-pink);
+            border-top-style: none;
+            border-right-style: none;
+            transform: rotate(-45deg);
+        }
+    }
+}

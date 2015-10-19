@@ -1,0 +1,67 @@
+.download-block {
+    background: $color-tone;
+    height: 271px;
+    padding-top: 20px;
+    p {
+        font-weight: 300;
+        font-size: 14px;
+        color: #fff;
+        width: 229px;
+        margin: auto;
+        margin-top: 20px;
+    }
+    &__btn {
+        display: block;
+        width: 281px;
+        height: 55px;
+        margin: auto;
+        border: 3px solid #fff;
+        color: #fff;
+        border-radius: 30px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 48px;
+        @extend %no-decor;
+        &:hover {
+            background: #fff;
+            color: $color-pink;
+            text-decoration: none;
+        }
+        &:active {
+            opacity: 0.3;
+        }
+    }
+    &__list {
+        @extend %no-list;
+        margin-top: 25px;
+        &-item {
+            @include inline-block;
+            margin-right: 25px;
+            width: 50px;
+            height: 60px;
+            &--apple {
+                background: url(../img/apple-logo.svg) no-repeat;
+            }
+            &--android {
+                background: url(../img/android-logo.svg) no-repeat 0px 10px;
+            }
+            &--microsoft {
+                background: url(../img/microsoft-logo.svg) no-repeat 0px 15px;
+            }
+        }
+    }
+    @media (min-width: $width-md) {
+        background: transparent;
+        p {
+            font-size: 18px;
+            width: 100%;
+        }
+    }
+    @media (min-width: $width-lg) {
+        &__btn {
+            font-size: 21px;
+            margin-top: 50px;
+            margin-bottom: 70px;
+        }
+    }
+}

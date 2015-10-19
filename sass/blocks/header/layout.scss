@@ -1,0 +1,136 @@
+.page-header {
+    background: url(../img/iphone-hand-mobile.png) no-repeat 0% 36%, url(../img/background-mobile@1x.jpg) no-repeat 50% 0;
+    background-color: $color-tone;
+    background-size: 300px, 700px;
+    min-height: 553px;
+    &--second-page {
+        background: url(../img/background-mobile@1x.jpg) no-repeat 50% 0;
+        background-color: $color-tone;
+        height: 235px;
+        min-height: 235px;
+        background-size: 700px;
+    }
+    &__top-menu {
+        position: relative;
+        @extend %clearfix;
+        padding-top: 20px;
+        background: $color-tone;
+        background-color: rgba(29, 38, 49, 0.3);
+        width: 100%;
+        min-height: 66px;
+        &--cross {
+            background-color: $color-purple;
+            box-shadow: 0 1px 0 #000;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+        margin: auto;
+    }
+    &__title {
+        margin-bottom: 340px;
+        margin-left: 15px;
+        margin-right: 15px;
+        color: #fff;
+        font-weight: 300;
+        font-size: 24px;
+        &--second {
+            span {
+                display: block;
+            }
+        }
+        &--cross {
+            margin-bottom: 133px;
+        }
+    }
+    @media (min-resolution: 1.5dppx) {
+        background: url(../img/iphone-hand-mobile@2x.png) no-repeat 0% 36%, url(../img/background-mobile@2x.jpg) no-repeat 50% 0;
+        background-size: 300px, 700px;
+        background-color: $color-tone;
+    }
+    @media (min-resolution: 2.5dppx) {
+        background: url(../img/iphone-hand-mobile@3x.png) no-repeat 0% 36%, url(../img/background-mobile@3x.jpg) no-repeat 50% 0;
+        background-size: 300px, 700px;
+        background-color: $color-tone;
+    }
+    @media (min-width: $width-md) {
+        background: url(../img/iphone-hand-tablet@1x.png) no-repeat 70% 100%, url(../img/background-tablet@1x.jpg) no-repeat 50% 0;
+        background-color: $color-tone;
+        background-size: 700px, cover;
+        min-height: 728px;
+        @media (min-resolution: 1.5dppx) {
+            background: url(../img/iphone-hand-tablet@2x.png) no-repeat 70% 100%, url(../img/background-tablet@2x.jpg) no-repeat 50% 0;
+            background-size: 700px, 1200px;
+            background-color: $color-tone;
+        }
+        &--second-page {
+            background: url(../img/background-tablet@1x.jpg) no-repeat 50% 0;
+            min-height: 440px;
+            background-color: $color-tone;
+            background-size: 1200px;
+            @media (min-resolution: 1.5dppx) {
+                background: url(../img/background-tablet@2x.jpg) no-repeat 50% 0;
+                background-size: 1200px;
+                min-height: 440px;
+                background-color: $color-tone;
+            }
+        }
+        &__top-menu {
+            min-height: 105px;
+        }
+        &__content {
+            margin-top: 20px;
+            margin-left: 2%;
+        }
+        &__title {
+            width: 200px;
+            margin: auto;
+            font-size: 40px;
+            margin-top: 50px;
+            margin-bottom: 0;
+            &--second {
+                width: 100%;
+            }
+        }
+    }
+    @media (min-width: $width-lg) {
+        background: url(../img/iphone-hand-desktop@1x.png) no-repeat 70% 100%, url(../img/background-fullsize.jpg) no-repeat 50% 0;
+        background-color: $color-tone;
+        background-size: 1000px, cover;
+        min-height: 855px;
+        @media (min-resolution: 1.5dppx) {
+            background: url(../img/iphone-hand-desktop@2x.png) no-repeat 70% 100%, url(../img/background-fullsize.jpg) no-repeat 50% 0;
+            background-size: 1000px, cover;
+            background-color: $color-tone;
+            min-height: 855px;
+        }
+        &--second-page {
+            background: url(../img/background-fullsize.jpg) no-repeat 50% 0;
+            background-color: $color-tone;
+            background-size: cover;
+            min-height: 400px;
+            @media (min-resolution: 1.5dppx) {
+                background: url(../img/background-fullsize.jpg) no-repeat 50% 0;
+                background-size: cover;
+                background-color: $color-tone;
+                min-height: 400px;
+            }
+        }
+        &__title {
+            width: 250px;
+            font-size: 50px;
+            margin-top: 100px;
+            &--second {
+                span {
+                    display: inline-block;
+                }
+                margin-top: 70px;
+                font-size: 50px;
+                width: 800px;
+                margin-top: 70px;
+            }
+        }
+    }
+}

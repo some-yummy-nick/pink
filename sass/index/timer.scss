@@ -1,6 +1,5 @@
 .timer {
     display: none;
-    text-align: left;
     &__column {
         min-width: 300px;
         &:last-child {
@@ -26,17 +25,45 @@
             text-decoration: none;
         }
     }
-    &__svg {
+    &__text-block {
+        position: absolute;
+        width: 194px;
+        height: 194px;
+        border-radius: 50%;
+        background: #fff;
+        text-align: center;
+        top: 75px;
+        left: 34px;
+        font-size: 105px;
+        line-height: 160px;
+        color: $color-pink;
+        font-weight: 700;
+        border: 12px solid $color-pink;
+        @media (min-width: $width-lg) {
+            width: 221px;
+            height: 221px;
+            top: 86px;
+            left: 39px;
+            font-size: 120px;
+            line-height: 180px;
+        }
+    }
+    &__svg-block {
         width: 262px;
-        opacity: 0.5;
+        height: 302px;
+        opacity: 0.1;
         @media (min-width: $width-lg) {
             width: 300px;
+            height: 346px;
         }
     }
     @media (min-width: $width-md) {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        text-align: left;
+        position: relative;
+        margin-top: 30px;
     }
     @media (min-width: $width-lg) {
         background: #f2f2f2;
