@@ -104,5 +104,17 @@
         }
     }
 
+    var removing = document.querySelector(".username__remove");
+    removing.addEventListener("click", function () {
+        var item = document.querySelector(".username__item");
+        item.remove();
+    })
 
+    var toggler = document.querySelector(".main-nav__toggle");
+    toggler.addEventListener("click", function () {
+        document.querySelector(".main-nav").classList.toggle("main-nav--hide-block");
+        document.querySelector(".page-header__top-menu").classList.toggle("page-header__top-menu--cross");
+        document.querySelector(".page-header__title").classList.toggle("page-header__title--cross");
+        this.classList.toggle("main-nav__toggle--close");
+    })
 })();

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    <title>Pink-post</title>
+    <title>Pink-blog</title>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
     <script>
         WebFont.load({
@@ -12,7 +12,7 @@
                 families: ["Open Sans:300,400,600,700:cyrillic,latin", "PT Sans:400,700:cyrillic,latin"]
             }
         });
-
+  
     </script>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -20,6 +20,9 @@
 <body>
     <div class="svg-wrapper" style="height: 0; width: 0; position: absolute; visibility: hidden">
         <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="blog-post-icon" viewBox="2 3 28 26">
+                <path d="M29 3H3c-.552 0-1 .448-1 1s.448 1 1 1h25v16H15c-.04 0-.076.018-.116.023-.067.008-.13.018-.195.04-.07.02-.128.052-.188.087-.033.02-.07.025-.102.05L8 26v-4c0-.553-.448-1-1-1H4V8c0-.552-.448-1-1-1s-1 .448-1 1v14c0 .553.448 1 1 1h3v5c0 .38.214.725.553.895.14.07.295.105.447.105.212 0 .423-.066.6-.2l7.733-5.8H29c.553 0 1-.447 1-1V4c0-.552-.447-1-1-1z" />
+            </symbol>
             <symbol id="copyright" viewBox="0 0 26.943 34.09">
                 <path d="M13.62.017L13.472 0 0 1.412v24.66l13.472 8.018 13.43-7.99.042-.026V1.412L13.62.017zm11.4 12.11L13.494 5.334V5.23l-.088.05-.088-.056v.11L1.924 12.117v-8.97l11.547-1.213L25.02 3.147v8.98zm-11.615-5.34L24.923 13.5l-4.48 2.64-7.092-4.22-.012 1.414 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.032-1.787-.012 1.413 1.852 1.092-1.8 1.08-11.356-6.75 11.37-6.835zm-11.48 8.34l11.41 6.79.016 1.045-7.94-4.728-.015 1.416 7.98 4.796.016 1.076-7.97-4.74-.014 1.414 8.02 4.82.046.027 8.143-4.872v-1.267l-.01-.148v-3.76l3.414-2.037v10.02L13.47 31.85 1.925 24.98v-9.853z" />
             </symbol>
@@ -138,36 +141,65 @@
 
     <div class="page-wrapper">
         <div class="blog">
-            <article class="post-header  post-header--center">
-                <h2>Антон и Надя в Тайланде </h2>
-                <div class="post-header__date  post-header__date--tablet">Опубликовано: 6 месяцев назад</div>
-                <p class="post-header__text">Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и районов.</p>
+            <article class="post-header">
+                <span class="post-header__icon">
+                  <svg class="post-header__icon-svg">
+                    <use xlink:href="#blog-post-icon">
+                </svg>
+               </span>
+                <h3 class="post-header__link">
+                  <a href="post.html">Антон и Надя в Тайланде</a>
+                </h3>
+                <div class="post-header__date">Опубликовано: 6 месяцев назад</div>
+                <p>Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и районов.</p>
             </article>
-            <h3 class="blog__caption">Предыстория</h3>
-            <p>В Азию нам хотелось попасть уже давно, но все время что-то останавливало. Также не давал покоя вопрос гигиены и чистоты вокруг. Были сомнения и на счет местной еды. Однако, увидев выгодные билеты на <a href="">skyscanner.ru</a> мы все-таки решились!</p>
-            <h3 class="blog__caption">Выбор отеля</h3>
-            <p>В Тайланде огромный разброс по стоимости отелей и так же сильно отличаются и они сами. Так как достопримечательности щедро разбросаны по всей стране, то чтобы посетить их все, нужно пожить в нескольких разных городах. В итоге мы остановились на следующих:</p>
-            <ul>
-                <li>Point Yamu by Como (Пхукет)</li>
-                <li>Amari Vogue Hotel (Краби)</li>
-                <li> Photo Hotel (Пхукет)</li>
-            </ul>
-            <p>В выборе отелей мы учитывали как расположение, так и отзывы на Tripadvisor. Например, вот, что пишут люди про Point Yamu:</p>
-            <div class="post-blockquote">
-                <blockquote class="post-blockquote__block">Замечательное место,в которое хочется вернуться обязательно! Персонал отзывчивый и внимательный,еда-потрясающая. Отель расположен в тихом и уединенном месте-в чем вся и прелесть. СПА отличный. Потрясающие виды.</blockquote>
-                <cite class="post-blockquote__cite">Олег, г. Москва</cite>
-            </div>
-            <h3 class="blog__caption">Местная еда</h3>
-            <p>Существует мнение, что вся еда в Тайланде экстремально острая. Это мнение сложилось не напрасно! Но не стоит делать из этого проблему — просто попросите сделать ваше блюдо «not spicy». Желающие могут попробовать жареных тараканчиков. Мы не рискнули.</p>
+            <article class="post-header">
+                <span class="post-header__icon">
+                   <svg class="post-header__icon-svg">
+                    <use xlink:href="#blog-post-icon">
+                </svg>
+               </span>
+                <h3 class="post-header__link">
+                 <a href="">Гастрольный тур «Кубанских борщеваров»</a>
+               </h3>
+                <div class="post-header__date">Опубликовано: 5 лет назад</div>
+                <p>Возрождение культурных традиций уже не за горами. Фолк-металл-рэп-группа из столицы Кубани провела весь год в гастролях по России и ближнему (а также среднему) зарубежью.</p>
+            </article>
+            <article class="post-header">
+                <span class="post-header__icon">
+              <svg class="post-header__icon-svg">
+                    <use xlink:href="#blog-post-icon">
+                </svg>
+               </span>
+                <h3 class="post-header__link">
+                  <a href="">Чета Болонских в Париже</a>
+                </h3>
+                <div class="post-header__date">Опубликовано: 100 лет назад</div>
+                <p>Невероятные приключения русских во Франции. Интриги, предательства, погони и, разумеется, убийства. Читайте криминально-исторический трактат в двух томах.</p>
+            </article>
+            <article class="post-header">
+                <span class="post-header__icon">
+                  <svg class="post-header__icon-svg">
+                    <use xlink:href="#blog-post-icon">
+                </svg>
+               </span>
+                <h3 class="post-header__link">
+                  <a href="">Путешествие на яхте сеньора Христофора</a>
+                </h3>
+                <div class="post-header__date">Опубликовано: 523 года назад</div>
+                <p>Группа испанцев отдыхала на яхте, но они даже не представляли, какие открытия ждут их впереди и чем это обернется для всего человечества!</p>
+            </article>
         </div>
 
 
 
 
-        <div class="paginator  paginator--post">
-            <a class="paginator__item  paginator__item--post" href="">Пред.</a>
-            <a class="paginator__item  paginator__item--post paginator__item--next" href="">След.</a>
-            <a class="paginator__item  paginator__item--longer" href="">Назад к списку</a>
+        <div class="paginator">
+            <span class="paginator__span">Стр.</span>
+            <a href="" class="paginator__item  paginator__item--active">1</a>
+            <a href="" class="paginator__item">2</a>
+            <a href="" class="paginator__item">3</a>
+            <a href="" class="paginator__item">4</a>
         </div>
 
 
@@ -175,7 +207,7 @@
 
         <footer class="page-footer">
             <a class="logo" href="index.html">
-                <svg class="logo__tablet logo__tablet--footer">
+                <svg class="logo__tablet  logo__tablet--footer">
                     <use xlink:href="#logotype-blue-tablet">
                 </svg>
                 <svg class="logo__desktop">
@@ -202,7 +234,6 @@
             </div>
         </footer>
     </div>
-
 
 
 
