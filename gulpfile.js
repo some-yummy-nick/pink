@@ -22,7 +22,8 @@ var gulp = require('gulp'),
     runSequence = require('run-sequence'),
     concat = require('gulp-concat'),
     htmlmin = require('gulp-htmlmin'),
-    path = require('path');
+    path = require('path'),
+    wiredep = require('wiredep').stream;
 
 gulp.task('default', ['sass', 'watch', 'browser-sync', 'change', 'js']);
 
@@ -47,7 +48,13 @@ gulp.task('sass', function () {
 gulp.task('change', function () {
     return gulp.src('source/*.html')
         .pipe(changed('build'))
-        .pipe(gulp.dest('build'));
+        .pipe(htmlmin({
+            collapseWhitespace: true
+        }))
+        .pipe(gulp.dest('build'))
+        .pipe(reload({
+            stream: true
+        }));
 });
 
 gulp.task('js', function () {
@@ -55,7 +62,7 @@ gulp.task('js', function () {
         .pipe(changed('build'))
         .pipe(concat('script.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('build'));
+        .pipe(gulp.dest('build/js'));
 });
 
 gulp.task('minify', function () {
@@ -66,9 +73,19 @@ gulp.task('minify', function () {
         .pipe(gulp.dest('build/'));
 });
 
+gulp.task('minify-css', function () {
+    return gulp.src('build/css/*.css')
+        .pipe(minifyCss({
+            compatibility: 'ie8'
+        }))
+        .pipe(rename('style.min.css'))
+        .pipe(gulp.dest('build/css'));
+});
+
 gulp.task('build', function () {
     runSequence('clean', ['sass', 'html'],
         'minify',
+        'minify-css',
         'copy',
         'image');
 });
@@ -79,6 +96,7 @@ gulp.task('html', function () {
     return gulp.src('source/*.html')
         .pipe(assets)
         .pipe(gulpif('*.js', uglify()))
+        .pipe(gulpif('*.css'))
         .pipe(assets.restore())
         .pipe(useref())
         .pipe(gulp.dest('build/'))
@@ -114,12 +132,13 @@ gulp.task('watch', function () {
     gulp.watch('source/sass/**/*.scss', ['sass']);
     gulp.watch('source/*.html', ['change']);
     gulp.watch('source/js/*.js', ['js']);
+    gulp.watch('bower.json', ['bower']);
 });
 
 
 gulp.task('svg', function () {
     return gulp
-        .src('img/svg/*.svg')
+        .src('source/img/svg/*.svg')
         .pipe(svgmin(function (file) {
             var prefix = path.basename(file.relative, path.extname(file.relative));
             return {
@@ -132,7 +151,16 @@ gulp.task('svg', function () {
             };
         }))
         .pipe(svgstore())
-        .pipe(gulp.dest('img/'));
+        .pipe(gulp.dest('source/img/'));
+});
+
+gulp.task('bower', function () {
+    gulp.src('./source/index.html')
+        .pipe(wiredep({
+            optional: 'configuration',
+            goes: 'here'
+        }))
+        .pipe(gulp.dest('./source'));
 });
 
 gulp.task('browser-sync', function () {

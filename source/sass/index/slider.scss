@@ -1,10 +1,11 @@
-.slider-review {
+.slider {
     margin-top: 30px;
     margin-bottom: 30px;
     position: relative;
     &__inner {
         position: relative;
-        width: 100%;
+        width: 90%;
+        margin: auto;
         min-height: 150px;
     }
     &__item {
@@ -36,6 +37,21 @@
         height: 64px;
         margin: auto;
         fill: #EFEFEF;
+    }
+    &__arrow {
+        position: absolute;
+        width: 22px;
+        height: 42px;
+        top: 50%;
+        opacity: 0.3;
+        cursor: pointer;
+        fill: $color-purple;
+        &--left {
+            left: 0;
+        }
+        &--right {
+            right: 0;
+        }
     }
     @media(min-width: $width-md) {
         &__item {
@@ -103,9 +119,9 @@
     border: 3px solid $color-purple;
     opacity: 1;
 }
-#slider-controls__slide1:checked ~ .slider-review__inner > .slide1,
-#slider-controls__slide2:checked ~ .slider-review__inner > .slide2,
-#slider-controls__slide3:checked ~ .slider-review__inner > .slide3 {
+#slider-controls__slide1:checked ~ .slider__inner > .slide1,
+#slider-controls__slide2:checked ~ .slider__inner > .slide2,
+#slider-controls__slide3:checked ~ .slider__inner > .slide3 {
     opacity: 1;
 }
 #slider-controls__table1:checked ~ .table-price {
