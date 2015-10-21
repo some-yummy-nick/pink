@@ -107,13 +107,13 @@
             <div class="page-wrapper">
                 <a class="logo logo--header" href="index.html">
                     <svg class="logo__mobile">
-                        <use xlink:href="#logotype-white-mobile">
+                        <use xlink:href="#logotype-white-mobile" />
                     </svg>
                     <svg class="logo__tablet">
-                        <use xlink:href="#logotype-white-tablet">
+                        <use xlink:href="#logotype-white-tablet"></use>
                     </svg>
                     <svg class="logo__desktop">
-                        <use xlink:href="#logotype-white-desktop">
+                        <use xlink:href="#logotype-white-desktop" />
                     </svg>
                 </a>
                 <nav class="main-nav main-nav--hide-block">
@@ -134,10 +134,10 @@
                 </nav>
                 <button type="button" class="main-nav__toggle" id="main-nav__toggle">
                     <svg class="main-nav__toggle-icon">
-                        <use xlink:href="#menu-burger">
+                        <use xlink:href="#menu-burger"></use>
                     </svg>
                     <svg class="main-nav__toggle-iconclose">
-                        <use xlink:href="#menu-cross">
+                        <use xlink:href="#menu-cross"></use>
                     </svg>
                 </button>
             </div>
@@ -181,6 +181,12 @@
                 </div>
                 <div class="information__item  information__item--gray">
                     <picture>
+                        <source media="(min-width: 960px)" srcset="img/iphone-screen-desktop-1@2x.png 2x,
+                                                                    img/iphone-screen-desktop-1@1x.png">
+
+                        <source media="(min-width: 660px)" srcset="img/iphone-screen-tablet-1@1x.png">
+                        <source media="(min-width: 320px)" srcset="img/iphone-screen-mobile-1@1x.png">
+                        
                         <img src="img/iphone-screen-desktop-1@1x.png" srcset="img/iphone-screen-desktop-1@2x.png 2x" height="300" width="292" alt="information__img">
                     </picture>
                 </div>
