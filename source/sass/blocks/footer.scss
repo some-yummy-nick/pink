@@ -82,6 +82,7 @@
     position: relative;
     width: 100%;
     z-index: 1;
+    
     &:after {
         content: "";
         display: block;
@@ -95,7 +96,23 @@
         background: url(../img/map-marker.svg) no-repeat;
         cursor: pointer;
     }
+
+    &:before {
+        content: "";
+        background: url(../img/svg/triangle-white-footer.svg) no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        // left: 50%;
+        // margin: 0 0 0 -500px;
+        height: 61px;
+        z-index: 1;
+        // max-width: 1000px;
+    }
+
     &__triagle {
+        display: none;
         position: absolute;
         height: 61px;
         width: 100%;

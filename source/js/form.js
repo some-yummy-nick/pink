@@ -10,6 +10,11 @@
     var form = document.querySelector(".form");
     var area = form.querySelector(".upload-images__list");
     var template = document.querySelector("#image-template").innerHTML;
+
+
+    var usernameList = form.querySelector(".username");
+    var templateUser = document.querySelector("#username-template").innerHTML;
+
     var queue = [];
 
     form.addEventListener("submit", function (event) {
@@ -47,6 +52,7 @@
                 "image": event.target.result,
                 "name": file.name
             });
+
             var li = document.createElement("li");
             li.classList.add("upload-images__item");
             li.innerHTML = html;
@@ -82,10 +88,12 @@
         var input = parent.querySelector("input");
         var minus = parent.querySelector(".form-counter__btn--minus");
         var plus = parent.querySelector(".form-counter__btn--plus");
+        
         minus.addEventListener("click", function (e) {
             e.preventDefault();
             changeNumber(false);
         });
+
         plus.addEventListener("click", function (e) {
             e.preventDefault();
             changeNumber(true);
@@ -98,17 +106,40 @@
             }
             if (operation) {
                 input.value = value + 1;
+                addUser();
             } else {
                 input.value = value - 1;
             }
         }
     }
 
-    var removing = document.querySelector(".username__remove");
-    removing.addEventListener("click", function () {
-        var item = document.querySelector(".username__item");
-        item.remove();
-    })
+    function addUser() {
+        var html = Mustache.render(templateUser);
+
+        var li = document.createElement("li");
+            li.classList.add("username__item");
+            li.innerHTML = html;
+        
+        usernameList.appendChild(li);
+
+        li.querySelector(".username__remove").addEventListener("click",
+            function (event) {
+                var item = document.querySelector(".username__item");
+                item.remove();
+
+                var newCounter = document.querySelectorAll(".username__item").length;
+
+                document.querySelector("#counterUsers").value = newCounter;
+            });
+    }
+
+    var removing = document.querySelectorAll(".username__remove");
+    for (var i = 0; i < removing.length; i++) {
+        removing[i].addEventListener("click", function () {
+            var item = document.querySelector(".username__item");
+            item.remove();
+        });
+    }
 
     var toggler = document.querySelector(".main-nav__toggle");
     toggler.addEventListener("click", function () {
