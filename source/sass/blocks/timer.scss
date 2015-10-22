@@ -29,7 +29,7 @@
         position: absolute;
         width: 194px;
         height: 194px;
-        border-radius: 50%;
+        border-radius: 100%;
         background: #fff;
         text-align: center;
         top: 75px;
@@ -59,6 +59,7 @@
     }
     @media (min-width: $width-md) {
         display: flex;
+        margin: 0 30px;
         justify-content: space-around;
         align-items: center;
         text-align: left;

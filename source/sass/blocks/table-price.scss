@@ -3,7 +3,6 @@
         background: #f2f2f2 url(../img/triangle-white.svg) no-repeat;
         padding-bottom: 50px;
         margin: auto;
-        overflow-x: scroll;
     }
     &-price {
         width: 100%;
@@ -88,7 +87,7 @@
             overflow-x: hidden;
         }
         &-price {
-            transform: translatex(0) !important;
+            transform: translatex(0) !important; //*Чтобы перекрыть translate с мобильной версии у input:checked *//
             &__header {
                 min-width: 155px;
                 &:first-child {

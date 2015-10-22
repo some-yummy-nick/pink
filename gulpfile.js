@@ -11,22 +11,16 @@ var gulp = require('gulp'),
     svgmin = require('gulp-svgmin'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
-    useref = require('gulp-useref'),
-    gulpif = require('gulp-if'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     clean = require('gulp-clean'),
-    copy = require('gulp-copy'),
     changed = require('gulp-changed'),
-    runSequence = require('run-sequence'),
     concat = require('gulp-concat'),
     htmlmin = require('gulp-htmlmin'),
-    path = require('path'),
-    wiredep = require('wiredep').stream;
+    path = require('path');
 
-gulp.task('default', ['sass', 'watch', 'browser-sync', 'change', 'js']);
-
+gulp.task('default', ['sass', 'html', 'js', 'browser-sync', 'watch', 'image'], function () {});
 
 gulp.task('sass', function () {
     gulp.src('source/sass/style.scss')
@@ -36,8 +30,10 @@ gulp.task('sass', function () {
             browsers: ['last 3 versions']
         })]))
         .pipe(csscomb())
-        .pipe(gulp.dest('build/css/'))
-        .pipe(minifyCss())
+        .pipe(gulp.dest('build/css'))
+        .pipe(minifyCss({
+            compatibility: 'ie8'
+        }))
         .pipe(rename('style.min.css'))
         .pipe(gulp.dest('build/css/'))
         .pipe(reload({
@@ -45,13 +41,13 @@ gulp.task('sass', function () {
         }));
 });
 
-gulp.task('change', function () {
+gulp.task('html', function () {
     return gulp.src('source/*.html')
-        .pipe(changed('build'))
+        .pipe(changed('build/'))
         .pipe(htmlmin({
             collapseWhitespace: true
         }))
-        .pipe(gulp.dest('build'))
+        .pipe(gulp.dest('build/'))
         .pipe(reload({
             stream: true
         }));
@@ -59,66 +55,19 @@ gulp.task('change', function () {
 
 gulp.task('js', function () {
     return gulp.src('source/js/*.js')
-        .pipe(changed('build'))
         .pipe(concat('script.js'))
+        .pipe(gulp.dest('build/js'))
         .pipe(uglify())
-        .pipe(gulp.dest('build/js'));
-});
-
-gulp.task('minify', function () {
-    return gulp.src('build/*.html')
-        .pipe(htmlmin({
-            collapseWhitespace: true
-        }))
-        .pipe(gulp.dest('build/'));
-});
-
-gulp.task('minify-css', function () {
-    return gulp.src('build/css/*.css')
-        .pipe(minifyCss({
-            compatibility: 'ie8'
-        }))
-        .pipe(rename('style.min.css'))
-        .pipe(gulp.dest('build/css'));
-});
-
-gulp.task('build', function () {
-    runSequence('clean', ['sass', 'html'],
-        'minify',
-        'minify-css',
-        'copy',
-        'image');
-});
-
-gulp.task('html', function () {
-    var assets = useref.assets();
-
-    return gulp.src('source/*.html')
-        .pipe(assets)
-        .pipe(gulpif('*.js', uglify()))
-        .pipe(gulpif('*.css'))
-        .pipe(assets.restore())
-        .pipe(useref())
-        .pipe(gulp.dest('build/'))
+        .pipe(rename('script.min.js'))
+        .pipe(gulp.dest('build/js'))
         .pipe(reload({
             stream: true
         }));
 });
-gulp.task('clean', function () {
-    return gulp.src('build', {
-            read: false
-        })
-        .pipe(clean());
-});
-
-gulp.task('copy', function () {
-    return gulp
-        .src('source/fonts/*.*')
-        .pipe(gulp.dest('build/fonts'));
-});
 
 gulp.task('image', function () {
-    return gulp.src('source/img/**/*')
+    return gulp.src('source/img/*.*')
+        .pipe(changed('build/img'))
         .pipe(imagemin({
             progressive: true,
             use: [pngquant()]
@@ -126,15 +75,11 @@ gulp.task('image', function () {
         .pipe(gulp.dest('build/img'));
 });
 
-
-
 gulp.task('watch', function () {
     gulp.watch('source/sass/**/*.scss', ['sass']);
-    gulp.watch('source/*.html', ['change']);
+    gulp.watch('source/*.html', ['html']);
     gulp.watch('source/js/*.js', ['js']);
-    gulp.watch('bower.json', ['bower']);
 });
-
 
 gulp.task('svg', function () {
     return gulp
@@ -154,15 +99,6 @@ gulp.task('svg', function () {
         .pipe(gulp.dest('source/img/'));
 });
 
-gulp.task('bower', function () {
-    gulp.src('./source/index.html')
-        .pipe(wiredep({
-            optional: 'configuration',
-            goes: 'here'
-        }))
-        .pipe(gulp.dest('./source'));
-});
-
 gulp.task('browser-sync', function () {
     browserSync({
         server: {
@@ -170,4 +106,11 @@ gulp.task('browser-sync', function () {
         },
         open: false
     });
+});
+
+gulp.task('clean', function () {
+    return gulp.src('build', {
+            read: false
+        })
+        .pipe(clean());
 });

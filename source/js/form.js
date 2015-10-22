@@ -1,21 +1,30 @@
-//var toggler = document.getElementById('main-nav__toggle');
-//toggler.onclick = function (e) {
-//    e.preventDefault();
-//    toggler.classList.toggle('main-nav__toggle--close');
-//}
 (function () {
+    'use strict';
+
     if (!("FormData" in window) || !("FileReader" in window)) {
         return;
     }
-    var form = document.querySelector(".form");
-    var area = form.querySelector(".upload-images__list");
-    var template = document.querySelector("#image-template").innerHTML;
+    var form = document.querySelector(".form"),
+        area = form.querySelector(".upload-images__list"),
+        template = document.querySelector("#image-template").innerHTML,
 
 
-    var usernameList = form.querySelector(".username");
-    var templateUser = document.querySelector("#username-template").innerHTML;
+        usernameList = form.querySelector(".username"),
+        templateUser = document.querySelector("#username-template").innerHTML,
 
-    var queue = [];
+        queue = [];
+
+    function request(data, fn) {
+        var xhr = new XMLHttpRequest(),
+            time = (new Date()).getTime();
+        xhr.open("post", "https://echo.htmlacademy.ru/adaptive?" + time);
+        xhr.addEventListener("readystatechange", function () {
+            if (xhr.readyState == 4) {
+                fn(xhr.responseText);
+            }
+        });
+        xhr.send(data);
+    }
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -25,17 +34,7 @@
         });
     });
 
-    function request(data, fn) {
-        var xhr = new XMLHttpRequest();
-        var time = (new Date()).getTime();
-        xhr.open("post", "https://echo.htmlacademy.ru/adaptive?" + time);
-        xhr.addEventListener("readystatechange", function () {
-            if (xhr.readyState == 4) {
-                fn(xhr.responseText);
-            }
-        });
-        xhr.send(data);
-    }
+
 
     form.querySelector("#file").addEventListener("change", function () {
         var files = this.files;
@@ -88,7 +87,7 @@
         var input = parent.querySelector("input");
         var minus = parent.querySelector(".form-counter__btn--minus");
         var plus = parent.querySelector(".form-counter__btn--plus");
-        
+
         minus.addEventListener("click", function (e) {
             e.preventDefault();
             changeNumber(false);
@@ -117,15 +116,15 @@
         var html = Mustache.render(templateUser);
 
         var li = document.createElement("li");
-            li.classList.add("username__item");
-            li.innerHTML = html;
-        
+        li.classList.add("username__item");
+        li.innerHTML = html;
+
         usernameList.appendChild(li);
 
         li.querySelector(".username__remove").addEventListener("click",
             function (event) {
                 var item = document.querySelector(".username__item");
-                item.remove();
+                item.parentNode.removeChild(item);
 
                 var newCounter = document.querySelectorAll(".username__item").length;
 
@@ -137,15 +136,17 @@
     for (var i = 0; i < removing.length; i++) {
         removing[i].addEventListener("click", function () {
             var item = document.querySelector(".username__item");
-            item.remove();
+            item.parentNode.removeChild(item);
         });
     }
 
     var toggler = document.querySelector(".main-nav__toggle");
     toggler.addEventListener("click", function () {
         document.querySelector(".main-nav").classList.toggle("main-nav--hide-block");
-        document.querySelector(".page-header__top-menu").classList.toggle("page-header__top-menu--cross");
-        document.querySelector(".page-header__title").classList.toggle("page-header__title--cross");
+        document.querySelector(".header__top-menu").classList.toggle("header__top-menu--cross");
+        document.querySelector(".header__title").classList.toggle("header__title--cross");
         this.classList.toggle("main-nav__toggle--close");
-    })
+    });
+
+
 })();

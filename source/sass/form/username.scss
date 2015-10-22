@@ -65,6 +65,15 @@
         background: #fff;
         text-transform: uppercase;
         margin-left: 80%;
+        outline: none;
+        &:hover {
+            color: $color-pink;
+            box-shadow: 0 1px 0 $color-pink;
+        }
+        &:active {
+            opacity: 0.3;
+            box-shadow: none;
+        }
         @media (min-width: $width-md) {
             display: block;
         }

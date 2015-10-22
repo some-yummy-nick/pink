@@ -49,7 +49,11 @@
         outline: none;
         cursor: pointer;
         i {
-            margin-left: -3px;
+            margin-left: -4px;
+            font-size: 30px;
+            &:active {
+                color: #fff;
+            }
         }
         &:hover {
             border-color: $color-purple;
