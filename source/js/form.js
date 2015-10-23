@@ -29,8 +29,11 @@
     form.addEventListener("submit", function (event) {
         event.preventDefault();
         var data = new FormData(form);
+
         request(data, function (response) {
-            console.log(response);
+           var popup = document.querySelector('#popupSuccess');
+           popup.style.display = 'block';
+
         });
     });
 
@@ -103,13 +106,27 @@
             if (isNaN(value)) {
                 value = 0;
             }
+
             if (operation) {
                 input.value = value + 1;
                 addUser();
             } else {
-                input.value = value - 1;
+                input.value = (value > 2) ? value - 1 : 1;
+
+                if (typeof document.querySelectorAll(".username__item")[input.value] !== 'undefined') {
+                    document.querySelectorAll(".username__item")[input.value].remove();    
+                }
+                
+                // deleteUser();
             }
         }
+    }
+
+    function deleteUser() {
+        this.parentNode.remove();
+
+        var newCounter = document.querySelectorAll(".username__item").length;
+        document.querySelector("#counterUsers").value = newCounter;
     }
 
     function addUser() {
@@ -121,23 +138,14 @@
 
         usernameList.appendChild(li);
 
-        li.querySelector(".username__remove").addEventListener("click",
-            function (event) {
-                var item = document.querySelector(".username__item");
-                item.parentNode.removeChild(item);
-
-                var newCounter = document.querySelectorAll(".username__item").length;
-
-                document.querySelector("#counterUsers").value = newCounter;
-            });
+        li.querySelector(".username__remove").addEventListener("click", deleteUser);
     }
+
+    
 
     var removing = document.querySelectorAll(".username__remove");
     for (var i = 0; i < removing.length; i++) {
-        removing[i].addEventListener("click", function () {
-            var item = document.querySelector(".username__item");
-            item.parentNode.removeChild(item);
-        });
+        removing[i].addEventListener("click", deleteUser);
     }
 
     var toggler = document.querySelector(".main-nav__toggle");
@@ -147,6 +155,5 @@
         document.querySelector(".header__title").classList.toggle("header__title--cross");
         this.classList.toggle("main-nav__toggle--close");
     });
-
 
 })();
