@@ -5,15 +5,15 @@
         return;
     }
     var form = document.querySelector(".form"),
-        area = form.querySelector(".upload-images__list"),
-        template = document.querySelector("#image-template").innerHTML,
-
-
-        usernameList = form.querySelector(".username"),
-        templateUser = document.querySelector("#username-template").innerHTML,
-
         queue = [];
 
+    if (form) {
+        var area = form.querySelector(".upload-images__list"),
+            template = document.querySelector("#image-template").innerHTML,
+            usernameList = form.querySelector(".username"),
+            templateUser = document.querySelector("#username-template").innerHTML;
+    }
+        
     function request(data, fn) {
         var xhr = new XMLHttpRequest(),
             time = (new Date()).getTime();
@@ -26,126 +26,128 @@
         xhr.send(data);
     }
 
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        var data = new FormData(form);
+    if (form) {
 
-        request(data, function (response) {
-           var popup = document.querySelector('#popupSuccess');
-           popup.style.display = 'block';
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            var data = new FormData(form);
 
-        });
-    });
+            request(data, function (response) {
+               var popup = document.querySelector('#popupSuccess');
+               popup.style.display = 'block';
 
-
-
-    form.querySelector("#file").addEventListener("change", function () {
-        var files = this.files;
-        for (var i = 0; i < files.length; i++) {
-            preview(files[i]);
-        }
-        this.value = "";
-    });
-
-    function preview(file) {
-        var reader = new FileReader();
-        reader.addEventListener("load", function (event) {
-            var html = Mustache.render(template, {
-                "image": event.target.result,
-                "name": file.name
             });
+        });
 
-            var li = document.createElement("li");
-            li.classList.add("upload-images__item");
-            li.innerHTML = html;
-            area.appendChild(li);
-            li.querySelector(".upload-images__del-link").addEventListener("click",
-                function (event) {
-                    event.preventDefault();
-                    removePreview(li);
+        form.querySelector("#file").addEventListener("change", function () {
+            var files = this.files;
+            for (var i = 0; i < files.length; i++) {
+                preview(files[i]);
+            }
+            this.value = "";
+        });
+
+        function preview(file) {
+            var reader = new FileReader();
+            reader.addEventListener("load", function (event) {
+                var html = Mustache.render(template, {
+                    "image": event.target.result,
+                    "name": file.name
                 });
 
+                var li = document.createElement("li");
+                li.classList.add("upload-images__item");
+                li.innerHTML = html;
+                area.appendChild(li);
+                li.querySelector(".upload-images__del-link").addEventListener("click",
+                    function (event) {
+                        event.preventDefault();
+                        removePreview(li);
+                    });
 
-            queue.push({
-                "file": file,
-                "li": li
+
+                queue.push({
+                    "file": file,
+                    "li": li
+                });
             });
-        });
-        reader.readAsDataURL(file);
-    }
+            reader.readAsDataURL(file);
+        }
 
 
-    function removePreview(li) {
-        queue = queue.filter(function (element) {
-            return element.li != li;
-        });
-        li.parentNode.removeChild(li);
-    }
-    var elements = document.querySelectorAll(".form-counter");
-    for (var i = 0; i < elements.length; i++) {
-        initNumberField(elements[i]);
-    }
+        function removePreview(li) {
+            queue = queue.filter(function (element) {
+                return element.li != li;
+            });
+            li.parentNode.removeChild(li);
+        }
+        var elements = document.querySelectorAll(".form-counter");
+        for (var i = 0; i < elements.length; i++) {
+            initNumberField(elements[i]);
+        }
 
-    function initNumberField(parent) {
-        var input = parent.querySelector("input");
-        var minus = parent.querySelector(".form-counter__btn--minus");
-        var plus = parent.querySelector(".form-counter__btn--plus");
+        function initNumberField(parent) {
+            var input = parent.querySelector("input");
+            var minus = parent.querySelector(".form-counter__btn--minus");
+            var plus = parent.querySelector(".form-counter__btn--plus");
 
-        minus.addEventListener("click", function (e) {
-            e.preventDefault();
-            changeNumber(false);
-        });
+            minus.addEventListener("click", function (e) {
+                e.preventDefault();
+                changeNumber(false);
+            });
 
-        plus.addEventListener("click", function (e) {
-            e.preventDefault();
-            changeNumber(true);
-        });
+            plus.addEventListener("click", function (e) {
+                e.preventDefault();
+                changeNumber(true);
+            });
 
-        function changeNumber(operation) {
-            var value = Number(input.value);
-            if (isNaN(value)) {
-                value = 0;
-            }
-
-            if (operation) {
-                input.value = value + 1;
-                addUser();
-            } else {
-                input.value = (value > 2) ? value - 1 : 1;
-
-                if (typeof document.querySelectorAll(".username__item")[input.value] !== 'undefined') {
-                    document.querySelectorAll(".username__item")[input.value].remove();    
+            function changeNumber(operation) {
+                var value = Number(input.value);
+                if (isNaN(value)) {
+                    value = 0;
                 }
-                
-                // deleteUser();
+
+                if (operation) {
+                    input.value = value + 1;
+                    addUser();
+                } else {
+                    input.value = (value > 2) ? value - 1 : 1;
+
+                    if (typeof document.querySelectorAll(".username__item")[input.value] !== 'undefined') {
+                        document.querySelectorAll(".username__item")[input.value].remove();    
+                    }
+                    
+                    // deleteUser();
+                }
             }
         }
-    }
 
-    function deleteUser() {
-        this.parentNode.remove();
+        function deleteUser() {
+            this.parentNode.remove();
 
-        var newCounter = document.querySelectorAll(".username__item").length;
-        document.querySelector("#counterUsers").value = newCounter;
-    }
+            var newCounter = document.querySelectorAll(".username__item").length;
+            document.querySelector("#counterUsers").value = newCounter;
+        }
 
-    function addUser() {
-        var html = Mustache.render(templateUser);
+        function addUser() {
+            var html = Mustache.render(templateUser);
 
-        var li = document.createElement("li");
-        li.classList.add("username__item");
-        li.innerHTML = html;
+            var li = document.createElement("li");
+            li.classList.add("username__item");
+            li.innerHTML = html;
 
-        usernameList.appendChild(li);
+            usernameList.appendChild(li);
 
-        li.querySelector(".username__remove").addEventListener("click", deleteUser);
-    }
+            li.querySelector(".username__remove").addEventListener("click", deleteUser);
+        }
 
-    
+        
 
-    var removing = document.querySelectorAll(".username__remove");
-    for (var i = 0; i < removing.length; i++) {
-        removing[i].addEventListener("click", deleteUser);
+        var removing = document.querySelectorAll(".username__remove");
+        for (var i = 0; i < removing.length; i++) {
+            removing[i].addEventListener("click", deleteUser);
+        }
+
     }
 
     var toggler = document.querySelector(".main-nav__toggle");
