@@ -34,7 +34,7 @@
     }
     &__block {
         position: absolute;
-        left: -33px;
+        left: -50px;
         top: 15px;
         color: $color-pink;
     }
@@ -44,6 +44,7 @@
         margin-top: 15px;
         color: $color-pink;
         padding-left: 20px;
+        text-transform: uppercase;
     }
     &__field {
         display: block;

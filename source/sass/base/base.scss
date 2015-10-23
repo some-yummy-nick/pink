@@ -8,11 +8,14 @@ html {
 }
 html,
 body {
+    position: relative;
     font-family: $font;
     color: $color-purple;
     font-weight: 400;
     min-height: 100%;
     min-width: 320px;
+    max-width: 1280px;
+    margin: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -20,9 +23,6 @@ body {
     min-width: 320px;
     margin: auto;
     text-align: center;
-    @media (min-width: $width-lg) {
-        width: 960px;
-    }
 }
 .section-title {
     font-weight: 700;

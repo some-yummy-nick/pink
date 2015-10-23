@@ -13,7 +13,7 @@
             usernameList = form.querySelector(".username"),
             templateUser = document.querySelector("#username-template").innerHTML;
     }
-        
+
     function request(data, fn) {
         var xhr = new XMLHttpRequest(),
             time = (new Date()).getTime();
@@ -33,9 +33,15 @@
             var data = new FormData(form);
 
             request(data, function (response) {
-               var popup = document.querySelector('#popupSuccess');
-               popup.style.display = 'block';
-
+                var popup = document.querySelector('#popupSuccess');
+                popup.style.display = 'block';
+                var closePopup = popup.querySelector('.js-closePopup');
+                closePopup.addEventListener("click", function () {
+                    closePopup.parentNode.remove();
+                    overlay.style.height = "100%";
+                });
+                var overlay = document.querySelector('.overlay');
+                overlay.style.height = "2500px";
             });
         });
 
@@ -114,9 +120,9 @@
                     input.value = (value > 2) ? value - 1 : 1;
 
                     if (typeof document.querySelectorAll(".username__item")[input.value] !== 'undefined') {
-                        document.querySelectorAll(".username__item")[input.value].remove();    
+                        document.querySelectorAll(".username__item")[input.value].remove();
                     }
-                    
+
                     // deleteUser();
                 }
             }
@@ -141,7 +147,7 @@
             li.querySelector(".username__remove").addEventListener("click", deleteUser);
         }
 
-        
+
 
         var removing = document.querySelectorAll(".username__remove");
         for (var i = 0; i < removing.length; i++) {
@@ -154,7 +160,6 @@
     toggler.addEventListener("click", function () {
         document.querySelector(".main-nav").classList.toggle("main-nav--hide-block");
         document.querySelector(".header__top-menu").classList.toggle("header__top-menu--cross");
-        document.querySelector(".header__title").classList.toggle("header__title--cross");
         this.classList.toggle("main-nav__toggle--close");
     });
 

@@ -2,6 +2,7 @@
     &-counter {
         position: relative;
         width: 276px;
+        margin: auto;
         font-size: 0;
         input {
             @include inline-block;
@@ -51,6 +52,7 @@
         }
         @media (min-width: $width-md) {
             width: 227px;
+            margin: inherit;
             &--people {
                 border: none;
                 input {

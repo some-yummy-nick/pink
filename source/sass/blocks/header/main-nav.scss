@@ -1,6 +1,7 @@
 .main-nav {
     display: block;
-    float: left;
+    position: absolute;
+    top: 65px;
     width: 100%;
     &__list {
         @extend %no-list;
@@ -28,8 +29,12 @@
     &--hide-block {
         display: none;
     }
+    @media (min-width: $width-md) {
+        top: 75px;
+    }
     @media (min-width: $width-lg) {
         float: none;
+        position: static;
         &__list {
             display: flex;
             justify-content: flex-end;

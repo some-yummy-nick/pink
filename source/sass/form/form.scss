@@ -1,6 +1,10 @@
 .form {
     margin-top: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
     &-caption {
+        padding-left: 10px;
+        padding-right: 10px;
         color: $color-purple;
         line-height: 30px;
         margin: auto;
@@ -71,7 +75,12 @@
         }
     }
     @media (min-width: $width-md) {
+        padding-left: 30px;
+        padding-right: 30px;
         &-caption {
+            width: 500px;
+            margin: auto;
+            margin-top: 50px;
             span {
                 @include inline-block;
             }
@@ -79,8 +88,8 @@
         &__group {
             @include border;
             padding-left: 60px;
-            padding-right: 30px;
             &--first {
+                padding-left: 0;
                 border: none;
                 text-align: left;
                 label {
@@ -110,11 +119,18 @@
     @media (min-width: $width-lg) {
         width: 960px;
         margin: auto;
+        padding-right: 10px;
+        padding-left: 10px;
+        &-caption {
+            width: 800px;
+            margin-bottom: 30px;
+        }
         &__group {
-            width: 960px;
+            width: 940px;
             padding-left: 60px;
             margin-bottom: 60px;
             &--first {
+                width: 960px;
                 padding-left: 0;
                 padding-right: 0;
                 margin-bottom: 40px;
@@ -123,7 +139,7 @@
                 &--names {
                     @include inline-block;
                     width: 300px;
-                    margin-right: 25px;
+                    margin-right: 20px;
                     margin-bottom: 0;
                     &:last-child {
                         margin-right: 0;

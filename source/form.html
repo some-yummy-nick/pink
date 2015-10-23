@@ -103,257 +103,254 @@
             </symbol>
         </svg>
     </div>
+    <div class="overlay">
 
 
 
-
-    <header class="header header--second-page">
-        <div class="header__top-menu">
-            <div class="page-wrapper">
-                <a class="logo logo--header" href="index.html">
-                    <svg class="logo__mobile">
-                        <use xlink:href="#logotype-white-mobile"></use>
-                    </svg>
-                    <svg class="logo__tablet">
-                        <use xlink:href="#logotype-white-tablet"></use>
-                    </svg>
-                    <svg class="logo__desktop">
-                        <use xlink:href="#logotype-white-desktop"></use>
-                    </svg>
-                </a>
-                <nav class="main-nav main-nav--hide-block">
-                    <ul class="main-nav__list">
-                        <li class="main-nav__item  main-nav__item--active">
-                            <a href="#">Информация</a>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="blog.html">Блог</a>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="#">Отзывы</a>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="#">Конкурс</a>
-                        </li>
-                    </ul>
-                </nav>
-                <button type="button" class="main-nav__toggle" id="main-nav__toggle">
-                    <svg class="main-nav__toggle-icon">
-                        <use xlink:href="#menu-burger"></use>
-                    </svg>
-                    <svg class="main-nav__toggle-iconclose">
-                        <use xlink:href="#menu-cross"></use>
-                    </svg>
-                </button>
+        <header class="header header--second-page">
+            <div class="header__top-menu">
+                <div class="page-wrapper">
+                    <a class="logo logo--header" href="index.html">
+                        <svg class="logo__mobile">
+                            <use xlink:href="#logotype-white-mobile"></use>
+                        </svg>
+                        <svg class="logo__tablet">
+                            <use xlink:href="#logotype-white-tablet"></use>
+                        </svg>
+                        <svg class="logo__desktop">
+                            <use xlink:href="#logotype-white-desktop"></use>
+                        </svg>
+                    </a>
+                    <nav class="main-nav main-nav--hide-block">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item  main-nav__item--active">
+                                <a href="#">Информация</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="blog.html">Блог</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="#">Отзывы</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="#">Конкурс</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button type="button" class="main-nav__toggle" id="main-nav__toggle">
+                        <svg class="main-nav__toggle-icon">
+                            <use xlink:href="#menu-burger"></use>
+                        </svg>
+                        <svg class="main-nav__toggle-iconclose">
+                            <use xlink:href="#menu-cross"></use>
+                        </svg>
+                    </button>
+                </div>
             </div>
-        </div>
+            <div class="page-wrapper">
+                <h1 class="header__title  header__title--second ">Конкурс на самое <span>безбашеное</span> путешествие с Пинк</h1>
+            </div>
+        </header>
+
+
+
+
         <div class="page-wrapper">
-            <h1 class="header__title  header__title--second ">Конкурс на самое <span>безбашеное</span> путешествие с Пинк</h1>
-        </div>
-    </header>
+            <p class="form-caption">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+                <span>Пожалуйста, заполните форму ниже:</span>
+            </p>
+            <form action="https://echo.htmlacademy.ru/adaptive" method="post" class="form">
+                <fieldset class="form__group form__group--first">
+                    <div class="form__group-fields  form__group-fields--names">
+                        <label class="form__group-title" for="name">Имя:*</label>
+                        <input class="form__group-field  form__group-field--names" type="text" id="name" name="first_name" placeholder="Введите ваше имя">
+                    </div>
+                    <div class="form__group-fields  form__group-fields--names">
+                        <label class="form__group-title" for="family">Фамилия:*</label>
+                        <input class="form__group-field  form__group-field--names" type="text" id="family" name="last_name" placeholder="Укажите фамилию ">
+                    </div>
+                    <div class="form__group-fields  form__group-fields--names">
+                        <label class="form__group-title" for="patronymic">Отчество:</label>
+                        <input class="form__group-field  form__group-field--names" type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
+                    </div>
+                </fieldset>
 
+                <fieldset class="form__group form__group--gray form__group--radio">
+                    <legend class="form__group-title">С каким приложением путешествовали? *</legend>
+                    <div class="form__group-fields  form__group-fields--radio">
+                        <input class="form__radio-field" type="radio" name="device" id="answer1" value="Pink для OS" checked>
+                        <label class="form__radio-checkbox" for="answer1">Pink для OS</label>
+                    </div>
+                    <div class="form__group-fields  form__group-fields--radio">
+                        <input class="form__radio-field" type="radio" name="device" value="Pink для Android" id="answer2">
+                        <label class="form__radio-checkbox" for="answer2">Pink на Android</label>
+                    </div>
+                    <div class="form__group-fields  form__group-fields--radio">
+                        <input class="form__radio-field" type="radio" name="device" value="Windows Phone" id="answer3">
+                        <label class="form__radio-checkbox" for="answer3">Windows Phone</label>
+                    </div>
+                </fieldset>
 
+                <fieldset class="form__group form__group--time-travel ">
+                    <legend class="form__group-title">Когда вы путешествовали? *</legend>
+                    <div class="form__group-fields  form__group-fields--time-travel">
+                        <input class="form__group-field" type="text" id="date" placeholder="1 апреля 2015">
+                        <label class="form__group-title  form__group-title--bottom">Дата выезда</label>
+                    </div>
+                    <div class="form__group-fields  form__group-fields--time-travel">
+                        <div class="form-counter">
+                            <button class="form-counter__btn  form-counter__btn--minus" type="button">
+                                <i>-</i>
+                            </button>
+                            <input type="number" min="1" max="999" value="10"><span class="form-counter__inner-input">дней</span>
+                            <button class="form-counter__btn  form-counter__btn--plus" type="button">
+                                <i>+</i>
+                            </button>
+                        </div>
+                        <label class="form__group-title  form__group-title--bottom">Продолжительность</label>
+                    </div>
+                    <div class="form__group-fields  form__group-fields--time-travel">
+                        <input class="form__group-field" type="text" id="dateend" placeholder="1 апреля 2015 ">
+                        <label class="form__group-title  form__group-title--bottom">Дата возвращения</label>
+                    </div>
+                </fieldset>
 
-
-    <div class="page-wrapper">
-        <p class="form-caption">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
-            <span>Пожалуйста, заполните форму ниже:</span>
-        </p>
-        <form action="https://echo.htmlacademy.ru/adaptive" method="post" class="form">
-            <fieldset class="form__group form__group--first">
-                <div class="form__group-fields  form__group-fields--names">
-                    <label class="form__group-title" for="name">Имя:*</label>
-                    <input class="form__group-field  form__group-field--names" type="text" id="name" name="first_name" required placeholder="Введите ваше имя">
-                </div>
-                <div class="form__group-fields  form__group-fields--names">
-                    <label class="form__group-title" for="family">Фамилия:*</label>
-                    <input class="form__group-field  form__group-field--names" type="text" id="family" name="last_name"  required placeholder="Укажите фамилию ">
-                </div>
-                <div class="form__group-fields  form__group-fields--names">
-                    <label class="form__group-title" for="patronymic">Отчество:</label>
-                    <input class="form__group-field  form__group-field--names" type="text" id="patronymic" name="patronymic"  placeholder="Ну и отчество тоже">
-                </div>
-            </fieldset>
-
-            <fieldset class="form__group form__group--gray form__group--radio">
-                <legend class="form__group-title">С каким приложением путешествовали? *</legend>
-                <div class="form__group-fields  form__group-fields--radio">
-                    <input class="form__radio-field" type="radio" name="device" id="answer1" value="Pink для OS" checked>
-                    <label class="form__radio-checkbox" for="answer1">Pink для OS</label>
-                </div>
-                <div class="form__group-fields  form__group-fields--radio">
-                    <input class="form__radio-field" type="radio" name="device"  value="Pink для Android" id="answer2">
-                    <label class="form__radio-checkbox" for="answer2">Pink на Android</label>
-                </div>
-                <div class="form__group-fields  form__group-fields--radio">
-                    <input class="form__radio-field" type="radio" name="device" value="Windows Phone" id="answer3">
-                    <label class="form__radio-checkbox" for="answer3">Windows Phone</label>
-                </div>
-            </fieldset>
-
-            <fieldset class="form__group form__group--time-travel ">
-                <legend class="form__group-title">Когда вы путешествовали? *</legend>
-                <div class="form__group-fields  form__group-fields--time-travel">
-                    <input class="form__group-field" type="text" id="date" required placeholder="1 апреля 2015">
-                    <label class="form__group-title  form__group-title--bottom">Дата выезда</label>
-                </div>
-                <div class="form__group-fields  form__group-fields--time-travel">
-                    <div class="form-counter">
-                        <button class="form-counter__btn  form-counter__btn--minus" type="button">
+                <fieldset class="form__group  form__group--gray  form__group--count-travel ">
+                    <legend class="form__group-title">Количество попутчиков*</legend>
+                    <div class="form-counter form-counter--people">
+                        <button class="form-counter__btn  form-counter__btn--minus" id="form-counter__btn--minus" type="button">
                             <i>-</i>
                         </button>
-                        <input type="number" min="1" max="999" required value="10"><span class="form-counter__inner-input">дней</span>
-                        <button class="form-counter__btn  form-counter__btn--plus" type="button">
+                        <input type="number" id="counterUsers" min="1" max="999" value="2"><span class="form-counter__inner-input">чел</span>
+                        <button class="form-counter__btn  form-counter__btn--plus" id="form-counter__btn--plus" type="button">
                             <i>+</i>
                         </button>
                     </div>
-                    <label class="form__group-title  form__group-title--bottom">Продолжительность</label>
-                </div>
-                <div class="form__group-fields  form__group-fields--time-travel">
-                    <input class="form__group-field" type="text" id="dateend" placeholder="1 апреля 2015 ">
-                    <label class="form__group-title  form__group-title--bottom">Дата возвращения</label>
-                </div>
-            </fieldset>
+                    <ol class="username">
+                        <li class="username__item">
+                            <span class="username__block">№</span>
+                            <div class="form__group-fields  form__group-fields--people">
+                                <label class="username__title">Имя:*</label>
+                                <input class="username__field" type="text" name="username-name" placeholder="Введите ваше имя">
+                            </div>
+                            <div class="form__group-fields  form__group-fields--people">
+                                <label class="username__title">Прозвище:</label>
+                                <input class="username__field" type="text" name="username-name" placeholder="Ну как же без этого!">
+                            </div>
+                            <button class="username__remove" type="button">Удалить</button>
+                        </li>
+                        <li class="username__item">
+                            <span class="username__block">№</span>
+                            <div class="form__group-fields  form__group-fields--people">
+                                <label class="username__title">Имя:* </label>
+                                <input class="username__field" type="text" name="username-name" placeholder="Введите ваше имя">
+                            </div>
+                            <div class="form__group-fields  form__group-fields--people">
+                                <label class="username__title">Прозвище:</label>
+                                <input class="username__field" type="text" name="username-name" placeholder="Ну как же без этого!">
+                            </div>
+                            <button class="username__remove" type="button">Удалить</button>
+                        </li>
+                    </ol>
+                </fieldset>
 
-            <fieldset class="form__group  form__group--gray  form__group--count-travel ">
-                <legend class="form__group-title">Количество попутчиков*</legend>
-                <div class="form-counter form-counter--people">
-                    <button class="form-counter__btn  form-counter__btn--minus" id="form-counter__btn--minus" type="button">
-                        <i>-</i>
-                    </button>
-                    <input type="number" id="counterUsers" min="1" max="999" required value="2"><span class="form-counter__inner-input">чел</span>
-                    <button class="form-counter__btn  form-counter__btn--plus" id="form-counter__btn--plus" type="button">
-                        <i>+</i>
-                    </button>
-                </div>
-                <ol class="username">
-                    <li class="username__item">
-                        <span class="username__block">№</span>
-                        <div class="form__group-fields  form__group-fields--people">
-                            <label class="username__title">Имя:*</label>
-                            <input class="username__field" type="text" name="username-name" placeholder="Введите ваше имя" required>
-                        </div>
-                        <div class="form__group-fields  form__group-fields--people">
-                            <label class="username__title">ПРОЗВИЩЕ:</label>
-                            <input class="username__field" type="text" name="username-name" placeholder="Ну как же без этого!">
-                        </div>
-                        <button class="username__remove" type="button">Удалить</button>
-                    </li>
-                    <li class="username__item">
-                        <span class="username__block">№</span>
-                        <div class="form__group-fields  form__group-fields--people">
-                            <label class="username__title">Имя:* </label>
-                            <input class="username__field" type="text" name="username-name" placeholder="Введите ваше имя" required>
-                        </div>
-                        <div class="form__group-fields  form__group-fields--people">
-                            <label class="username__title">ПРОЗВИЩЕ:</label>
-                            <input class="username__field" type="text" name="username-name" placeholder="Ну как же без этого!">
-                        </div>
-                        <button class="username__remove" type="button">Удалить</button>
-                    </li>
-                </ol>
-            </fieldset>
+                <fieldset class="form__group ">
+                    <legend class="form__group-title">Ваши безбашенные достижения в путешествии</legend>
+                    <div class="form__group-fields  form__group-fields--checkbox">
+                        <input class="form__checkbox-field" type="checkbox" id="answer4" checked>
+                        <label class="form__radio-checkbox" for="answer4">Сделал селфи с акулой</label>
+                    </div>
+                    <div class="form__group-fields  form__group-fields--checkbox">
+                        <input class="form__checkbox-field" type="checkbox" checked id="answer5">
+                        <label class="form__radio-checkbox" for="answer5">Обгорел на пляже</label>
+                    </div>
+                    <div class="form__group-fields  form__group-fields--checkbox">
+                        <input class="form__checkbox-field" type="checkbox" id="answer6">
+                        <label class="form__radio-checkbox" for="answer6">Видел Чака Норриса</label>
+                    </div>
+                    <div class="form__group-fields  form__group-fields--checkbox">
+                        <input class="form__checkbox-field" type="checkbox" id="answer7">
+                        <label class="form__radio-checkbox" for="answer7">Накупил сувениров</label>
+                    </div>
+                    <div class="form__group-fields  form__group-fields--checkbox">
+                        <input class="form__checkbox-field" type="checkbox" id="answer8" checked>
+                        <label class="form__radio-checkbox" for="answer8">Удержал башню</label>
+                    </div>
+                    <div class="form__group-fields  form__group-fields--checkbox">
+                        <input class="form__checkbox-field" type="checkbox" id="answer9">
+                        <label class="form__radio-checkbox" for="answer9">Разгромил отель</label>
+                    </div>
+                </fieldset>
 
-            <fieldset class="form__group ">
-                <legend class="form__group-title">Ваши безбашенные достижения в путешествии</legend>
-                <div class="form__group-fields  form__group-fields--checkbox">
-                    <input class="form__checkbox-field" type="checkbox" id="answer4" checked>
-                    <label class="form__radio-checkbox" for="answer4">Сделал селфи с акулой</label>
+                <fieldset class="form__group form__group--gray  form__group--submit">
+                    <legend class="form__group-title">ВАШИ ФОТОГРАФИИ из поездки *</legend>
+                    <input class="inputfile" type="file" name="file" id="file" multiple />
+                    <label for="file">Загрузить фото</label>
+                    <div class="upload-images">
+                        <ul class="upload-images__list"></ul>
+                    </div>
+                </fieldset>
+                <div class="submit-wrapper">
+                    <input class="submit-form" type="submit" value="Отправить форму" id="submit">
+                    <div class="required-text"><span>*</span> — обязательные поля</div>
                 </div>
-                <div class="form__group-fields  form__group-fields--checkbox">
-                    <input class="form__checkbox-field" type="checkbox" checked id="answer5">
-                    <label class="form__radio-checkbox" for="answer5">Обгорел на пляже</label>
-                </div>
-                <div class="form__group-fields  form__group-fields--checkbox">
-                    <input class="form__checkbox-field" type="checkbox" id="answer6">
-                    <label class="form__radio-checkbox" for="answer6">Видел Чака Норриса</label>
-                </div>
-                <div class="form__group-fields  form__group-fields--checkbox">
-                    <input class="form__checkbox-field" type="checkbox" id="answer7">
-                    <label class="form__radio-checkbox" for="answer7">Накупил сувениров</label>
-                </div>
-                <div class="form__group-fields  form__group-fields--checkbox">
-                    <input class="form__checkbox-field" type="checkbox" id="answer8" checked>
-                    <label class="form__radio-checkbox" for="answer8">Удержал башню</label>
-                </div>
-                <div class="form__group-fields  form__group-fields--checkbox">
-                    <input class="form__checkbox-field" type="checkbox" id="answer9">
-                    <label class="form__radio-checkbox" for="answer9">Разгромил отель</label>
-                </div>
-            </fieldset>
-
-            <fieldset class="form__group form__group--gray  form__group--submit">
-                <legend class="form__group-title">ВАШИ ФОТОГРАФИИ из поездки *</legend>
-                <input class="inputfile" type="file" name="file" id="file" multiple />
-                <label for="file">Загрузить фото</label>
-                <div class="upload-images">
-                    <ul class="upload-images__list"></ul>
-                </div>
-            </fieldset>
-            <div class="submit-wrapper">
-                <input class="submit-form" type="submit" value="Отправить форму" id="submit">
-                <div class="required-text"><span>*</span> — обязательные поля</div>
-            </div>
-        </form>
+            </form>
 
 
 
 
-        <footer class="footer">
-            <a class="logo" href="index.html">
-                <svg class="logo__tablet  logo__tablet--footer">
-                    <use xlink:href="#logotype-blue-tablet"></use>
-                </svg>
+            <footer class="footer">
+                <a class="logo" href="index.html">
+                    <svg class="logo__tablet  logo__tablet--footer">
+                        <use xlink:href="#logotype-blue-tablet"></use>
+                    </svg>
 
-                <svg class="logo__desktop">
-                    <use xlink:href="#logotype-blue-desktop"></use>
-                </svg>
-            </a>
-            <div class="social-buttons">
-                <a class="social-buttons__item" href="https://twitter.com">
-                    <svg class="social-buttons__svg">
-                        <use xlink:href="#twitter"></use>
+                    <svg class="logo__desktop">
+                        <use xlink:href="#logotype-blue-desktop"></use>
                     </svg>
                 </a>
-                <a class="social-buttons__item" href="https://ru-ru.facebook.com/">
-                    <svg class="social-buttons__svg">
-                        <use xlink:href="#facebook"></use>
-                    </svg>
-                </a>
-                <a class="social-buttons__item" href="http://www.youtube.com/">
-                    <svg class="social-buttons__svg">
-                        <use xlink:href="#youtube"></use>
-                    </svg>
-                </a>
-            </div>
-            <div class="footer__copyright">Разработано
-                <a class="footer__copyright-link" href="https://htmlacademy.ru/">
-                    <svg class="footer__copyright-svg">
-                        <use xlink:href="#copyright"></use>
-                    </svg>
-                </a>
-            </div>
-        </footer>
+                <div class="social-buttons">
+                    <a class="social-buttons__item" href="https://twitter.com">
+                        <svg class="social-buttons__svg">
+                            <use xlink:href="#twitter"></use>
+                        </svg>
+                    </a>
+                    <a class="social-buttons__item" href="https://ru-ru.facebook.com/">
+                        <svg class="social-buttons__svg">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+                    <a class="social-buttons__item" href="http://www.youtube.com/">
+                        <svg class="social-buttons__svg">
+                            <use xlink:href="#youtube"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="footer__copyright">Разработано
+                    <a class="footer__copyright-link" href="https://htmlacademy.ru/">
+                        <svg class="footer__copyright-svg">
+                            <use xlink:href="#copyright"></use>
+                        </svg>
+                    </a>
+                </div>
+            </footer>
+        </div>
+
+
+
+
+        <div class="popup popup--success" id="popupSuccess">
+            <h3 class="popup__caption">Ваша заявка отправлена</h3>
+            <p>Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+
+            <button class="popup__btn js-closePopup" type="button">Закрыть окно</button>
+        </div>
+        <div class=" popup  popup--failure" id="popupFailure">
+            <h3 class="popup__caption">Что-то пошло не так!</h3>
+            <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+            <button class="popup__btn js-closePopup" type="button">Oк</button>
+        </div>
     </div>
-
-
-
-
-    <div class="popup popup--success" id="popupSuccess">
-        <h3 class="popup__caption">Ваша заявка отправлена</h3>
-        <p>Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
-        <!-- 
-            Убрать капс и сделать норм регистр. 
-            Лучше задать стилями text-transform: uppercase
-        -->
-        <button class="popup__btn js-closePopup" type="button">ЗАКРЫТЬ ОКНО</button>
-    </div>
-    <div class=" popup  popup--failure" id="popupFailure">
-        <h3 class="popup__caption">Что-то пошло не так!</h3>
-        <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button class="popup__btn js-closePopup" type="button">OK</button>
-    </div>
-
 
 
 
@@ -374,7 +371,7 @@
             <input class="username__field" type="text" name="username-name" placeholder="Введите ваше имя" required>
         </div>
         <div class="form__group-fields  form__group-fields--people">
-            <label class="username__title">ПРОЗВИЩЕ:</label>
+            <label class="username__title">Прозвище:</label>
             <input class="username__field" type="text" name="username-name" placeholder="Ну как же без этого!">
         </div>
         <button class="username__remove" type="button">Удалить</button>

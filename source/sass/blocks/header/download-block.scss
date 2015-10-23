@@ -9,6 +9,7 @@
         width: 229px;
         margin: auto;
         margin-top: 20px;
+        text-align: center;
     }
     &__btn {
         display: block;
@@ -21,6 +22,7 @@
         font-weight: 700;
         font-size: 18px;
         line-height: 48px;
+        text-align: center;
         @extend %no-decor;
         &:hover {
             background: #fff;
@@ -34,6 +36,7 @@
     &__list {
         @extend %no-list;
         margin-top: 25px;
+        text-align: center;
         &-item {
             @include inline-block;
             margin-right: 25px;
