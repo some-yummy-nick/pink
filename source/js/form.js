@@ -38,10 +38,10 @@
                 var closePopup = popup.querySelector('.js-closePopup');
                 closePopup.addEventListener("click", function () {
                     closePopup.parentNode.remove();
-                    overlay.style.height = "100%";
+                    overlay.style.height = "0";
                 });
                 var overlay = document.querySelector('.overlay');
-                overlay.style.height = "2500px";
+                overlay.style.height = "100%";
             });
         });
 
