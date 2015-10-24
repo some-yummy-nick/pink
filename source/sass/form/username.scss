@@ -26,6 +26,9 @@
             border-right: none;
             width: 50px;
             height: 54px;
+            @-moz-document url-prefix() {
+                top: 48px;
+            }
             @media (min-width: $width-md) {
                 left: -70px;
                 border-right: 2px solid $color-gray;

@@ -4,6 +4,7 @@
     &__wrapper {
         padding-bottom: 60px;
         margin: auto;
+        overflow-x: hidden;
     }
     &-price {
         width: 100%;
@@ -20,7 +21,7 @@
             text-transform: uppercase;
             background: $color-purple;
             &:first-child {
-                background: #f2f2f2;
+                background: $color-wan;
                 border: none;
                 display: none;
                 border-top: 4px solid $color-wan;
