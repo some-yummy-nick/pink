@@ -1,0 +1,181 @@
+.form {
+    margin-top: 60px;
+    &-caption {
+        padding-left: 10px;
+        padding-right: 10px;
+        color: $color-purple;
+        line-height: 30px;
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        span {
+            display: none;
+        }
+    }
+    &__group {
+        border: none;
+        margin-bottom: 30px;
+        text-align: left;
+        padding: 0;
+        padding-bottom: 35px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        &--first {
+            text-align: left;
+        }
+        &--time-travel {
+            padding-top: 40px;
+            padding-bottom: 10px;
+        }
+        &--count-travel {
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+        &-fields {
+            text-align: left;
+            &--names {
+                margin-bottom: 20px;
+            }
+        }
+        &--gray {
+            background: $color-wan;
+        }
+        &-title {
+            display: block;
+            margin: auto;
+            text-align: center;
+            text-transform: uppercase;
+            color: $color-pink;
+            &--bottom {
+                margin-top: 10px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        }
+        &-field {
+            padding: 15px;
+            width: 100%;
+            @include border;
+            text-align: left;
+            &:hover {
+                border-color: $color-purple;
+            }
+            &:active {
+                border-color: $color-pink;
+            }
+            &:focus {
+                outline: none;
+                border-color: $color-pink;
+            }
+            &--names {
+                margin-top: 20px;
+            }
+        }
+    }
+    @media (min-width: $width-md) {
+        padding-left: 30px;
+        padding-right: 30px;
+        &-caption {
+            width: 500px;
+            margin: auto;
+            margin-top: 50px;
+            span {
+                @include inline-block;
+            }
+        }
+        &__group {
+            @include border;
+            padding-left: 60px;
+            &--first {
+                padding-left: 0;
+                border: none;
+                text-align: left;
+                label {
+                    text-align: left;
+                }
+            }
+            &--submit {
+                padding-right: 60px;
+            }
+            &-fields {
+                &--radio {
+                    margin-bottom: 20px;
+                }
+                &--time-travel {
+                    @include inline-block;
+                    margin-right: 30px;
+                }
+            }
+            &-title {
+                text-align: center;
+                &--bottom {
+                    text-align: left;
+                }
+            }
+        }
+    }
+    @media (min-width: $width-lg) {
+        width: 960px;
+        margin: auto;
+        padding-right: 10px;
+        padding-left: 10px;
+        &-caption {
+            width: 800px;
+            margin-bottom: 30px;
+        }
+        &__group {
+            width: 940px;
+            padding-left: 60px;
+            margin-bottom: 60px;
+            &--first {
+                width: 960px;
+                padding-left: 0;
+                padding-right: 0;
+                margin-bottom: 40px;
+            }
+            &-fields {
+                &--names {
+                    @include inline-block;
+                    width: 300px;
+                    margin-right: 20px;
+                    margin-bottom: 0;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+                &--radio {
+                    @include inline-block;
+                    width: 200px;
+                    margin-right: 60px;
+                    margin-left: 0;
+                    &:last-child {
+                        margin-right: 0;
+                        margin-left: 60px;
+                    }
+                }
+                &--time-travel {
+                    @include inline-block;
+                    width: 240px;
+                    margin-right: 40px;
+                    &:last-child {
+                        margin-right: 0;
+                        margin-left: 10px;
+                    }
+                }
+                &--people {
+                    @include inline-block;
+                    margin-right: 20px;
+                }
+                &--checkbox {
+                    min-width: 260px;
+                    @include inline-block;
+                    margin-right: 15px;
+                }
+                &--gray {
+                    background: #fff;
+                }
+            }
+        }
+    }
+}

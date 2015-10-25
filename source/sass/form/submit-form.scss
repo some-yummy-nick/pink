@@ -1,0 +1,41 @@
+.submit-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: $width-md) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    @media (min-width: $width-lg) {
+        width: 940px;
+        margin: auto;
+    }
+}
+.submit-form {
+    width: 276px;
+    padding: 15px;
+    background: $color-green;
+    border: 2px solid $color-green;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    outline: none;
+    &:hover {
+        background: darken($color-green, 10%);
+        border-color: darken($color-green, 10%);
+    }
+    &:active {
+        color: rgba(#fff, 0.3);
+    }
+}
+.required-text {
+    margin-top: 30px;
+    text-transform: uppercase;
+    span {
+        color: $color-pink;
+    }
+}

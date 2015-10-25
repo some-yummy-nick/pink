@@ -1,0 +1,32 @@
+%clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;        
+    }
+}
+
+%no-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+%no-decor{
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+@mixin inline-block($valign: top) {
+    display: inline-block;
+    vertical-align: $valign;
+}
+
+@mixin border($color: $color-gray, $width: 2px, $style: solid) {
+  border-color: $color;
+  border-style: $style;
+  border-width: $width;
+ 
+}
+

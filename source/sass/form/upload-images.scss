@@ -1,0 +1,67 @@
+.upload-images {
+    margin-top: 30px;
+    padding: 0;
+    padding-top: 30px;
+    font-size: 0;
+    border-top: 2px solid $color-gray;
+    text-align: left;
+    &__list {
+        @extend %no-list;
+        font-size: 0;
+    }
+    &__item {
+        @include inline-block;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        width: 70px;
+        @media (min-width: $width-md) {
+            width: 120px;
+            margin-right: 40px;
+            margin-bottom: 40px;
+            &:nth-child(5n) {
+                margin-right: 0;
+            }
+        }
+        @media (min-width: $width-lg) {
+            margin-right: 50px;
+        }
+    }
+    &__img-wrap {
+        position: relative;
+        font: 400 14px $font;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    &__del-link {
+        display: block;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        width: 29px;
+        height: 30px;
+        background: #fff;
+        border-radius: 50%;
+        color: rgba(#000, 0.3);
+        font-size: 25px;
+        line-height: 5px;
+        outline: none;
+        cursor: pointer;
+        i {
+            margin-left: -4px;
+            font-size: 30px;
+            &:active {
+                color: #fff;
+            }
+        }
+        &:hover {
+            border-color: $color-purple;
+            color: $color-purple;
+        }
+        &:active {
+            color: #fff;
+            background: $color-purple
+        }
+    }
+}

@@ -1,0 +1,88 @@
+.username {
+    position: relative;
+    margin-top: 40px;
+    padding-left: 64px;
+    padding-top: 20px;
+    counter-reset: myCounter;
+    font-family: $font;
+    font-size: 15px;
+    color: #000;
+    border-top: 2px solid $color-gray;
+    &__item {
+        list-style: none;
+        position: relative;
+        margin-bottom: 30px;
+        text-align: left;
+        &:before {
+            counter-increment: myCounter;
+            content: counter(myCounter);
+            @include inline-block;
+            position: absolute;
+            left: -50px;
+            top: 45px;
+            text-align: center;
+            line-height: 50px;
+            @include border;
+            border-right: none;
+            width: 50px;
+            height: 54px;
+            @-moz-document url-prefix() {
+                top: 48px;
+            }
+            @media (min-width: $width-md) {
+                left: -70px;
+                border-right: 2px solid $color-gray;
+            }
+        }
+    }
+    &__block {
+        position: absolute;
+        left: -50px;
+        top: 15px;
+        color: $color-pink;
+    }
+    &__title {
+        @include inline-block;
+        margin-bottom: 10px;
+        margin-top: 15px;
+        color: $color-pink;
+        padding-left: 20px;
+        text-transform: uppercase;
+    }
+    &__field {
+        display: block;
+        padding: 15px;
+        @include border;
+        outline: none;
+        &:hover {
+            border-color: $color-purple;
+        }
+        &:focus {
+            border-color: $color-pink;
+        }
+    }
+    &__remove {
+        display: none;
+        border: none;
+        position: absolute;
+        top: 30%;
+        background: #fff;
+        text-transform: uppercase;
+        margin-left: 80%;
+        outline: none;
+        &:hover {
+            color: $color-pink;
+            box-shadow: 0 1px 0 $color-pink;
+        }
+        &:active {
+            opacity: 0.3;
+            box-shadow: none;
+        }
+        @media (min-width: $width-md) {
+            display: block;
+        }
+        @media (min-width: $width-lg) {
+            top: 55%;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+$font: "Open Sans",
+Arial,
+sans-serif;
+$color-purple: #283645;
+$color-tone:#1d2631;
+$color-pink:#d22856;
+$color-green:#2AAB6D;
+$color-gray:#E5E5E5;
+$color-wan:#f2f2f2;
+// Использовать map
+// $colors: (
+//     purple: #283645,
+//     tone: #1d2631
+// );
+// color: map-get($colors, purple);
+$border:2px solid $color-gray;
+$width-md:660px;
+$width-lg:960px;

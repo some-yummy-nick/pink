@@ -1,0 +1,82 @@
+.post {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $color-gray;
+    h2 {
+        color: $color-purple;
+        font-weight: 700;
+        font-size: 30px;
+    }
+    &--center {
+        text-align: center;
+    }
+    &__link {
+        a {
+            font-weight: 700;
+            font-size: 18px;
+            color: $color-purple;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__icon {
+        display: none;
+    }
+    &__text {
+        color: $color-purple;
+    }
+    &__date {
+        color: $color-pink;
+        margin-top: -10px;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    &:last-child {
+        border: none;
+    }
+    @media (min-width: $width-md) {
+        border-bottom: 1px dotted $color-gray;
+        h2 {
+            font-size: 50px;
+        }
+        &__link {
+            a {
+                font-size: 27px;
+            }
+        }
+        &__icon {
+            display: inline;
+            position: absolute;
+            left: -40px;
+            top: 35px;
+            &-svg {
+                width: 28px;
+                height: 26px;
+                fill: $color-pink;
+            }
+        }
+        &__text {
+            font-size: 24px;
+            margin-bottom: 45px;
+        }
+        &__date {
+            font-size: 14px;
+        }
+        &--tablet {
+            position: absolute;
+            display: block;
+            width: 300px;
+            bottom: -10px;
+            left: 30%;
+            background: #fff;
+        }
+    }
+    @media (min-width: $width-lg) {
+        &--tablet {
+            left: 33%;
+        }
+    }
+}

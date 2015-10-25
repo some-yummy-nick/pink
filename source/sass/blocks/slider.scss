@@ -1,0 +1,91 @@
+.slider {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    &__inner {
+        position: relative;
+        width: 90%;
+        margin: auto;
+        min-height: 150px;
+    }
+    &__item {
+        position: absolute;
+        width: 100%;
+        min-height: 150px;
+        opacity: 0;
+        padding-top: 30px;
+        transition: opacity ease-in-out .5s;
+    }
+    &__cite {
+        font-weight: 700;
+        font-size: 18px;
+        position: absolute;
+        top: 0;
+        left: 25%;
+    }
+    &__hide {
+        display: none;
+    }
+    &__blockquote {
+        margin: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    &__quotes {
+        display: none;
+        width: 78px;
+        height: 64px;
+        margin: auto;
+        fill: #EFEFEF;
+    }
+    &__arrow {
+        display: none;
+    }
+    @media(min-width: $width-md) {
+        margin-top: 0;
+        &__inner {
+            width: 90%;
+        }
+        &__item {
+            padding-top: 0;
+        }
+        &__cite {
+            position: static;
+        }
+        &__hide {
+            display: block;
+        }
+    }
+    @media(min-width: $width-lg) {
+        &__inner {
+            width: 70%;
+        }
+        &__quotes {
+            display: block;
+        }
+        &__arrow {
+            display: block;
+            position: absolute;
+            margin-left: 80px;
+            margin-right: 80px;
+            width: 22px;
+            height: 42px;
+            top: 50%;
+            opacity: 0.3;
+            cursor: pointer;
+            fill: $color-purple;
+            &--left {
+                left: 0;
+            }
+            &--right {
+                right: 0;
+            }
+            &:hover {
+                opacity: 0.6;
+            }
+            &:active {
+                opacity: 0.1;
+            }
+        }
+    }
+}
