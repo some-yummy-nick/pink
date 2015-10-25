@@ -123,7 +123,7 @@
                         document.querySelectorAll(".username__item")[input.value].remove();
                     }
 
-                    // deleteUser();
+
                 }
             }
         }

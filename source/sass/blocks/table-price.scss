@@ -1,6 +1,7 @@
 .table {
     padding-top: 100px;
     background: $color-wan url(../img/triangle-white.svg) no-repeat;
+    overflow-x: hidden;
     &__wrapper {
         padding-bottom: 60px;
         margin: auto;
@@ -14,6 +15,7 @@
         @include border;
         border-width: 2px;
         transform: translateX(-60px);
+        overflow-x: hidden;
         &__header {
             min-width: 280px;
             border-right: 2px solid #fff;
