@@ -32,8 +32,6 @@
             margin: auto;
         }
         &__item {
-            width: auto;
-            min-width: 330px;
             &--smile {
                 order: -1;
             }
@@ -51,6 +49,7 @@
             justify-content: space-around;
         }
         &__item {
+            width: auto;
             min-width: 300px;
             &--text {
                 min-width: 300px;

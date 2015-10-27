@@ -64,19 +64,14 @@
         }
         &__date {
             font-size: 14px;
-        }
-        &--tablet {
-            position: absolute;
-            display: block;
-            width: 300px;
-            bottom: -10px;
-            left: 30%;
-            background: #fff;
-        }
-    }
-    @media (min-width: $width-lg) {
-        &--tablet {
-            left: 33%;
+            &--tablet {
+                position: absolute;
+                display: block;
+                bottom: -10px;
+                left: 50%;
+                transform: translate(-50%, 0);
+                background: #fff;
+            }
         }
     }
 }

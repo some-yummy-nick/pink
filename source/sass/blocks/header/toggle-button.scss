@@ -1,47 +1,47 @@
- .main-nav__toggle {
-     position: absolute;
-     display: block;
-     right: 20px;
-     width: 50px;
-     height: 24px;
-     margin-right: 20px;
-     border: none;
-     outline: none;
-     cursor: pointer;
-     background: transparent;
-     &-icon,
-     &-iconclose {
-         &:hover {
-             fill: $color-pink;
-         }
-         &:active {
-             opacity: 0.3;
-         }
-     }
-     &-icon {
-         width: 50px;
-         height: 24px;
-         fill: #fff;
-     }
-     &-iconclose {
-         width: 24px;
-         height: 24px;
-         display: none;
-         fill: #fff;
-         margin-left: 30px;
-     }
-     &--close {
-         .main-nav__toggle-icon {
-             display: none;
-         }
-         .main-nav__toggle-iconclose {
-             display: block;
-         }
-     }
-     @media (min-width: $width-md) {
-         padding-top: 10px;
-     }
-     @media (min-width: $width-lg) {
-         display: none;
-     }
- }
+.main-nav__toggle {
+    position: absolute;
+    display: block;
+    right: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+    &:hover {
+        .main-nav__toggle-icon,
+        .main-nav__toggle-iconclose {
+            fill: $color-pink;
+        }
+    }
+    &:active {
+        .main-nav__toggle-icon,
+        .main-nav__toggle-iconclose {
+            opacity: 0.3;
+        }
+    }
+    &-icon {
+        width: 50px;
+        height: 24px;
+        fill: #fff;
+    }
+    &-iconclose {
+        width: 24px;
+        height: 24px;
+        display: none;
+        fill: #fff;
+        margin-left: 30px;
+    }
+    &--close {
+        .main-nav__toggle-icon {
+            display: none;
+        }
+        .main-nav__toggle-iconclose {
+            display: block;
+        }
+    }
+    @media (min-width: $width-md) {
+        padding-top: 10px;
+    }
+    @media (min-width: $width-lg) {
+        display: none;
+    }
+}

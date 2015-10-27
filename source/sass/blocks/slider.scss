@@ -4,15 +4,16 @@
     position: relative;
     &__inner {
         position: relative;
-        width: 90%;
-        margin: auto;
+        width: 100%;
         min-height: 150px;
     }
     &__item {
         position: absolute;
-        width: 100%;
+        width: 90%;
         min-height: 150px;
         opacity: 0;
+        left: 50%;
+        transform: translateX(-50%);
         padding-top: 30px;
         transition: opacity ease-in-out .5s;
     }
@@ -21,7 +22,9 @@
         font-size: 18px;
         position: absolute;
         top: 0;
-        left: 25%;
+        width: 300px;
+        left: 45%;
+        transform: translateX(-45%);
     }
     &__hide {
         display: none;
@@ -45,6 +48,8 @@
         margin-top: 0;
         &__inner {
             width: 90%;
+            left: 50%;
+            transform: translateX(-50%);
         }
         &__item {
             padding-top: 0;

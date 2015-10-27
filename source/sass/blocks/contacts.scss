@@ -1,10 +1,13 @@
 .contacts {
-    margin-top: 40px;
     &__wrapper {
         display: flex;
         flex-direction: column;
         text-align: center;
         flex-wrap: wrap;
+        @media (min-width: $width-md) {
+            flex-direction: row;
+            justify-content: space-around;
+        }
     }
     &__title {
         color: $color-purple;
@@ -13,6 +16,9 @@
         margin-top: 0;
         margin-bottom: 0;
         text-align: center;
+        @media (min-width: $width-md) {
+            font-size: 40px;
+        }
     }
     &__text {
         margin-bottom: 30px;
@@ -26,27 +32,7 @@
         p {
             margin-top: 0;
         }
-        a {
-            &:hover {
-                color: $color-purple;
-            }
-            &:active {
-                opacity: 0.3;
-            }
-        }
-    }
-    @media (min-width: $width-md) {
-        margin-top: 50px;
-        &__wrapper {
-            flex-direction: row;
-            justify-content: space-around;
-        }
-        &__title {
-            font-size: 40px;
-        }
-    }
-    @media (min-width: $width-lg) {
-        &__text {
+        @media (min-width: $width-lg) {
             &:nth-child(2) {
                 order: 1;
             }
