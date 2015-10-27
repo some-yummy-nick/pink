@@ -103,7 +103,7 @@
         min-height: 855px;
         @media (min-resolution: 1.5dppx) {
             background: url(../img/iphone-hand-desktop@2x.png) no-repeat 70% 100%, url(../img/background-fullsize.jpg) no-repeat 50% 0;
-            background-size: 1000px, cover;
+            background-size: 960px, cover;
             background-color: $color-tone;
             min-height: 855px;
         }
@@ -120,7 +120,7 @@
             }
         }
         &__wrapper {
-            width: 960px;
+            width: 950px;
             margin: auto;
             text-align: center;
         }

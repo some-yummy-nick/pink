@@ -22,8 +22,9 @@
         font-size: 18px;
         position: absolute;
         top: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        width: 300px;
+        left: 45%;
+        transform: translateX(-45%);
     }
     &__hide {
         display: none;
