@@ -1,121 +1,139 @@
-.table-wrapper {
-    background: #f2f2f2 url(../img/triangle-white.svg) no-repeat;
-    padding-bottom: 50px;
-    padding-top: 115px;
-    margin: auto;
-    overflow-x: scroll;
-    @media (min-width: $width-md) {
-        width: 605px;
+.table {
+    padding-top: 100px;
+    background: $color-wan url(../img/triangle-white.svg) no-repeat;
+    overflow-x: hidden;
+    &__wrapper {
+        padding-bottom: 60px;
+        margin: auto;
         overflow-x: hidden;
     }
-    @media (min-width: $width-lg) {
-        width: 930px;
-    }
-}
-.table-price {
-    width: 100%;
-    background: #fff;
-    margin: auto;
-    transform: translateX(-60px);
-    @media (min-width: $width-md) {
-        transform: translatex(0) !important;
-    }
-    &__header {
-        min-width: 280px;
-        border-right: 2px solid #fff;
-        color: #fff;
-        text-transform: uppercase;
-        background: $color-purple;
-        @media (min-width: $width-md) {
-            min-width: 155px;
-        }
-        &:first-child {
-            background: #fff;
-            border: none;
-            display: none;
-            @media (min-width: $width-md) {
-                display: table-cell;
-            }
-        }
-        &--flag {
-            position: relative;
-            &:after,
-            &:before {
-                content: "";
-                position: absolute;
-                display: block;
-            }
-            &:after {
-                top: 0;
-                width: 74px;
-                height: 73px;
-                background: url(../img/slider-flag.png);
-            }
-            &:before {
-                content: "Хит";
-                color: #fff;
-                font-weight: 600;
-                text-transform: uppercase;
-                top: 12px;
-                left: 10px;
-                z-index: 2;
-                transform: matrix(0.707, -0.707, 0.707, 0.707, 0, 0);
-            }
-        }
-    }
-    &__caption {
-        font-weight: 700;
-        @media (min-width: $width-md) {
-            font-size: 16px;
-        }
-        @media (min-width: $width-lg) {
-            font-size: 18px;
-        }
-        margin-bottom: 0;
-    }
-    &__cost {
-        margin-top: 0;
-        font-weight: 300;
-        @media (min-width: $width-md) {
-            font-size: 18px;
-        }
-        @media (min-width: $width-lg) {
-            font-size: 24px;
-        }
-    }
-    &__item {
-        position: relative;
-        color: $color-purple;
-        text-align: left;
-        border: 2px solid $color-gray;
-        padding: 15px;
-        font-size: 14px;
-        text-transform: uppercase;
-        &:first-child {
-            display: none;
-        }
-        @media (min-width:$width-md) {
-            text-transform: none;
-            color: transparent;
+    &-price {
+        width: 100%;
+        background: #fff;
+        margin: auto;
+        border-collapse: collapse;
+        @include border;
+        border-width: 2px;
+        transform: translateX(-60px);
+        overflow-x: hidden;
+        &__header {
+            min-width: 280px;
+            border-right: 2px solid #fff;
+            color: #fff;
+            text-transform: uppercase;
+            background: $color-purple;
             &:first-child {
-                display: table-cell;
-                color: $color-purple;
+                background: $color-wan;
+                border: none;
+                display: none;
+                border-top: 4px solid $color-wan;
+                border-left: 2px solid $color-wan;
+            }
+            &--flag {
+                position: relative;
+                &:after,
+                &:before {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                }
+                &:after {
+                    top: 0;
+                    width: 74px;
+                    height: 73px;
+                    background: url(../img/slider-flag.png);
+                }
+                &:before {
+                    content: "Хит";
+                    color: #fff;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    top: 12px;
+                    left: 10px;
+                    z-index: 2;
+                    transform: matrix(0.707, -0.707, 0.707, 0.707, 0, 0);
+                }
+            }
+        }
+        &__caption {
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+        &__cost {
+            margin-top: 0;
+            font-weight: 300;
+        }
+        &__item {
+            position: relative;
+            color: $color-purple;
+            text-align: left;
+            border: 2px solid $color-gray;
+            padding: 15px;
+            font-size: 14px;
+            text-transform: uppercase;
+            &:first-child {
+                display: none;
+            }
+            &--yes,
+            &--no {
+                position: absolute;
+                width: 26px;
+                height: 26px;
+                right: 20px;
+                top: 25%;
+            }
+            &--yes {
+                fill: #44c84b;
+            }
+            &--no {
+                fill: #f36735;
             }
         }
     }
-    &__item--yes,
-    &__item--no {
-        position: absolute;
-        right: 20px;
-        top: 25%;
-        @media (min-width: $width-md) {
-            right: 40%;
+    @media (min-width: $width-md) {
+        &__wrapper {
+            width: 622px;
+            overflow-x: hidden;
+        }
+        &-price {
+            transform: translatex(0) !important; //*Чтобы перекрыть translate с мобильной версии у input:checked *//
+            &__header {
+                min-width: 155px;
+                &:first-child {
+                    display: table-cell;
+                }
+            }
+            &__caption {
+                font-size: 16px;
+            }
+            &__cost {
+                font-size: 18px;
+            }
+            &__item {
+                text-transform: none;
+                color: transparent;
+                &:first-child {
+                    display: table-cell;
+                    color: $color-purple;
+                }
+                &--yes,
+                &--no {
+                    right: 40%;
+                }
+            }
         }
     }
-    &__item--yes {
-        fill: #44c84b;
-    }
-    &__item--no {
-        fill: #f36735;
+    @media (min-width: $width-lg) {
+        &__wrapper {
+            width: 930px;
+        }
+        &-price {
+            &__caption {
+                font-size: 18px;
+            }
+            &__cost {
+                font-size: 24px;
+            }
+        }
     }
 }

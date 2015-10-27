@@ -1,59 +1,71 @@
-    .information {
-        padding: 15px;
-        @media (min-width: $width-lg) {
-            width: 960px;
+.information {
+    margin-top: 30px;
+    padding: 15px;
+    padding-top: 20px;
+    background: $color-wan url(../img/triangle-white.svg) no-repeat;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 40px;
+    }
+    &__item {
+        width: 300px;
+        text-align: center;
+        p {
+            font-size: 14px;
+            color: $color-purple;
+        }
+        &--pink,
+        &--gray {
+            display: none;
+        }
+    }
+    @media (min-width: $width-md) {
+        &__list {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            text-align: left;
+            width: 500px;
             margin: auto;
         }
-        background: #f2f2f2 url(../img/triangle-white.svg) no-repeat;
-        &__list {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-items: center;
-            margin-top: 40px;
-            @media (min-width: $width-lg) {
-                justify-content: flex-start;
-            }
-        }
-        &__row {
-            @media (min-width: $width-lg) {
-                display: flex;
-                justify-content: flex-start;
-            }
-        }
         &__item {
-            width: 300px;
-            text-align: center;
-            &--text {
-                @media (min-width: $width-lg) {
-                    width: 300px;
-                    padding-left: 30px;
-                    padding-right: 30px;
-                }
-            }
-            p {
-                font-size: 14px;
-                color: $color-purple;
-                @media (min-width: $width-lg) {
-                    font-size: 18px;
-                }
-            }
-            &--pink,
-            &--gray {
-                display: none;
-            }
+            width: auto;
+            min-width: 330px;
             &--smile {
-                @media (min-width: $width-md) {
-                    order: -1;
-                }
-            }
-            @media (min-width: $width-lg) {
-                &--pink,
-                &--gray {
-                    display: block;
-                    order: -1;
-                }
+                order: -1;
             }
         }
     }
+    @media (min-width: $width-lg) {
+        &__list {
+            width: auto;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        &__row {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+        &__item {
+            min-width: 300px;
+            &--text {
+                min-width: 300px;
+                max-width: 380px;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+            p {
+                font-size: 18px;
+            }
+            &--pink,
+            &--gray {
+                display: block;
+                order: -1;
+            }
+        }
+    }
+}
