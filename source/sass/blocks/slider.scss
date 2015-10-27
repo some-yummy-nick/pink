@@ -22,7 +22,8 @@
         font-size: 18px;
         position: absolute;
         top: 0;
-        left: 25%;
+        left: 50%;
+        transform: translateX(-50%);
     }
     &__hide {
         display: none;
