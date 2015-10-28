@@ -65,7 +65,8 @@
         }
     }
     @media (min-width: $width-lg) {
-        background: $color-wan;
+        max-width: 1280px;
+        margin: auto;
         &__column {
             justify-content: center;
             &:first-child {

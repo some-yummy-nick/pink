@@ -135,6 +135,7 @@
                         <li class="main-nav__item">
                             <a href="#">Конкурс</a>
                         </li>
+
                     </ul>
                 </nav>
                 <button type="button" class="main-nav__toggle" id="main-nav__toggle">
@@ -167,65 +168,66 @@
 
 
     <h2 class="caption__title">Устали от серости мегаполиса?<span>Нам есть, что вам <br>предложить!</span></h2>
-    <section class="information">
-        <div class="information__list">
-            <div class="information__row">
-                <div class="information__item  information__item--text">
-                    <h3 class="section-title">Поднимает настроение</h3>
-                    <p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+    <div class="wrapper-color  wrapper-color--information">
+        <section class="information">
+            <div class="information__list">
+                <div class="information__row">
+                    <div class="information__item  information__item--text">
+                        <h3 class="section-title">Поднимает настроение</h3>
+                        <p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+                    </div>
+                    <div class="information__item  information__item--text">
+                        <h3 class="section-title">Меняет мир вокруг</h3>
+                        <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+                    </div>
+                    <div class="information__item  information__item--text">
+                        <h3 class="section-title">Заводит новых друзей</h3>
+                        <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+                    </div>
                 </div>
-                <div class="information__item  information__item--text">
-                    <h3 class="section-title">Меняет мир вокруг</h3>
-                    <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+                <div class="information__item  information__item--gray">
+                    <picture>
+                        <img src="img/iphone-screen-desktop-1@1x.png" srcset="img/iphone-screen-desktop-1@2x.png 2x" height="300" width="292" alt="information__img">
+                    </picture>
                 </div>
-                <div class="information__item  information__item--text">
-                    <h3 class="section-title">Заводит новых друзей</h3>
-                    <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+                <div class="information__item  information__item--pink">
+                    <picture>
+                        <img src="img/iphone-screen-desktop-2@1x.png" srcset="img/iphone-screen-desktop-2@2x.png 2x" height="300" width="292" alt="information__img">
+                    </picture>
+                </div>
+                <div class="information__item  information__item--smile">
+                    <picture>
+                        <img src="img/iphone-screen-desktop-3@1x.png" srcset="img/iphone-screen-desktop-3@2x.png 2x" height="300" width="292" alt="information__img">
+                    </picture>
                 </div>
             </div>
-            <div class="information__item  information__item--gray">
-                <picture>
-                    <img src="img/iphone-screen-desktop-1@1x.png" srcset="img/iphone-screen-desktop-1@2x.png 2x" height="300" width="292" alt="information__img">
-                </picture>
+        </section>
+    </div>
+
+
+
+    <div class="wrapper-color  wrapper-color--timer">
+        <section class="timer">
+            <div class="timer__column">
+                <div class="timer__text-block">
+                    24
+                </div>
+                <svg class="timer__svg-block">
+                    <use xlink:href="#timer"></use>
+                </svg>
             </div>
-            <div class="information__item  information__item--pink">
-                <picture>
-                    <img src="img/iphone-screen-desktop-2@1x.png" srcset="img/iphone-screen-desktop-2@2x.png 2x" height="300" width="292" alt="information__img">
-                </picture>
+            <div class="timer__column">
+                <h2 class="timer__title">Эффект <span>на 24 часа!</span></h2>
+                <p>Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+
+                <a href="">Узнать больше об исследовании</a>
             </div>
-            <div class="information__item  information__item--smile">
-                <picture>
-                    <img src="img/iphone-screen-desktop-3@1x.png" srcset="img/iphone-screen-desktop-3@2x.png 2x" height="300" width="292" alt="information__img">
-                </picture>
-            </div>
-        </div>
-    </section>
-
-
-
-
-    <section class="timer">
-        <div class="timer__column">
-            <div class="timer__text-block">
-                24
-            </div>
-            <svg class="timer__svg-block">
-                <use xlink:href="#timer"></use>
-            </svg>
-        </div>
-        <div class="timer__column">
-            <h2 class="timer__title">Эффект <span>на 24 часа!</span></h2>
-            <p>Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-
-            <a href="">Узнать больше об исследовании</a>
-        </div>
-    </section>
-
+        </section>
+    </div>
 
 
 
     <div class="slider">
-
         <svg class="slider__quotes">
             <use xlink:href="#quotes"></use>
         </svg>
@@ -267,88 +269,89 @@
 
 
 
-
-    <div class="table">
-        <div class="table__wrapper">
-            <input id="slider-controls__table1" type="radio" name="table">
-            <input id="slider-controls__table2" type="radio" name="table" checked>
-            <input id="slider-controls__table3" type="radio" name="table">
-            <table class="table-price">
-                <tr>
-                    <th class="table-price__header">
-                    </th>
-                    <th class="table-price__header">
-                        <p class="table-price__caption">База</p>
-                        <p class="table-price__cost">1,99 USD</p>
-                    </th>
-                    <th class="table-price__header table-price__header--flag">
-                        <p class="table-price__caption">Стандарт</p>
-                        <p class="table-price__cost">3.99 USD</p>
-                    </th>
-                    <th class="table-price__header">
-                        <p class="table-price__caption">Анлим </p>
-                        <p class="table-price__cost">9.99 USD </p>
-                    </th>
-                </tr>
-                <tr>
-                    <td class="table-price__item">Розовый фильтр</td>
-                    <td class="table-price__item">Розовый фильтр
-                        <svg class="table-price__item--yes">
-                            <use xlink:href="#yes"></use>
-                        </svg>
-                    </td>
-                    <td class="table-price__item">Розовый фильтр
-                        <svg class="table-price__item--yes">
-                            <use xlink:href="#yes"></use>
-                        </svg>
-                    </td>
-                    <td class="table-price__item">Розовый фильтр
-                        <svg class="table-price__item--yes">
-                            <use xlink:href="#yes"></use>
-                        </svg>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="table-price__item">Смайлики</td>
-                    <td class="table-price__item">Смайлики
-                        <svg class="table-price__item--no">
-                            <use xlink:href="#no"></use>
-                        </svg>
-                    </td>
-                    <td class="table-price__item">Смайлики
-                        <svg class="table-price__item--no">
-                            <use xlink:href="#no"></use>
-                        </svg>
-                    </td>
-                    <td class="table-price__item">Смайлики
-                        <svg class="table-price__item--yes">
-                            <use xlink:href="#yes"></use>
-                        </svg>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="table-price__item">Комментарии</td>
-                    <td class="table-price__item">Комментарии
-                        <svg class="table-price__item--no">
-                            <use xlink:href="#no"></use>
-                        </svg>
-                    </td>
-                    <td class="table-price__item">Комментарии
-                        <svg class="table-price__item--no">
-                            <use xlink:href="#no"></use>
-                        </svg>
-                    </td>
-                    <td class="table-price__item">Комментарии
-                        <svg class="table-price__item--no">
-                            <use xlink:href="#no"></use>
-                        </svg>
-                    </td>
-                </tr>
-            </table>
-            <div class="slider-controls  slider-controls--table">
-                <label for="slider-controls__table1"></label>
-                <label for="slider-controls__table2"></label>
-                <label for="slider-controls__table3"></label>
+    <div class="wrapper-color  wrapper-color--table">
+        <div class="table">
+            <div class="table__wrapper">
+                <input id="slider-controls__table1" type="radio" name="table">
+                <input id="slider-controls__table2" type="radio" name="table" checked>
+                <input id="slider-controls__table3" type="radio" name="table">
+                <table class="table-price">
+                    <tr>
+                        <th class="table-price__header">
+                        </th>
+                        <th class="table-price__header">
+                            <p class="table-price__caption">База</p>
+                            <p class="table-price__cost">1,99 USD</p>
+                        </th>
+                        <th class="table-price__header table-price__header--flag">
+                            <p class="table-price__caption">Стандарт</p>
+                            <p class="table-price__cost">3.99 USD</p>
+                        </th>
+                        <th class="table-price__header">
+                            <p class="table-price__caption">Анлим </p>
+                            <p class="table-price__cost">9.99 USD </p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="table-price__item">Розовый фильтр</td>
+                        <td class="table-price__item">Розовый фильтр
+                            <svg class="table-price__item--yes">
+                                <use xlink:href="#yes"></use>
+                            </svg>
+                        </td>
+                        <td class="table-price__item">Розовый фильтр
+                            <svg class="table-price__item--yes">
+                                <use xlink:href="#yes"></use>
+                            </svg>
+                        </td>
+                        <td class="table-price__item">Розовый фильтр
+                            <svg class="table-price__item--yes">
+                                <use xlink:href="#yes"></use>
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-price__item">Смайлики</td>
+                        <td class="table-price__item">Смайлики
+                            <svg class="table-price__item--no">
+                                <use xlink:href="#no"></use>
+                            </svg>
+                        </td>
+                        <td class="table-price__item">Смайлики
+                            <svg class="table-price__item--no">
+                                <use xlink:href="#no"></use>
+                            </svg>
+                        </td>
+                        <td class="table-price__item">Смайлики
+                            <svg class="table-price__item--yes">
+                                <use xlink:href="#yes"></use>
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-price__item">Комментарии</td>
+                        <td class="table-price__item">Комментарии
+                            <svg class="table-price__item--no">
+                                <use xlink:href="#no"></use>
+                            </svg>
+                        </td>
+                        <td class="table-price__item">Комментарии
+                            <svg class="table-price__item--no">
+                                <use xlink:href="#no"></use>
+                            </svg>
+                        </td>
+                        <td class="table-price__item">Комментарии
+                            <svg class="table-price__item--no">
+                                <use xlink:href="#no"></use>
+                            </svg>
+                        </td>
+                    </tr>
+                </table>
+                <div class="slider-controls  slider-controls--table">
+                    <label for="slider-controls__table1"></label>
+                    <label for="slider-controls__table2"></label>
+                    <label for="slider-controls__table3"></label>
+                </div>
             </div>
         </div>
     </div>

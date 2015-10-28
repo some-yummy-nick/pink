@@ -23,6 +23,27 @@ body {
     margin: auto;
     text-align: center;
 }
+.wrapper-color {
+    min-width: 320px;
+    margin: auto;
+    text-align: center;
+    background: $color-wan;
+    &--information,
+    &--table {
+        background: $color-wan url(../img/triangle-white.svg) no-repeat;
+        background-size: contain;
+    }
+    @media (min-width: $width-md) {
+        &--timer {
+            background: #fff;
+        }
+    }
+    @media (min-width: $width-lg) {
+        &--timer {
+            background: $color-wan;
+        }
+    }
+}
 .section-title {
     font-weight: 700;
     font-size: 18px;
@@ -36,6 +57,7 @@ body {
     font-weight: 300;
     font-size: 24px;
     color: $color-purple;
+    text-align: center;
     span {
         display: block;
         margin-top: 20px;
@@ -50,5 +72,8 @@ body {
             display: inline-block;
             margin-top: 0;
         }
+    }
+    @media (min-width: $width-lg) {
+        margin-bottom: 50px;
     }
 }

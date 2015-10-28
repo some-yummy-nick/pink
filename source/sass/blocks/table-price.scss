@@ -1,6 +1,5 @@
 .table {
     padding-top: 100px;
-    background: $color-wan url(../img/triangle-white.svg) no-repeat;
     overflow-x: hidden;
     &__wrapper {
         padding-bottom: 60px;
@@ -124,6 +123,7 @@
         }
     }
     @media (min-width: $width-lg) {
+        padding-top: 120px;
         &__wrapper {
             width: 930px;
         }

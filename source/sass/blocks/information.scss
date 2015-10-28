@@ -2,7 +2,6 @@
     margin-top: 30px;
     padding: 15px;
     padding-top: 20px;
-    background: $color-wan url(../img/triangle-white.svg) no-repeat;
     &__list {
         display: flex;
         flex-direction: column;
@@ -38,6 +37,8 @@
         }
     }
     @media (min-width: $width-lg) {
+        max-width: 1280px;
+        margin: auto;
         &__list {
             width: auto;
             justify-content: space-around;
