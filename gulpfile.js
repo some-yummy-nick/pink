@@ -18,6 +18,7 @@ var gulp = require('gulp'),
     changed = require('gulp-changed'),
     concat = require('gulp-concat'),
     htmlmin = require('gulp-htmlmin'),
+    vghPages = require('gulp-gh-pages'),
     path = require('path');
 
 gulp.task('default', ['sass', 'html', 'js', 'browser-sync', 'watch', 'image'], function () {});
@@ -113,4 +114,11 @@ gulp.task('clean', function () {
             read: false
         })
         .pipe(clean());
+});
+
+gulp.task('deploy', function () {
+    return gulp.src('build/**/*')
+        .pipe(ghPages({
+            "remoteUrl": "http://yeffasol.github.io/pink/"
+        }));
 });
