@@ -18,6 +18,7 @@ var gulp = require('gulp'),
     changed = require('gulp-changed'),
     concat = require('gulp-concat'),
     htmlmin = require('gulp-htmlmin'),
+    rigger = require('gulp-rigger'),
     path = require('path');
 
 gulp.task('default', ['sass', 'html', 'js', 'browser-sync', 'watch', 'image'], function () {});
@@ -45,6 +46,7 @@ gulp.task('sass', function () {
 gulp.task('html', function () {
     return gulp.src('source/*.html')
         .pipe(changed('build/'))
+        .pipe(rigger())
         .pipe(htmlmin({
             collapseWhitespace: true
         }))
