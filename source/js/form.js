@@ -97,7 +97,7 @@
             var minus = parent.querySelector(".form-counter__btn--minus");
             var plus = parent.querySelector(".form-counter__btn--plus");
 
-            minus.addEventListener("click", function (e) {
+          minus.addEventListener("click", function (e) {
                 e.preventDefault();
                 changeNumber(false);
             });
@@ -112,19 +112,19 @@
                 if (isNaN(value)) {
                     value = 0;
                 }
+         if(plus.classList.contains('second')){
+  if (operation) {
+    input.value = value + 1;
+    addUser();
+  } else {
+    input.value = (value > 2) ? value - 1 : 1;
 
-                if (operation) {
-                    input.value = value + 1;
-                    addUser();
-                } else {
-                    input.value = (value > 2) ? value - 1 : 1;
+    if (typeof document.querySelectorAll(".username__item")[input.value] !== 'undefined') {
+      document.querySelectorAll(".username__item")[input.value].remove();
+    }
+  }
+}
 
-                    if (typeof document.querySelectorAll(".username__item")[input.value] !== 'undefined') {
-                        document.querySelectorAll(".username__item")[input.value].remove();
-                    }
-
-
-                }
             }
         }
 
